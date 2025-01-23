@@ -1,12 +1,13 @@
-import { Sequelize, DataTypes, Model, Optional } from 'sequelize';
-import sequelize from '../db';  
+import { DataTypes, Model, Optional } from 'sequelize';
+import sequelize from '../db';
 
 interface MovieAttributes {
   id: number;
   title: string;
   description: string;
-  image: string;
-  user_id: number;
+  year: String;        
+  genre: string;   
+  rate: number;   
 }
 
 interface MovieCreationAttributes extends Optional<MovieAttributes, 'id'> {}
@@ -15,9 +16,9 @@ class Movie extends Model<MovieAttributes, MovieCreationAttributes> implements M
   public id!: number;
   public title!: string;
   public description!: string;
-  public image!: string;
-  public user_id!: number;
-
+  public year!: String;   
+  public genre!: string; 
+  public rate!: number; 
 }
 
 const MoviesModel = sequelize.define<Movie, MovieCreationAttributes>('movie', {
@@ -29,12 +30,16 @@ const MoviesModel = sequelize.define<Movie, MovieCreationAttributes>('movie', {
     type: DataTypes.TEXT,
     allowNull: false,
   },
-  image: {
+  year: {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  user_id: {
-    type: DataTypes.NUMBER,
+  genre: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
+  rate: {
+    type: DataTypes.FLOAT, 
     allowNull: false,
   },
 });

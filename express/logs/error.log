@@ -1,0 +1,114 @@
+2025-01-23 19:40:53 error : Unknown column 'user_id' in 'field list'
+2025-01-23 19:40:55 error : Unknown column 'user_id' in 'field list'
+2025-01-23 19:41:36 error : Unknown column 'user_id' in 'field list'
+2025-01-23 19:42:00 error : Unknown column 'user_id' in 'field list'
+2025-01-23 19:43:47 error : Unknown column 'user_id' in 'field list'
+2025-01-23 19:43:59 error : Unknown column 'user_id' in 'field list'
+2025-01-23 19:47:24 error : notNull Violation: movie.description cannot be null,
+notNull Violation: movie.image cannot be null,
+notNull Violation: movie.year cannot be null,
+notNull Violation: movie.genre cannot be null,
+notNull Violation: movie.rate cannot be null
+2025-01-23 19:47:24 error : notNull Violation: movie.description cannot be null,
+notNull Violation: movie.image cannot be null,
+notNull Violation: movie.year cannot be null,
+notNull Violation: movie.genre cannot be null,
+notNull Violation: movie.rate cannot be null
+2025-01-23 19:49:03 error : notNull Violation: movie.description cannot be null,
+notNull Violation: movie.year cannot be null,
+notNull Violation: movie.genre cannot be null,
+notNull Violation: movie.rate cannot be null
+2025-01-23 19:49:03 error : notNull Violation: movie.description cannot be null,
+notNull Violation: movie.year cannot be null,
+notNull Violation: movie.genre cannot be null,
+notNull Violation: movie.rate cannot be null
+2025-01-23 19:57:22 error : notNull Violation: movie.description cannot be null,
+notNull Violation: movie.year cannot be null,
+notNull Violation: movie.genre cannot be null,
+notNull Violation: movie.rate cannot be null
+2025-01-23 19:57:22 error : notNull Violation: movie.description cannot be null,
+notNull Violation: movie.year cannot be null,
+notNull Violation: movie.genre cannot be null,
+notNull Violation: movie.rate cannot be null
+2025-01-23 19:58:48 error : notNull Violation: movie.description cannot be null,
+notNull Violation: movie.year cannot be null,
+notNull Violation: movie.genre cannot be null,
+notNull Violation: movie.rate cannot be null
+2025-01-23 19:58:48 error : notNull Violation: movie.description cannot be null,
+notNull Violation: movie.year cannot be null,
+notNull Violation: movie.genre cannot be null,
+notNull Violation: movie.rate cannot be null
+2025-01-23 20:00:11 error : notNull Violation: movie.description cannot be null,
+notNull Violation: movie.year cannot be null,
+notNull Violation: movie.genre cannot be null,
+notNull Violation: movie.rate cannot be null
+2025-01-23 20:00:11 error : notNull Violation: movie.description cannot be null,
+notNull Violation: movie.year cannot be null,
+notNull Violation: movie.genre cannot be null,
+notNull Violation: movie.rate cannot be null
+2025-01-23 20:00:13 error : notNull Violation: movie.description cannot be null,
+notNull Violation: movie.year cannot be null,
+notNull Violation: movie.genre cannot be null,
+notNull Violation: movie.rate cannot be null
+2025-01-23 20:00:13 error : notNull Violation: movie.description cannot be null,
+notNull Violation: movie.year cannot be null,
+notNull Violation: movie.genre cannot be null,
+notNull Violation: movie.rate cannot be null
+2025-01-23 20:00:53 error : notNull Violation: movie.description cannot be null,
+notNull Violation: movie.year cannot be null,
+notNull Violation: movie.genre cannot be null,
+notNull Violation: movie.rate cannot be null
+2025-01-23 20:00:53 error : notNull Violation: movie.description cannot be null,
+notNull Violation: movie.year cannot be null,
+notNull Violation: movie.genre cannot be null,
+notNull Violation: movie.rate cannot be null
+2025-01-23 20:00:55 error : notNull Violation: movie.description cannot be null,
+notNull Violation: movie.year cannot be null,
+notNull Violation: movie.genre cannot be null,
+notNull Violation: movie.rate cannot be null
+2025-01-23 20:00:55 error : notNull Violation: movie.description cannot be null,
+notNull Violation: movie.year cannot be null,
+notNull Violation: movie.genre cannot be null,
+notNull Violation: movie.rate cannot be null
+2025-01-23 20:02:22 error : notNull Violation: movie.year cannot be null,
+notNull Violation: movie.genre cannot be null,
+notNull Violation: movie.rate cannot be null
+2025-01-23 20:02:22 error : notNull Violation: movie.year cannot be null,
+notNull Violation: movie.genre cannot be null,
+notNull Violation: movie.rate cannot be null
+2025-01-23 20:04:28 error : notNull Violation: movie.year cannot be null,
+notNull Violation: movie.genre cannot be null,
+notNull Violation: movie.rate cannot be null
+2025-01-23 20:04:28 error : notNull Violation: movie.year cannot be null,
+notNull Violation: movie.genre cannot be null,
+notNull Violation: movie.rate cannot be null
+2025-01-23 20:04:29 error : notNull Violation: movie.year cannot be null,
+notNull Violation: movie.genre cannot be null,
+notNull Violation: movie.rate cannot be null
+2025-01-23 20:04:29 error : notNull Violation: movie.year cannot be null,
+notNull Violation: movie.genre cannot be null,
+notNull Violation: movie.rate cannot be null
+2025-01-23 20:06:20 error : notNull Violation: movie.year cannot be null,
+notNull Violation: movie.genre cannot be null,
+notNull Violation: movie.rate cannot be null
+2025-01-23 20:06:20 error : notNull Violation: movie.year cannot be null,
+notNull Violation: movie.genre cannot be null,
+notNull Violation: movie.rate cannot be null
+2025-01-23 20:34:37 error : Unknown column 'NaN' in 'where clause'
+2025-01-23 20:34:37 error : Unknown column 'NaN' in 'where clause'
+2025-01-23 20:35:30 error : Unknown column 'NaN' in 'where clause'
+2025-01-23 20:35:30 error : Unknown column 'NaN' in 'where clause'
+2025-01-23 20:35:36 error : Unknown column 'NaN' in 'where clause'
+2025-01-23 20:35:36 error : Unknown column 'NaN' in 'where clause'
+2025-01-23 20:36:14 error : Unknown column 'NaN' in 'where clause'
+2025-01-23 20:36:14 error : Unknown column 'NaN' in 'where clause'
+2025-01-23 20:36:34 error : Unknown column 'NaN' in 'where clause'
+2025-01-23 20:36:34 error : Unknown column 'NaN' in 'where clause'
+2025-01-23 20:37:25 error : Unknown column 'NaN' in 'where clause'
+2025-01-23 20:37:25 error : Unknown column 'NaN' in 'where clause'
+2025-01-23 20:39:37 error : Unknown column 'NaN' in 'where clause'
+2025-01-23 20:39:37 error : Unknown column 'NaN' in 'where clause'
+2025-01-23 20:42:07 error : Unknown column 'NaN' in 'where clause'
+2025-01-23 20:42:07 error : Unknown column 'NaN' in 'where clause'
+2025-01-23 20:42:09 error : Unknown column 'NaN' in 'where clause'
+2025-01-23 20:42:09 error : Unknown column 'NaN' in 'where clause'
