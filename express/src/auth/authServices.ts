@@ -13,7 +13,8 @@ export const signup = async (data: SignupDto) => {
     const hashedPassword = await bcrypt.hash(data.password, 10);
     const newUser = await UsersModel.create({...data , password : hashedPassword})
   
-    return newUser;
+    const token = encodeToken({id : newUser.id})
+    return {token : `${token}`}
   };
 
 

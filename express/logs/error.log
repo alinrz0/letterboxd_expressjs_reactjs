@@ -156,3 +156,47 @@ notNull Violation: movie.rate cannot be null
 2025-01-24 15:23:01 error : Validation error: Rating must be a number between 0 and 5, and must increment by 0.25.
 2025-01-24 15:23:02 error : Validation error: Rating must be a number between 0 and 5, and must increment by 0.25.
 2025-01-24 15:23:02 error : Validation error: Rating must be a number between 0 and 5, and must increment by 0.25.
+2025-01-24 19:00:45 error : Unknown column 'createdAt' in 'field list'
+2025-01-24 19:00:45 error : Unknown column 'createdAt' in 'field list'
+2025-01-24 19:01:29 error : Unknown column 'createdAt' in 'field list'
+2025-01-24 19:01:29 error : Unknown column 'createdAt' in 'field list'
+2025-01-24 19:01:31 error : Unknown column 'createdAt' in 'field list'
+2025-01-24 19:01:31 error : Unknown column 'createdAt' in 'field list'
+2025-01-24 19:01:57 error : Unknown column 'createdAt' in 'field list'
+2025-01-24 19:01:57 error : Unknown column 'createdAt' in 'field list'
+2025-01-24 19:01:59 error : Unknown column 'createdAt' in 'field list'
+2025-01-24 19:01:59 error : Unknown column 'createdAt' in 'field list'
+2025-01-24 19:02:26 error : Unknown column 'createdAt' in 'field list'
+2025-01-24 19:02:26 error : Unknown column 'createdAt' in 'field list'
+2025-01-24 19:02:27 error : Unknown column 'createdAt' in 'field list'
+2025-01-24 19:02:27 error : Unknown column 'createdAt' in 'field list'
+2025-01-24 19:03:21 error : Unknown column 'createdAt' in 'field list'
+2025-01-24 19:03:21 error : Unknown column 'createdAt' in 'field list'
+2025-01-24 19:28:37 error : auth is not associated to friend!
+2025-01-24 19:28:37 error : auth is not associated to friend!
+2025-01-24 19:28:48 error : auth is not associated to friend!
+2025-01-24 19:28:48 error : auth is not associated to friend!
+2025-01-24 19:30:02 error : auth is not associated to friend!
+2025-01-24 19:30:02 error : auth is not associated to friend!
+2025-01-24 19:44:50 error : auth is not associated to friend!
+2025-01-24 19:44:50 error : auth is not associated to friend!
+2025-01-24 19:44:51 error : auth is not associated to friend!
+2025-01-24 19:44:51 error : auth is not associated to friend!
+2025-01-24 19:46:11 error : auth is not associated to friend!
+2025-01-24 19:46:11 error : auth is not associated to friend!
+2025-01-24 19:46:12 error : auth is not associated to friend!
+2025-01-24 19:46:12 error : auth is not associated to friend!
+2025-01-24 19:46:25 error : auth is not associated to friend!
+2025-01-24 19:46:25 error : auth is not associated to friend!
+2025-01-24 19:46:42 error : auth is not associated to friend!
+2025-01-24 19:46:42 error : auth is not associated to friend!
+2025-01-24 19:47:05 error : auth is not associated to friend!
+2025-01-24 19:47:05 error : auth is not associated to friend!
+2025-01-24 19:47:26 error : Cannot read properties of undefined (reading 'email')
+2025-01-24 19:47:26 error : Cannot read properties of undefined (reading 'email')
+2025-01-24 19:48:24 error : auth is not associated to friend!
+2025-01-24 19:48:24 error : auth is not associated to friend!
+2025-01-24 21:00:59 error : Friend request not found.
+2025-01-24 21:00:59 error : Friend request not found.
+2025-01-24 21:01:01 error : Friend request not found.
+2025-01-24 21:01:01 error : Friend request not found.

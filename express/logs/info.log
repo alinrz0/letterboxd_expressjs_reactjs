@@ -360,3 +360,140 @@ notNull Violation: movie.rate cannot be null
 2025-01-24 16:04:08 info : Server is running on http://localhost:3000
 2025-01-24 16:04:08 info : Connection to the database has been established successfully.
 2025-01-24 16:04:08 info : Database tables are synchronized.
+2025-01-24 18:37:54 info : Server is running on http://localhost:3000
+2025-01-24 18:37:54 info : Connection to the database has been established successfully.
+2025-01-24 18:37:54 info : Database tables are synchronized.
+2025-01-24 18:39:14 info : Server is running on http://localhost:3000
+2025-01-24 18:39:14 info : Connection to the database has been established successfully.
+2025-01-24 18:39:14 info : Database tables are synchronized.
+2025-01-24 18:39:47 info : Server is running on http://localhost:3000
+2025-01-24 18:39:47 info : Connection to the database has been established successfully.
+2025-01-24 18:39:47 info : Database tables are synchronized.
+2025-01-24 18:59:22 info : Server is running on http://localhost:3000
+2025-01-24 18:59:22 info : Connection to the database has been established successfully.
+2025-01-24 18:59:22 info : Database tables are synchronized.
+2025-01-24 19:00:45 error : Unknown column 'createdAt' in 'field list'
+2025-01-24 19:00:45 error : Unknown column 'createdAt' in 'field list'
+2025-01-24 19:01:28 info : Server is running on http://localhost:3000
+2025-01-24 19:01:28 info : Connection to the database has been established successfully.
+2025-01-24 19:01:29 info : Database tables are synchronized.
+2025-01-24 19:01:29 error : Unknown column 'createdAt' in 'field list'
+2025-01-24 19:01:29 error : Unknown column 'createdAt' in 'field list'
+2025-01-24 19:01:31 error : Unknown column 'createdAt' in 'field list'
+2025-01-24 19:01:31 error : Unknown column 'createdAt' in 'field list'
+2025-01-24 19:01:57 info : Server is running on http://localhost:3000
+2025-01-24 19:01:57 info : Connection to the database has been established successfully.
+2025-01-24 19:01:57 info : Database tables are synchronized.
+2025-01-24 19:01:57 error : Unknown column 'createdAt' in 'field list'
+2025-01-24 19:01:57 error : Unknown column 'createdAt' in 'field list'
+2025-01-24 19:01:59 error : Unknown column 'createdAt' in 'field list'
+2025-01-24 19:01:59 error : Unknown column 'createdAt' in 'field list'
+2025-01-24 19:02:24 info : Server is running on http://localhost:3000
+2025-01-24 19:02:24 info : Connection to the database has been established successfully.
+2025-01-24 19:02:25 info : Database tables are synchronized.
+2025-01-24 19:02:26 error : Unknown column 'createdAt' in 'field list'
+2025-01-24 19:02:26 error : Unknown column 'createdAt' in 'field list'
+2025-01-24 19:02:27 error : Unknown column 'createdAt' in 'field list'
+2025-01-24 19:02:27 error : Unknown column 'createdAt' in 'field list'
+2025-01-24 19:03:20 info : Server is running on http://localhost:3000
+2025-01-24 19:03:20 info : Connection to the database has been established successfully.
+2025-01-24 19:03:20 info : Database tables are synchronized.
+2025-01-24 19:03:21 error : Unknown column 'createdAt' in 'field list'
+2025-01-24 19:03:21 error : Unknown column 'createdAt' in 'field list'
+2025-01-24 19:21:34 info : Server is running on http://localhost:3000
+2025-01-24 19:21:34 info : Connection to the database has been established successfully.
+2025-01-24 19:21:34 info : Database tables are synchronized.
+2025-01-24 19:22:19 info : Server is running on http://localhost:3000
+2025-01-24 19:22:19 info : Connection to the database has been established successfully.
+2025-01-24 19:22:19 info : Database tables are synchronized.
+2025-01-24 19:22:43 info : Server is running on http://localhost:3000
+2025-01-24 19:22:43 info : Connection to the database has been established successfully.
+2025-01-24 19:22:43 info : Database tables are synchronized.
+2025-01-24 19:26:31 info : Server is running on http://localhost:3000
+2025-01-24 19:26:31 info : Connection to the database has been established successfully.
+2025-01-24 19:26:31 info : Database tables are synchronized.
+2025-01-24 19:28:07 info : Server is running on http://localhost:3000
+2025-01-24 19:28:07 info : Connection to the database has been established successfully.
+2025-01-24 19:28:07 info : Database tables are synchronized.
+2025-01-24 19:28:37 error : auth is not associated to friend!
+2025-01-24 19:28:37 error : auth is not associated to friend!
+2025-01-24 19:28:48 error : auth is not associated to friend!
+2025-01-24 19:28:48 error : auth is not associated to friend!
+2025-01-24 19:30:01 info : Server is running on http://localhost:3000
+2025-01-24 19:30:02 info : Connection to the database has been established successfully.
+2025-01-24 19:30:02 info : Database tables are synchronized.
+2025-01-24 19:30:02 error : auth is not associated to friend!
+2025-01-24 19:30:02 error : auth is not associated to friend!
+2025-01-24 19:33:17 info : Server is running on http://localhost:3000
+2025-01-24 19:33:17 info : Connection to the database has been established successfully.
+2025-01-24 19:33:17 info : Database tables are synchronized.
+2025-01-24 19:44:47 info : Server is running on http://localhost:3000
+2025-01-24 19:44:47 info : Connection to the database has been established successfully.
+2025-01-24 19:44:47 info : Database tables are synchronized.
+2025-01-24 19:44:50 error : auth is not associated to friend!
+2025-01-24 19:44:50 error : auth is not associated to friend!
+2025-01-24 19:44:51 error : auth is not associated to friend!
+2025-01-24 19:44:51 error : auth is not associated to friend!
+2025-01-24 19:46:10 info : Server is running on http://localhost:3000
+2025-01-24 19:46:10 info : Connection to the database has been established successfully.
+2025-01-24 19:46:10 info : Database tables are synchronized.
+2025-01-24 19:46:11 error : auth is not associated to friend!
+2025-01-24 19:46:11 error : auth is not associated to friend!
+2025-01-24 19:46:12 error : auth is not associated to friend!
+2025-01-24 19:46:12 error : auth is not associated to friend!
+2025-01-24 19:46:25 error : auth is not associated to friend!
+2025-01-24 19:46:25 error : auth is not associated to friend!
+2025-01-24 19:46:41 info : Server is running on http://localhost:3000
+2025-01-24 19:46:41 info : Connection to the database has been established successfully.
+2025-01-24 19:46:41 info : Database tables are synchronized.
+2025-01-24 19:46:42 error : auth is not associated to friend!
+2025-01-24 19:46:42 error : auth is not associated to friend!
+2025-01-24 19:46:50 info : Server is running on http://localhost:3000
+2025-01-24 19:46:50 info : Connection to the database has been established successfully.
+2025-01-24 19:46:50 info : Database tables are synchronized.
+2025-01-24 19:47:04 info : Server is running on http://localhost:3000
+2025-01-24 19:47:04 info : Connection to the database has been established successfully.
+2025-01-24 19:47:04 info : Database tables are synchronized.
+2025-01-24 19:47:05 error : auth is not associated to friend!
+2025-01-24 19:47:05 error : auth is not associated to friend!
+2025-01-24 19:47:26 info : Server is running on http://localhost:3000
+2025-01-24 19:47:26 info : Connection to the database has been established successfully.
+2025-01-24 19:47:26 info : Database tables are synchronized.
+2025-01-24 19:47:26 error : Cannot read properties of undefined (reading 'email')
+2025-01-24 19:47:26 error : Cannot read properties of undefined (reading 'email')
+2025-01-24 19:47:37 info : Server is running on http://localhost:3000
+2025-01-24 19:47:37 info : Connection to the database has been established successfully.
+2025-01-24 19:47:37 info : Database tables are synchronized.
+2025-01-24 19:48:23 info : Server is running on http://localhost:3000
+2025-01-24 19:48:24 info : Connection to the database has been established successfully.
+2025-01-24 19:48:24 info : Database tables are synchronized.
+2025-01-24 19:48:24 error : auth is not associated to friend!
+2025-01-24 19:48:24 error : auth is not associated to friend!
+2025-01-24 19:52:05 info : Server is running on http://localhost:3000
+2025-01-24 19:52:05 info : Connection to the database has been established successfully.
+2025-01-24 19:52:05 info : Database tables are synchronized.
+2025-01-24 19:52:25 info : Server is running on http://localhost:3000
+2025-01-24 19:52:25 info : Connection to the database has been established successfully.
+2025-01-24 19:52:25 info : Database tables are synchronized.
+2025-01-24 19:55:00 info : Server is running on http://localhost:3000
+2025-01-24 19:55:00 info : Connection to the database has been established successfully.
+2025-01-24 19:55:00 info : Database tables are synchronized.
+2025-01-24 19:55:45 info : Server is running on http://localhost:3000
+2025-01-24 19:55:45 info : Connection to the database has been established successfully.
+2025-01-24 19:55:45 info : Database tables are synchronized.
+2025-01-24 20:52:55 info : Server is running on http://localhost:3000
+2025-01-24 20:52:55 info : Connection to the database has been established successfully.
+2025-01-24 20:52:55 info : Database tables are synchronized.
+2025-01-24 20:55:17 info : Server is running on http://localhost:3000
+2025-01-24 20:55:17 info : Connection to the database has been established successfully.
+2025-01-24 20:55:17 info : Database tables are synchronized.
+2025-01-24 20:59:58 info : Server is running on http://localhost:3000
+2025-01-24 20:59:58 info : Connection to the database has been established successfully.
+2025-01-24 20:59:58 info : Database tables are synchronized.
+2025-01-24 21:00:43 info : Server is running on http://localhost:3000
+2025-01-24 21:00:43 info : Connection to the database has been established successfully.
+2025-01-24 21:00:43 info : Database tables are synchronized.
+2025-01-24 21:00:59 error : Friend request not found.
+2025-01-24 21:00:59 error : Friend request not found.
+2025-01-24 21:01:01 error : Friend request not found.
+2025-01-24 21:01:01 error : Friend request not found.
