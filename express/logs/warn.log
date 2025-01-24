@@ -112,3 +112,47 @@ notNull Violation: movie.rate cannot be null
 2025-01-23 20:42:07 error : Unknown column 'NaN' in 'where clause'
 2025-01-23 20:42:09 error : Unknown column 'NaN' in 'where clause'
 2025-01-23 20:42:09 error : Unknown column 'NaN' in 'where clause'
+2025-01-24 14:54:40 error : jwt must be a string
+2025-01-24 14:54:40 error : jwt must be a string
+2025-01-24 14:54:42 error : jwt must be a string
+2025-01-24 14:54:42 error : jwt must be a string
+2025-01-24 14:54:55 error : jwt must be a string
+2025-01-24 14:54:55 error : jwt must be a string
+2025-01-24 14:55:02 error : jwt must be a string
+2025-01-24 14:55:02 error : jwt must be a string
+2025-01-24 14:55:22 error : jwt must be a string
+2025-01-24 14:55:22 error : jwt must be a string
+2025-01-24 14:55:52 error : jwt must be a string
+2025-01-24 14:55:52 error : jwt must be a string
+2025-01-24 14:56:49 error : jwt must be a string
+2025-01-24 14:56:49 error : jwt must be a string
+2025-01-24 14:57:35 error : jwt must be a string
+2025-01-24 14:57:35 error : jwt must be a string
+2025-01-24 14:58:24 error : jwt must be a string
+2025-01-24 14:58:24 error : jwt must be a string
+2025-01-24 15:01:55 error : Unknown column 'createdAt' in 'field list'
+2025-01-24 15:01:55 error : Unknown column 'createdAt' in 'field list'
+2025-01-24 15:02:41 error : Unknown column 'createdAt' in 'field list'
+2025-01-24 15:02:41 error : Unknown column 'createdAt' in 'field list'
+2025-01-24 15:02:42 error : Unknown column 'createdAt' in 'field list'
+2025-01-24 15:02:42 error : Unknown column 'createdAt' in 'field list'
+2025-01-24 15:02:43 error : Unknown column 'createdAt' in 'field list'
+2025-01-24 15:02:43 error : Unknown column 'createdAt' in 'field list'
+2025-01-24 15:02:51 error : Unknown column 'createdAt' in 'field list'
+2025-01-24 15:02:51 error : Unknown column 'createdAt' in 'field list'
+2025-01-24 15:04:12 error : Unknown column 'createdAt' in 'field list'
+2025-01-24 15:04:12 error : Unknown column 'createdAt' in 'field list'
+2025-01-24 15:05:04 error : Unknown column 'createdAt' in 'field list'
+2025-01-24 15:05:04 error : Unknown column 'createdAt' in 'field list'
+2025-01-24 15:08:25 error : Incorrect integer value: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTMsImlhdCI6MTczNzcxNzg5OSwiZXhwIjoxNzM3NzIxNDk5fQ.PbHiJ_Y5KBjdbk8Ufa9vsfNJRc0fRVDq' for column 'user_id' at row 1
+2025-01-24 15:08:25 error : Incorrect integer value: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTMsImlhdCI6MTczNzcxNzg5OSwiZXhwIjoxNzM3NzIxNDk5fQ.PbHiJ_Y5KBjdbk8Ufa9vsfNJRc0fRVDq' for column 'user_id' at row 1
+2025-01-24 15:08:26 error : Incorrect integer value: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTMsImlhdCI6MTczNzcxNzg5OSwiZXhwIjoxNzM3NzIxNDk5fQ.PbHiJ_Y5KBjdbk8Ufa9vsfNJRc0fRVDq' for column 'user_id' at row 1
+2025-01-24 15:08:26 error : Incorrect integer value: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTMsImlhdCI6MTczNzcxNzg5OSwiZXhwIjoxNzM3NzIxNDk5fQ.PbHiJ_Y5KBjdbk8Ufa9vsfNJRc0fRVDq' for column 'user_id' at row 1
+2025-01-24 15:13:33 error : Validation error: Rating must be a number between 0 and 5, and must increment by 0.25.
+2025-01-24 15:13:33 error : Validation error: Rating must be a number between 0 and 5, and must increment by 0.25.
+2025-01-24 15:13:35 error : Validation error: Rating must be a number between 0 and 5, and must increment by 0.25.
+2025-01-24 15:13:35 error : Validation error: Rating must be a number between 0 and 5, and must increment by 0.25.
+2025-01-24 15:23:01 error : Validation error: Rating must be a number between 0 and 5, and must increment by 0.25.
+2025-01-24 15:23:01 error : Validation error: Rating must be a number between 0 and 5, and must increment by 0.25.
+2025-01-24 15:23:02 error : Validation error: Rating must be a number between 0 and 5, and must increment by 0.25.
+2025-01-24 15:23:02 error : Validation error: Rating must be a number between 0 and 5, and must increment by 0.25.

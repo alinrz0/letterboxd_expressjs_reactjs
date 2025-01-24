@@ -7,6 +7,7 @@ import path from "path";
 
 import {authControllers} from './auth';
 import {movieControllers} from './movie';
+import {reviewControllers} from './review';
 
 import ErrorHandelingMid  from './middlewares/ErrorHandelingMid';
 
@@ -34,6 +35,7 @@ initializeDatabase();
 
 app.use("/" ,authControllers);
 app.use("/movies" ,movieControllers);
+app.use("/" ,reviewControllers);
 
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
