@@ -497,3 +497,29 @@ notNull Violation: movie.rate cannot be null
 2025-01-24 21:00:59 error : Friend request not found.
 2025-01-24 21:01:01 error : Friend request not found.
 2025-01-24 21:01:01 error : Friend request not found.
+2025-01-24 21:13:25 info : Server is running on http://localhost:3000
+2025-01-24 21:13:25 info : Connection to the database has been established successfully.
+2025-01-24 21:13:25 info : Database tables are synchronized.
+2025-01-24 21:15:08 info : Server is running on http://localhost:3000
+2025-01-24 21:15:08 info : Connection to the database has been established successfully.
+2025-01-24 21:15:08 info : Database tables are synchronized.
+2025-01-24 21:15:36 info : Server is running on http://localhost:3000
+2025-01-24 21:15:36 info : Connection to the database has been established successfully.
+2025-01-24 21:15:36 info : Database tables are synchronized.
+2025-01-24 21:15:53 info : Server is running on http://localhost:3000
+2025-01-24 21:15:54 info : Connection to the database has been established successfully.
+2025-01-24 21:15:54 info : Database tables are synchronized.
+2025-01-24 21:17:04 info : Server is running on http://localhost:3000
+2025-01-24 21:17:04 info : Connection to the database has been established successfully.
+2025-01-24 21:17:04 info : Database tables are synchronized.
+2025-01-24 21:21:33 info : Server is running on http://localhost:3000
+2025-01-24 21:21:33 info : Connection to the database has been established successfully.
+2025-01-24 21:21:33 info : Database tables are synchronized.
+2025-01-24 21:21:47 info : Server is running on http://localhost:3000
+2025-01-24 21:21:47 info : Connection to the database has been established successfully.
+2025-01-24 21:21:47 info : Database tables are synchronized.
+2025-01-24 21:24:36 error : Movie not found.
+2025-01-24 21:24:36 error : Movie not found.
+2025-01-24 21:27:04 info : Server is running on http://localhost:3000
+2025-01-24 21:27:04 info : Connection to the database has been established successfully.
+2025-01-24 21:27:04 info : Database tables are synchronized.

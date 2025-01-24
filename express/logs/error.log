@@ -200,3 +200,5 @@ notNull Violation: movie.rate cannot be null
 2025-01-24 21:00:59 error : Friend request not found.
 2025-01-24 21:01:01 error : Friend request not found.
 2025-01-24 21:01:01 error : Friend request not found.
+2025-01-24 21:24:36 error : Movie not found.
+2025-01-24 21:24:36 error : Movie not found.

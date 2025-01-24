@@ -2,11 +2,29 @@ import ReviewModel from "../models/reviewsModel";
 import MoviesModel from "../models/moviesModel";
 import { decodeToken } from "../utils/index";
 
+
+import UserModel from "../models/usersModel";
+import FriendModel from "../models/friendsModel";
+import { Op } from "sequelize";
+
 interface CreateReviewDto {
     movie_id: number;
     review: string;
     rating: number;
 }
+
+export const checkExistingReview = async (token: string, movie_id: number) => {
+    const user = decodeToken(token);
+    if (!user || !user.id) {
+        throw new Error("Invalid token payload.");
+    }
+
+    const existingReview = await ReviewModel.findOne({
+        where: { user_id: user.id, movie_id },
+    });
+
+    return existingReview;
+};
 
 export const addReview = async (
     token: string,
@@ -30,4 +48,50 @@ export const addReview = async (
     });
 
     return newReview;
+};
+
+
+// Fetch reviews if users are friends
+export const getReviewsByFriendEmail = async (user_id: number, friend_email: string) => {
+    // Find the friend by email
+    const friend = await UserModel.findOne({ where: { email: friend_email } });
+    if (!friend) {
+        throw new Error("User with this email not found.");
+    }
+
+    // Check if they are friends
+    const isFriend = await FriendModel.findOne({
+        where: {
+            [Op.or]: [
+                { user_id, friend_id: friend.id, status: "A" },
+                { user_id: friend.id, friend_id: user_id, status: "A" },
+            ],
+        },
+    });
+
+    if (!isFriend) {
+        throw new Error("You are not friends with this user.");
+    }
+
+    // Retrieve all reviews of the friend
+    const reviews = await ReviewModel.findAll({
+        where: { user_id: friend.id },
+        attributes: ["movie_id", "review", "rating", "createdAt"],
+    });
+
+    return reviews;
+};
+
+
+export const getUserFromToken = (token: string) => {
+    if (!token) {
+        throw new Error("Token not found or invalid.");
+    }
+
+    const user = decodeToken(token);
+    if (!user || !user.id) {
+        throw new Error("Invalid token payload.");
+    }
+
+    return user;
 };
