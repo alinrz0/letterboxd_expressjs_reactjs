@@ -1,13 +1,18 @@
 import { encodeToken} from './../utils/index';
 import AdminModel from "../models/adminModel";
+import ReviewModel from "../models/reviewsModel";
 import bcrypt from "bcrypt";
 import ServerError from '../errors/serverError';
 import LoginDto from "./dtos/loginDto";
 // import SignupDto from './dtos/signupDto';
-
+import { Request , Response , NextFunction } from "express";
 
 import UsersModel from "../models/usersModel";
 import UpdateUserDto from "./dtos/updateUserDto";
+
+import { decodeToken } from "../utils";
+import MoviesModel  from "../models/moviesModel";
+import CreateMovieDto  from "../movie/dtos/movieCreateDto";
 
 
 export const login = async  (data :LoginDto) =>{
@@ -62,6 +67,66 @@ export const deleteUser = async (id: number) => {
     return { id };
 };
 
+
+// Get all reviews
+export const getReviews = async () => {
+    try {
+        const reviews = await ReviewModel.findAll(); // Fetch all reviews from the database
+        return reviews;
+    } catch (error) {
+        throw new ServerError(500, "Error fetching reviews.");
+    }
+};
+
+// Get a single review by ID
+export const getReviewById = async (id: number) => {
+    try {
+        const review = await ReviewModel.findByPk(id); // Fetch review by primary key (ID)
+        if (!review) {
+            throw new ServerError(404, "Review not found.");
+        }
+        return review;
+    } catch (error) {
+        throw new ServerError(500, "Error fetching the review.");
+    }
+};
+
+// Delete a review by ID
+export const deleteReview = async (id: number) => {
+    try {
+        const review = await ReviewModel.findByPk(id); // Find the review by ID
+        if (!review) {
+            throw new ServerError(404, "Review not found.");
+        }
+
+        await review.destroy(); // Delete the review from the database
+    } catch (error) {
+        throw new ServerError(500, "Error deleting the review.");
+    }
+};
+
+
+export const updateMovie = async (movieId: number, data: Partial<CreateMovieDto>, token: string) => {
+    const movie = await MoviesModel.findOne({ where: { id: movieId} });
+
+    if (!movie) {
+        throw new Error("Movie not found or you do not have permission to update it");
+    }
+    return await movie.update(data);
+};
+
+export const deleteMovie = async (movieId: number, token: string) => {
+    const user = decodeToken(token); 
+
+    // Find the movie to ensure it exists and belongs to the user
+    const movie = await MoviesModel.findOne({ where: { id: movieId} });
+
+    if (!movie) {
+        throw new Error("Movie not found or you do not have permission to delete it");
+    }
+    await movie.destroy();
+    return { message: "Movie deleted successfully" };
+};
 // export const signup = async (data: SignupDto) => {
   
 //     const hashedPassword = await bcrypt.hash(data.password, 10);

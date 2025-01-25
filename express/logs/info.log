@@ -856,3 +856,47 @@ notNull Violation: movie.rate cannot be null
 2025-01-25 14:58:08 info : Server is running on http://localhost:3000
 2025-01-25 14:58:08 info : Connection to the database has been established successfully.
 2025-01-25 14:58:08 info : Database tables are synchronized.
+2025-01-25 15:55:02 info : Server is running on http://localhost:3000
+2025-01-25 15:55:02 info : Connection to the database has been established successfully.
+2025-01-25 15:55:02 info : Database tables are synchronized.
+2025-01-25 15:58:00 info : Server is running on http://localhost:3000
+2025-01-25 15:58:00 info : Connection to the database has been established successfully.
+2025-01-25 15:58:00 info : Database tables are synchronized.
+2025-01-25 15:59:41 info : Server is running on http://localhost:3000
+2025-01-25 15:59:42 info : Connection to the database has been established successfully.
+2025-01-25 15:59:42 info : Database tables are synchronized.
+2025-01-25 16:03:31 info : Server is running on http://localhost:3000
+2025-01-25 16:03:31 info : Connection to the database has been established successfully.
+2025-01-25 16:03:31 info : Database tables are synchronized.
+2025-01-25 16:04:07 info : Server is running on http://localhost:3000
+2025-01-25 16:04:08 info : Connection to the database has been established successfully.
+2025-01-25 16:04:08 info : Database tables are synchronized.
+2025-01-25 16:06:37 info : Server is running on http://localhost:3000
+2025-01-25 16:06:37 info : Connection to the database has been established successfully.
+2025-01-25 16:06:37 info : Database tables are synchronized.
+2025-01-25 16:15:06 info : Server is running on http://localhost:3000
+2025-01-25 16:15:06 info : Connection to the database has been established successfully.
+2025-01-25 16:15:07 info : Database tables are synchronized.
+2025-01-25 16:15:23 info : Server is running on http://localhost:3000
+2025-01-25 16:15:23 info : Connection to the database has been established successfully.
+2025-01-25 16:15:23 info : Database tables are synchronized.
+2025-01-25 16:23:53 info : Server is running on http://localhost:3000
+2025-01-25 16:23:53 info : Connection to the database has been established successfully.
+2025-01-25 16:23:53 info : Database tables are synchronized.
+2025-01-25 16:28:29 info : Server is running on http://localhost:3000
+2025-01-25 16:28:30 info : Connection to the database has been established successfully.
+2025-01-25 16:28:30 info : Database tables are synchronized.
+2025-01-25 16:30:10 info : Server is running on http://localhost:3000
+2025-01-25 16:30:10 info : Connection to the database has been established successfully.
+2025-01-25 16:30:10 info : Database tables are synchronized.
+2025-01-25 16:52:11 info : Server is running on http://localhost:3000
+2025-01-25 16:52:11 info : Connection to the database has been established successfully.
+2025-01-25 16:52:11 info : Database tables are synchronized.
+2025-01-25 16:54:25 info : Server is running on http://localhost:3000
+2025-01-25 16:54:25 info : Connection to the database has been established successfully.
+2025-01-25 16:54:25 info : Database tables are synchronized.
+2025-01-25 16:56:29 info : Server is running on http://localhost:3000
+2025-01-25 16:56:29 info : Connection to the database has been established successfully.
+2025-01-25 16:56:29 info : Database tables are synchronized.
+2025-01-25 16:56:52 error : Movie not found or you do not have permission to delete it
+2025-01-25 16:56:52 error : Movie not found or you do not have permission to delete it

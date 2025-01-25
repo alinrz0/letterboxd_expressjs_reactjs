@@ -1,10 +1,11 @@
-import {login ,deleteUser ,updateUser,getUsers,getUser} from './adminServices';
+import {login ,deleteUser ,updateUser,getUsers,getUser ,getReviews,getReviewById,deleteReview ,updateMovie,deleteMovie} from './adminServices';
 import { Router , Request , Response , NextFunction } from "express";
 import ValidateMiddleware  from '../middlewares/validateMiddleware';
 import LoginDto from './dtos/loginDto';
-
+import logger from "../helper/logger";
+import movieModel from '../models/moviesModel'; 
 import UpdateUserDto from "./dtos/updateUserDto";
-import { NUMBER } from 'sequelize';
+import CreateMovieDto  from "../movie/dtos/movieCreateDto";
 // import SignupDto from './dtos/signupDto';
 
 const router = Router();
@@ -95,6 +96,116 @@ router.delete("/users/:id", async (req: Request, res: Response, next: NextFuncti
     }
 });
 
+
+router.get("/reviews", async (req: Request, res: Response, next: NextFunction) => {
+    try {
+        const token = req.cookies.admin_token?.admin_token;
+        if (!token) {
+            res.status(401).json({ message: "Unauthorized." });
+            return;
+        }
+        const reviews = await getReviews(); // Fetch all reviews
+        res.status(200).json({ message: "Reviews fetched successfully.", reviews });
+    } catch (error) {
+        next(error);
+    }
+});
+
+// Get a single review by ID
+router.get("/reviews/:id",  async (req: Request, res: Response, next: NextFunction) => {
+    try {
+        const token = req.cookies.admin_token?.admin_token;
+        if (!token) {
+            res.status(401).json({ message: "Unauthorized." });
+            return;
+        }
+        const { id } = req.params;
+        const review = await getReviewById(Number(id)); // Fetch review by ID
+        res.status(200).json({ message: "Review fetched successfully.", review });
+    } catch (error) {
+        next(error);
+    }
+});
+
+// Delete a review by ID
+router.delete("/reviews/:id", async (req: Request, res: Response, next: NextFunction) => {
+    try {
+        const token = req.cookies.admin_token?.admin_token;
+        if (!token) {
+            res.status(401).json({ message: "Unauthorized." });
+            return;
+        }
+        const { id } = req.params;
+        await deleteReview(Number(id)); // Delete the review by ID
+        res.status(200).json({ message: "Review deleted successfully." });
+    } catch (error) {
+        next(error);
+    }
+});
+
+
+router.post("/movie", ValidateMiddleware(CreateMovieDto) ,  async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+    try {
+        const token = req.cookies.admin_token?.admin_token;
+        if (!token) {
+            res.status(401).json({ message: "Unauthorized." });
+            return;
+        }
+
+        const data: CreateMovieDto = req.body;
+
+        const result = await movieModel.create({
+            title: data.title,
+            description: data.description,
+            year: data.year,
+            genre: data.genre,
+            rate: data.rate,
+        });
+        
+
+        console.log(3)
+        res.status(200).json(result);
+    } catch (error) {
+        logger.error(error);
+        next(error);
+    }
+});
+
+router.put("/movie/:id" ,  async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+    try {
+        const movieId = parseInt(req.params.id);
+        const data: Partial<CreateMovieDto> = req.body;
+        const token = req.cookies.admin_token?.admin_token;
+        if (!token) {
+            res.status(401).json({ message: "Unauthorized." });
+            return;
+        }
+
+        // Update the movie with the provided data
+        const result = await updateMovie(movieId, data, token);
+        res.status(200).json(result);
+    } catch (error) {
+        logger.error(error);
+        next(error);
+    }
+});
+
+router.delete("/movie/:id" , async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+    try {
+        const movieId = parseInt(req.params.id);
+        const token = req.cookies.admin_token?.admin_token;
+        if (!token) {
+            res.status(401).json({ message: "Unauthorized." });
+            return;
+        }
+
+        const result = await deleteMovie(movieId, token);
+        res.status(200).json(result);
+    } catch (error) {
+        logger.error(error);
+        next(error);
+    }
+});
 
 // router.post("/signup",ValidateMiddleware(SignupDto) , async (req : Request , res : Response , next : NextFunction)=>{
 //     try{
