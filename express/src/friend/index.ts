@@ -1,7 +1,7 @@
 import friendController  from './friendController'
-// import * as friendController from './friendServices'
+import * as friendServices from './friendServices'
 
 export {
     friendController,
-    // reviewServices
+    friendServices
 }

@@ -1,7 +1,7 @@
 import { Router, Request, Response, NextFunction } from "express";
 import ValidateMiddleware from "../middlewares/validateMiddleware";
 import CreateReviewDto from "./dtos/createReviewDto";
-import { addReview ,getReviewsByFriendEmail , getUserFromToken ,checkExistingReview} from "./reviewServices";
+import { addReview ,getReviewsByFriendEmailWithInfo , getUserFromToken ,checkExistingReview} from "./reviewServices";
 import logger from "../helper/logger";
 
 const router = Router();
@@ -62,7 +62,7 @@ router.get("/review", async (req: Request, res: Response, next: NextFunction): P
             return;
         }
 
-        const user = getUserFromToken(token); // Use the new decode service
+        const user = getUserFromToken(token); // Use the getUserFromToken service
         const { email } = req.query;
 
         if (!email) {
@@ -71,8 +71,12 @@ router.get("/review", async (req: Request, res: Response, next: NextFunction): P
         }
 
         try {
-            const reviews = await getReviewsByFriendEmail(user.id, email as string);
-            res.status(200).json({ message: "Reviews fetched successfully.", reviews });
+            const { reviews, friendInfo } = await getReviewsByFriendEmailWithInfo(user.id, email as string);
+            res.status(200).json({
+                message: "Reviews fetched successfully.",
+                friend: friendInfo,
+                reviews,
+            });
         } catch (error) {
             res.status(403).json({ message: error });
         }
@@ -81,5 +85,6 @@ router.get("/review", async (req: Request, res: Response, next: NextFunction): P
         next(error);
     }
 });
+
 
 export default router;

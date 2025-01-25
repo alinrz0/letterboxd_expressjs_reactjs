@@ -523,3 +523,234 @@ notNull Violation: movie.rate cannot be null
 2025-01-24 21:27:04 info : Server is running on http://localhost:3000
 2025-01-24 21:27:04 info : Connection to the database has been established successfully.
 2025-01-24 21:27:04 info : Database tables are synchronized.
+2025-01-25 06:14:46 info : Server is running on http://localhost:3000
+2025-01-25 06:14:46 info : Connection to the database has been established successfully.
+2025-01-25 06:14:46 info : Database tables are synchronized.
+2025-01-25 06:17:43 info : Server is running on http://localhost:3000
+2025-01-25 06:17:44 info : Connection to the database has been established successfully.
+2025-01-25 06:17:44 info : Database tables are synchronized.
+2025-01-25 06:18:34 info : Server is running on http://localhost:3000
+2025-01-25 06:18:34 info : Connection to the database has been established successfully.
+2025-01-25 06:18:34 info : Database tables are synchronized.
+2025-01-25 06:18:56 info : Server is running on http://localhost:3000
+2025-01-25 06:18:56 info : Connection to the database has been established successfully.
+2025-01-25 06:18:56 info : Database tables are synchronized.
+2025-01-25 06:19:48 info : Server is running on http://localhost:3000
+2025-01-25 06:19:48 info : Connection to the database has been established successfully.
+2025-01-25 06:19:48 info : Database tables are synchronized.
+2025-01-25 06:20:00 info : Server is running on http://localhost:3000
+2025-01-25 06:20:00 info : Connection to the database has been established successfully.
+2025-01-25 06:20:00 info : Database tables are synchronized.
+2025-01-25 06:20:31 info : Server is running on http://localhost:3000
+2025-01-25 06:20:31 info : Connection to the database has been established successfully.
+2025-01-25 06:20:31 info : Database tables are synchronized.
+2025-01-25 06:22:36 info : Server is running on http://localhost:3000
+2025-01-25 06:22:36 info : Connection to the database has been established successfully.
+2025-01-25 06:22:36 info : Database tables are synchronized.
+2025-01-25 06:29:04 info : Server is running on http://localhost:3000
+2025-01-25 06:29:04 info : Connection to the database has been established successfully.
+2025-01-25 06:29:04 info : Database tables are synchronized.
+2025-01-25 06:31:44 info : Server is running on http://localhost:3000
+2025-01-25 06:31:44 info : Connection to the database has been established successfully.
+2025-01-25 06:31:44 info : Database tables are synchronized.
+2025-01-25 06:36:34 info : Server is running on http://localhost:3000
+2025-01-25 06:36:34 info : Connection to the database has been established successfully.
+2025-01-25 06:36:34 info : Database tables are synchronized.
+2025-01-25 06:36:54 info : Server is running on http://localhost:3000
+2025-01-25 06:36:54 info : Connection to the database has been established successfully.
+2025-01-25 06:36:54 info : Database tables are synchronized.
+2025-01-25 06:37:26 error : auth is not associated to friend!
+2025-01-25 06:37:26 error : auth is not associated to friend!
+2025-01-25 06:37:45 error : auth is not associated to friend!
+2025-01-25 06:37:45 error : auth is not associated to friend!
+2025-01-25 06:38:15 info : Server is running on http://localhost:3000
+2025-01-25 06:38:15 info : Connection to the database has been established successfully.
+2025-01-25 06:38:15 info : Database tables are synchronized.
+2025-01-25 06:38:16 error : auth is not associated to friend!
+2025-01-25 06:38:16 error : auth is not associated to friend!
+2025-01-25 06:38:35 info : Server is running on http://localhost:3000
+2025-01-25 06:38:35 info : Connection to the database has been established successfully.
+2025-01-25 06:38:35 info : Database tables are synchronized.
+2025-01-25 06:38:36 error : auth is not associated to friend!
+2025-01-25 06:38:36 error : auth is not associated to friend!
+2025-01-25 06:40:20 info : Server is running on http://localhost:3000
+2025-01-25 06:40:20 error : auth is not associated to friend!
+2025-01-25 06:40:20 error : auth is not associated to friend!
+2025-01-25 06:40:20 info : Connection to the database has been established successfully.
+2025-01-25 06:40:20 info : Database tables are synchronized.
+2025-01-25 06:40:20 error : auth is not associated to friend!
+2025-01-25 06:40:20 error : auth is not associated to friend!
+2025-01-25 06:40:41 info : Server is running on http://localhost:3000
+2025-01-25 06:40:41 info : Connection to the database has been established successfully.
+2025-01-25 06:40:41 info : Database tables are synchronized.
+2025-01-25 06:40:41 error : auth is not associated to friend!
+2025-01-25 06:40:41 error : auth is not associated to friend!
+2025-01-25 06:40:55 info : Server is running on http://localhost:3000
+2025-01-25 06:40:55 info : Connection to the database has been established successfully.
+2025-01-25 06:40:55 info : Database tables are synchronized.
+2025-01-25 06:40:56 error : auth is not associated to friend!
+2025-01-25 06:40:56 error : auth is not associated to friend!
+2025-01-25 06:43:21 info : Server is running on http://localhost:3000
+2025-01-25 06:43:22 info : Connection to the database has been established successfully.
+2025-01-25 06:43:22 info : Database tables are synchronized.
+2025-01-25 06:43:37 info : Server is running on http://localhost:3000
+2025-01-25 06:43:37 info : Connection to the database has been established successfully.
+2025-01-25 06:43:37 info : Database tables are synchronized.
+2025-01-25 06:44:29 info : Server is running on http://localhost:3000
+2025-01-25 06:44:29 info : Connection to the database has been established successfully.
+2025-01-25 06:44:29 info : Database tables are synchronized.
+2025-01-25 06:48:36 info : Server is running on http://localhost:3000
+2025-01-25 06:48:36 info : Connection to the database has been established successfully.
+2025-01-25 06:48:36 info : Database tables are synchronized.
+2025-01-25 06:49:30 info : Server is running on http://localhost:3000
+2025-01-25 06:49:30 info : Connection to the database has been established successfully.
+2025-01-25 06:49:30 info : Database tables are synchronized.
+2025-01-25 06:55:28 info : Server is running on http://localhost:3000
+2025-01-25 06:55:28 info : Connection to the database has been established successfully.
+2025-01-25 06:55:28 info : Database tables are synchronized.
+2025-01-25 06:55:54 error : Following connection not found.
+2025-01-25 06:55:54 error : Following connection not found.
+2025-01-25 06:56:19 error : Following connection not found.
+2025-01-25 06:56:19 error : Following connection not found.
+2025-01-25 06:56:23 error : Follower connection not found.
+2025-01-25 06:56:23 error : Follower connection not found.
+2025-01-25 06:57:58 info : Server is running on http://localhost:3000
+2025-01-25 06:57:58 info : Connection to the database has been established successfully.
+2025-01-25 06:57:58 info : Database tables are synchronized.
+2025-01-25 06:58:12 info : Server is running on http://localhost:3000
+2025-01-25 06:58:12 info : Connection to the database has been established successfully.
+2025-01-25 06:58:12 info : Database tables are synchronized.
+2025-01-25 07:02:07 info : Server is running on http://localhost:3000
+2025-01-25 07:02:07 info : Connection to the database has been established successfully.
+2025-01-25 07:02:07 info : Database tables are synchronized.
+2025-01-25 07:05:15 info : Server is running on http://localhost:3000
+2025-01-25 07:05:15 info : Connection to the database has been established successfully.
+2025-01-25 07:05:15 info : Database tables are synchronized.
+2025-01-25 07:05:50 info : Server is running on http://localhost:3000
+2025-01-25 07:05:50 info : Connection to the database has been established successfully.
+2025-01-25 07:05:50 info : Database tables are synchronized.
+2025-01-25 07:08:04 info : Server is running on http://localhost:3000
+2025-01-25 07:08:04 info : Connection to the database has been established successfully.
+2025-01-25 07:08:04 info : Database tables are synchronized.
+2025-01-25 07:08:26 info : Server is running on http://localhost:3000
+2025-01-25 07:08:26 info : Connection to the database has been established successfully.
+2025-01-25 07:08:26 info : Database tables are synchronized.
+2025-01-25 07:08:57 info : Server is running on http://localhost:3000
+2025-01-25 07:08:57 info : Connection to the database has been established successfully.
+2025-01-25 07:08:57 info : Database tables are synchronized.
+2025-01-25 07:09:44 info : Server is running on http://localhost:3000
+2025-01-25 07:09:44 info : Connection to the database has been established successfully.
+2025-01-25 07:09:44 info : Database tables are synchronized.
+2025-01-25 07:11:49 info : Server is running on http://localhost:3000
+2025-01-25 07:11:49 info : Connection to the database has been established successfully.
+2025-01-25 07:11:49 info : Database tables are synchronized.
+2025-01-25 07:12:09 info : Server is running on http://localhost:3000
+2025-01-25 07:12:09 info : Connection to the database has been established successfully.
+2025-01-25 07:12:09 info : Database tables are synchronized.
+2025-01-25 07:12:58 info : Server is running on http://localhost:3000
+2025-01-25 07:12:58 info : Connection to the database has been established successfully.
+2025-01-25 07:12:58 info : Database tables are synchronized.
+2025-01-25 07:13:57 info : Server is running on http://localhost:3000
+2025-01-25 07:13:57 info : Connection to the database has been established successfully.
+2025-01-25 07:13:57 info : Database tables are synchronized.
+2025-01-25 07:14:17 info : Server is running on http://localhost:3000
+2025-01-25 07:14:17 info : Connection to the database has been established successfully.
+2025-01-25 07:14:17 info : Database tables are synchronized.
+2025-01-25 07:18:36 info : Server is running on http://localhost:3000
+2025-01-25 07:18:36 info : Connection to the database has been established successfully.
+2025-01-25 07:18:36 info : Database tables are synchronized.
+2025-01-25 07:20:41 error : Friend request not found.
+2025-01-25 07:20:41 error : Friend request not found.
+2025-01-25 07:21:19 error : Friend request not found.
+2025-01-25 07:21:19 error : Friend request not found.
+2025-01-25 07:22:08 info : Server is running on http://localhost:3000
+2025-01-25 07:22:08 info : Connection to the database has been established successfully.
+2025-01-25 07:22:08 info : Database tables are synchronized.
+2025-01-25 07:23:06 error : Following connection not found.
+2025-01-25 07:23:06 error : Following connection not found.
+2025-01-25 07:23:09 error : Follower connection not found.
+2025-01-25 07:23:09 error : Follower connection not found.
+2025-01-25 07:45:27 info : Server is running on http://localhost:3000
+2025-01-25 07:45:27 info : Connection to the database has been established successfully.
+2025-01-25 07:45:27 info : Database tables are synchronized.
+2025-01-25 07:45:32 info : Server is running on http://localhost:3000
+2025-01-25 07:45:32 info : Connection to the database has been established successfully.
+2025-01-25 07:45:33 info : Database tables are synchronized.
+2025-01-25 07:55:58 info : Server is running on http://localhost:3000
+2025-01-25 07:55:58 info : Connection to the database has been established successfully.
+2025-01-25 07:55:58 info : Database tables are synchronized.
+2025-01-25 07:57:13 info : Server is running on http://localhost:3000
+2025-01-25 07:57:13 info : Connection to the database has been established successfully.
+2025-01-25 07:57:13 info : Database tables are synchronized.
+2025-01-25 08:04:02 info : Server is running on http://localhost:3000
+2025-01-25 08:04:03 info : Connection to the database has been established successfully.
+2025-01-25 08:04:03 info : Database tables are synchronized.
+2025-01-25 08:05:20 info : Server is running on http://localhost:3000
+2025-01-25 08:05:20 info : Connection to the database has been established successfully.
+2025-01-25 08:05:20 info : Database tables are synchronized.
+2025-01-25 08:05:59 info : Server is running on http://localhost:3000
+2025-01-25 08:05:59 info : Connection to the database has been established successfully.
+2025-01-25 08:05:59 info : Database tables are synchronized.
+2025-01-25 08:08:31 info : Server is running on http://localhost:3000
+2025-01-25 08:08:31 info : Connection to the database has been established successfully.
+2025-01-25 08:08:31 info : Database tables are synchronized.
+2025-01-25 08:09:05 info : Server is running on http://localhost:3000
+2025-01-25 08:09:06 info : Connection to the database has been established successfully.
+2025-01-25 08:09:06 info : Database tables are synchronized.
+2025-01-25 08:09:53 info : Server is running on http://localhost:3000
+2025-01-25 08:09:53 info : Connection to the database has been established successfully.
+2025-01-25 08:09:53 info : Database tables are synchronized.
+2025-01-25 08:10:07 info : Server is running on http://localhost:3000
+2025-01-25 08:10:07 info : Connection to the database has been established successfully.
+2025-01-25 08:10:07 info : Database tables are synchronized.
+2025-01-25 08:10:23 info : Server is running on http://localhost:3000
+2025-01-25 08:10:23 info : Connection to the database has been established successfully.
+2025-01-25 08:10:23 info : Database tables are synchronized.
+2025-01-25 08:10:44 info : Server is running on http://localhost:3000
+2025-01-25 08:10:44 info : Connection to the database has been established successfully.
+2025-01-25 08:10:45 info : Database tables are synchronized.
+2025-01-25 08:11:10 info : Server is running on http://localhost:3000
+2025-01-25 08:11:10 info : Connection to the database has been established successfully.
+2025-01-25 08:11:10 info : Database tables are synchronized.
+2025-01-25 08:11:47 info : Server is running on http://localhost:3000
+2025-01-25 08:11:47 info : Connection to the database has been established successfully.
+2025-01-25 08:11:47 info : Database tables are synchronized.
+2025-01-25 08:12:20 info : Server is running on http://localhost:3000
+2025-01-25 08:12:20 info : Connection to the database has been established successfully.
+2025-01-25 08:12:20 info : Database tables are synchronized.
+2025-01-25 08:13:57 info : Server is running on http://localhost:3000
+2025-01-25 08:13:57 info : Connection to the database has been established successfully.
+2025-01-25 08:13:57 info : Database tables are synchronized.
+2025-01-25 08:18:59 info : Server is running on http://localhost:3000
+2025-01-25 08:18:59 info : Connection to the database has been established successfully.
+2025-01-25 08:18:59 info : Database tables are synchronized.
+2025-01-25 08:22:57 info : Server is running on http://localhost:3000
+2025-01-25 08:22:57 info : Connection to the database has been established successfully.
+2025-01-25 08:22:57 info : Database tables are synchronized.
+2025-01-25 08:23:25 info : Server is running on http://localhost:3000
+2025-01-25 08:23:25 info : Connection to the database has been established successfully.
+2025-01-25 08:23:25 info : Database tables are synchronized.
+2025-01-25 08:23:42 info : Server is running on http://localhost:3000
+2025-01-25 08:23:42 info : Connection to the database has been established successfully.
+2025-01-25 08:23:42 info : Database tables are synchronized.
+2025-01-25 08:24:42 info : Server is running on http://localhost:3000
+2025-01-25 08:24:42 info : Connection to the database has been established successfully.
+2025-01-25 08:24:42 info : Database tables are synchronized.
+2025-01-25 08:25:51 info : Server is running on http://localhost:3000
+2025-01-25 08:25:51 info : Connection to the database has been established successfully.
+2025-01-25 08:25:51 info : Database tables are synchronized.
+2025-01-25 08:28:55 info : Server is running on http://localhost:3000
+2025-01-25 08:28:55 info : Connection to the database has been established successfully.
+2025-01-25 08:28:55 info : Database tables are synchronized.
+2025-01-25 08:29:16 info : Server is running on http://localhost:3000
+2025-01-25 08:29:16 info : Connection to the database has been established successfully.
+2025-01-25 08:29:16 info : Database tables are synchronized.
+2025-01-25 08:29:43 info : Server is running on http://localhost:3000
+2025-01-25 08:29:43 info : Connection to the database has been established successfully.
+2025-01-25 08:29:43 info : Database tables are synchronized.
+2025-01-25 08:30:06 info : Server is running on http://localhost:3000
+2025-01-25 08:30:06 info : Connection to the database has been established successfully.
+2025-01-25 08:30:07 info : Database tables are synchronized.
+2025-01-25 08:31:33 info : Server is running on http://localhost:3000
+2025-01-25 08:31:33 info : Connection to the database has been established successfully.
+2025-01-25 08:31:33 info : Database tables are synchronized.

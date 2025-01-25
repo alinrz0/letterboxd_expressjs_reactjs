@@ -52,7 +52,7 @@ export const addReview = async (
 
 
 // Fetch reviews if users are friends
-export const getReviewsByFriendEmail = async (user_id: number, friend_email: string) => {
+export const getReviewsByFriendEmailWithInfo = async (user_id: number, friend_email: string) => {
     // Find the friend by email
     const friend = await UserModel.findOne({ where: { email: friend_email } });
     if (!friend) {
@@ -79,8 +79,16 @@ export const getReviewsByFriendEmail = async (user_id: number, friend_email: str
         attributes: ["movie_id", "review", "rating", "createdAt"],
     });
 
-    return reviews;
+    // Return reviews along with the friend's name and email
+    return {
+        friendInfo: {
+            name: friend.name,
+            email: friend.email,
+        },
+        reviews,
+    };
 };
+
 
 
 export const getUserFromToken = (token: string) => {

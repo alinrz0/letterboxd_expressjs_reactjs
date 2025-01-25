@@ -9,6 +9,7 @@ import {authControllers} from './auth';
 import {movieControllers} from './movie';
 import {reviewControllers} from './review';
 import {friendController} from './friend';
+import {profileController} from './profile';
 
 import ErrorHandelingMid  from './middlewares/ErrorHandelingMid';
 
@@ -37,8 +38,8 @@ initializeDatabase();
 app.use("/" ,authControllers);
 app.use("/movies" ,movieControllers);
 app.use("/" ,reviewControllers);
-app.use("/" ,friendController);
-
+app.use("/friend" ,friendController);
+app.use("/profile" ,profileController);
 
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 

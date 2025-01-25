@@ -202,3 +202,33 @@ notNull Violation: movie.rate cannot be null
 2025-01-24 21:01:01 error : Friend request not found.
 2025-01-24 21:24:36 error : Movie not found.
 2025-01-24 21:24:36 error : Movie not found.
+2025-01-25 06:37:26 error : auth is not associated to friend!
+2025-01-25 06:37:26 error : auth is not associated to friend!
+2025-01-25 06:37:45 error : auth is not associated to friend!
+2025-01-25 06:37:45 error : auth is not associated to friend!
+2025-01-25 06:38:16 error : auth is not associated to friend!
+2025-01-25 06:38:16 error : auth is not associated to friend!
+2025-01-25 06:38:36 error : auth is not associated to friend!
+2025-01-25 06:38:36 error : auth is not associated to friend!
+2025-01-25 06:40:20 error : auth is not associated to friend!
+2025-01-25 06:40:20 error : auth is not associated to friend!
+2025-01-25 06:40:20 error : auth is not associated to friend!
+2025-01-25 06:40:20 error : auth is not associated to friend!
+2025-01-25 06:40:41 error : auth is not associated to friend!
+2025-01-25 06:40:41 error : auth is not associated to friend!
+2025-01-25 06:40:56 error : auth is not associated to friend!
+2025-01-25 06:40:56 error : auth is not associated to friend!
+2025-01-25 06:55:54 error : Following connection not found.
+2025-01-25 06:55:54 error : Following connection not found.
+2025-01-25 06:56:19 error : Following connection not found.
+2025-01-25 06:56:19 error : Following connection not found.
+2025-01-25 06:56:23 error : Follower connection not found.
+2025-01-25 06:56:23 error : Follower connection not found.
+2025-01-25 07:20:41 error : Friend request not found.
+2025-01-25 07:20:41 error : Friend request not found.
+2025-01-25 07:21:19 error : Friend request not found.
+2025-01-25 07:21:19 error : Friend request not found.
+2025-01-25 07:23:06 error : Following connection not found.
+2025-01-25 07:23:06 error : Following connection not found.
+2025-01-25 07:23:09 error : Follower connection not found.
+2025-01-25 07:23:09 error : Follower connection not found.

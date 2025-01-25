@@ -5,6 +5,14 @@ import {
     createFriendRequest,
     getPendingFriendRequests,
     acceptFriendRequest,
+    rejectFriendRequest,
+    getUserFromToken,
+    getFollowers,
+    getFollowing,
+    deleteFollower,
+    deleteFollowing,
+    getFollowersOfFriend,
+    getFollowingOfFriend
 } from "./friendServices";
 import { decodeToken } from "../utils/index";
 import logger from "../helper/logger";
@@ -98,5 +106,191 @@ router.put("/accept-friend", async (req: Request, res: Response, next: NextFunct
         next(error);
     }
 });
+
+
+router.put("/reject-friend", async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+    try {
+        const token = req.cookies.token?.token;
+        if (!token) {
+            res.status(401).json({ message: "Token not found or invalid" });
+            return;
+        }
+
+        const user = decodeToken(token);
+        const { email } = req.body;
+
+        if (!email) {
+            res.status(400).json({ message: "Email is required." });
+            return;
+        }
+
+        const friend = await findFriendByEmail(email);
+
+        const friendRequest = await rejectFriendRequest(friend.id, user.id);
+
+        res.status(200).json({ message: "Friend request rejected.", friendRequest });
+    } catch (error) {
+        logger.error(error);
+        next(error);
+    }
+});
+
+
+
+router.get("/followers", async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+    try {
+        const token = req.cookies.token?.token;
+
+        if (!token) {
+            res.status(401).json({ message: "Token not found or invalid." });
+            return;
+        }
+
+        const user = getUserFromToken(token);
+        const followers = await getFollowers(user.id);
+        res.status(200).json({
+            message: "Followers fetched successfully.",
+            followers,
+        });
+    } catch (error) {
+        logger.error(error);
+        next(error);
+    }
+});
+
+// Get Following
+router.get("/following", async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+    try {
+        const token = req.cookies.token?.token;
+
+        if (!token) {
+            res.status(401).json({ message: "Token not found or invalid." });
+            return;
+        }
+
+        const user = getUserFromToken(token);
+        const following = await getFollowing(user.id);
+
+        res.status(200).json({
+            message: "Following fetched successfully.",
+            following,
+        });
+    } catch (error) {
+        logger.error(error);
+        next(error);
+    }
+});
+
+// Delete a Follower
+router.get("/delete-connection/follower", async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+    try {
+        const token = req.cookies.token?.token;
+
+        if (!token) {
+            res.status(401).json({ message: "Token not found or invalid." });
+            return;
+        }
+
+        const user = getUserFromToken(token);
+        const { email } = req.query;
+
+        if (!email) {
+            res.status(400).json({ message: "Email query parameter is required." });
+            return;
+        }
+
+        const result = await deleteFollower(user.id, email as string);
+
+        res.status(200).json(result);
+    } catch (error) {
+        logger.error(error);
+        next(error);
+    }
+});
+
+// Delete a Following
+router.get("/delete-connection/following", async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+    try {
+        const token = req.cookies.token?.token;
+
+        if (!token) {
+            res.status(401).json({ message: "Token not found or invalid." });
+            return;
+        }
+
+        const user = getUserFromToken(token);
+        const { email } = req.query;
+
+        if (!email) {
+            res.status(400).json({ message: "Email query parameter is required." });
+            return;
+        }
+
+        const result = await deleteFollowing(user.id, email as string);
+
+        res.status(200).json(result);
+    } catch (error) {
+        logger.error(error);
+        next(error);
+    }
+});
+
+router.get("/followers-of", async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+    try {
+        const token = req.cookies.token?.token;
+
+        if (!token) {
+            res.status(401).json({ message: "Token not found or invalid." });
+            return;
+        }
+
+        const user = getUserFromToken(token);
+        const { email } = req.query;
+        if (!email) {
+            res.status(400).json({ message: "Email query parameter is required." });
+            return;
+        }
+
+        try {
+            const followers = await getFollowersOfFriend(user.id, email as string);
+            res.status(200).json({ message: "Followers fetched successfully.", followers });
+        } catch (error) {
+            res.status(403).json({ message: error });
+        }
+    } catch (error) {
+        logger.error(error);
+        next(error);
+    }
+});
+
+router.get("/following-of", async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+    try {
+        const token = req.cookies.token?.token;
+
+        if (!token) {
+            res.status(401).json({ message: "Token not found or invalid." });
+            return;
+        }
+
+        const user = getUserFromToken(token); // Decode user from token
+        const { email } = req.query;
+
+        if (!email) {
+            res.status(400).json({ message: "Email query parameter is required." });
+            return;
+        }
+
+        try {
+            const following = await getFollowingOfFriend(user.id, email as string);
+            res.status(200).json({ message: "Following list fetched successfully.", following });
+        } catch (error) {
+            res.status(403).json({ message: error });
+        }
+    } catch (error) {
+        logger.error(error);
+        next(error);
+    }
+});
+
 
 export default router;
