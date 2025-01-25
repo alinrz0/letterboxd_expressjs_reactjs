@@ -1,4 +1,4 @@
-import { encodeToken, decodeToken } from './../utils/index';
+import { encodeToken} from './../utils/index';
 import UsersModel from "../models/usersModel";
 import LoginDto from "./dtos/loginDto";
 import SignupDto from "./dtos/signupDto";

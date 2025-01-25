@@ -10,6 +10,7 @@ import {movieControllers} from './movie';
 import {reviewControllers} from './review';
 import {friendController} from './friend';
 import {profileController} from './profile';
+import {adminControllers} from './admin';
 
 import ErrorHandelingMid  from './middlewares/ErrorHandelingMid';
 
@@ -40,6 +41,7 @@ app.use("/movies" ,movieControllers);
 app.use("/" ,reviewControllers);
 app.use("/friend" ,friendController);
 app.use("/profile" ,profileController);
+app.use("/admin" ,adminControllers);
 
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 

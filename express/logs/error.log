@@ -232,3 +232,9 @@ notNull Violation: movie.rate cannot be null
 2025-01-25 07:23:06 error : Following connection not found.
 2025-01-25 07:23:09 error : Follower connection not found.
 2025-01-25 07:23:09 error : Follower connection not found.
+2025-01-25 14:39:02 error : Cannot delete or update a parent row: a foreign key constraint fails (`imdb`.`friends`, CONSTRAINT `friend_id` FOREIGN KEY (`id`) REFERENCES `auths` (`id`))
+2025-01-25 14:39:04 error : Cannot delete or update a parent row: a foreign key constraint fails (`imdb`.`friends`, CONSTRAINT `friend_id` FOREIGN KEY (`id`) REFERENCES `auths` (`id`))
+2025-01-25 14:40:11 error : Cannot delete or update a parent row: a foreign key constraint fails (`imdb`.`friends`, CONSTRAINT `friend_id` FOREIGN KEY (`id`) REFERENCES `auths` (`id`))
+2025-01-25 14:42:07 error : Cannot delete or update a parent row: a foreign key constraint fails (`imdb`.`friends`, CONSTRAINT `friend_id` FOREIGN KEY (`id`) REFERENCES `auths` (`id`))
+2025-01-25 14:42:50 error : Cannot delete or update a parent row: a foreign key constraint fails (`imdb`.`friends`, CONSTRAINT `friend_id` FOREIGN KEY (`id`) REFERENCES `auths` (`id`))
+2025-01-25 14:47:10 error : Cannot delete or update a parent row: a foreign key constraint fails (`imdb`.`friends`, CONSTRAINT `friend_id` FOREIGN KEY (`id`) REFERENCES `auths` (`id`))
