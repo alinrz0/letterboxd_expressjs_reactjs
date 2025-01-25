@@ -35,6 +35,8 @@ import {
     @IsPositive({ message: "Rate must be a positive number." })
     @IsNotEmpty({ message: "Rate cannot be empty." })
     rate!: number;
+
+    poster!:string;
   }
   
   export default CreateMovieDto;

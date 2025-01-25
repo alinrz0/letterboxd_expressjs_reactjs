@@ -900,3 +900,226 @@ notNull Violation: movie.rate cannot be null
 2025-01-25 16:56:29 info : Database tables are synchronized.
 2025-01-25 16:56:52 error : Movie not found or you do not have permission to delete it
 2025-01-25 16:56:52 error : Movie not found or you do not have permission to delete it
+2025-01-25 17:13:10 info : Server is running on http://localhost:3000
+2025-01-25 17:13:10 info : Connection to the database has been established successfully.
+2025-01-25 17:13:10 info : Database tables are synchronized.
+2025-01-25 17:13:11 error : ENOENT: no such file or directory, open 'C:\Users\alino\Desktop\uni\net\HW\project\letterboxd_expressjs_reactjs\express\src\uploads\1737812591342.jpg'
+2025-01-25 17:17:54 info : Server is running on http://localhost:3000
+2025-01-25 17:17:54 info : Connection to the database has been established successfully.
+2025-01-25 17:17:54 info : Database tables are synchronized.
+2025-01-25 17:18:20 info : Server is running on http://localhost:3000
+2025-01-25 17:18:20 info : Connection to the database has been established successfully.
+2025-01-25 17:18:20 info : Database tables are synchronized.
+2025-01-25 17:18:20 error : ENOENT: no such file or directory, open 'C:\Users\alino\Desktop\uni\net\HW\project\letterboxd_expressjs_reactjs\express\src\uploads\1737812900990.jpg'
+2025-01-25 17:18:22 error : ENOENT: no such file or directory, open 'C:\Users\alino\Desktop\uni\net\HW\project\letterboxd_expressjs_reactjs\express\src\uploads\1737812902241.jpg'
+2025-01-25 17:20:01 info : Server is running on http://localhost:3000
+2025-01-25 17:20:01 info : Connection to the database has been established successfully.
+2025-01-25 17:20:01 info : Database tables are synchronized.
+2025-01-25 17:20:04 error : ENOENT: no such file or directory, open 'C:\Users\alino\Desktop\uni\net\HW\project\letterboxd_expressjs_reactjs\express\src\uploads\1737813004344.jpg'
+2025-01-25 17:20:06 error : ENOENT: no such file or directory, open 'C:\Users\alino\Desktop\uni\net\HW\project\letterboxd_expressjs_reactjs\express\src\uploads\1737813006013.jpg'
+2025-01-25 17:21:07 info : Server is running on http://localhost:3000
+2025-01-25 17:21:07 info : Connection to the database has been established successfully.
+2025-01-25 17:21:07 info : Database tables are synchronized.
+2025-01-25 17:21:08 error : ENOENT: no such file or directory, open 'C:\Users\alino\Desktop\uni\net\HW\project\letterboxd_expressjs_reactjs\express\src\uploads\1737813068407.jpg'
+2025-01-25 17:21:10 error : ENOENT: no such file or directory, open 'C:\Users\alino\Desktop\uni\net\HW\project\letterboxd_expressjs_reactjs\express\src\uploads\1737813070355.jpg'
+2025-01-25 17:22:07 info : Server is running on http://localhost:3000
+2025-01-25 17:22:07 info : Connection to the database has been established successfully.
+2025-01-25 17:22:07 info : Database tables are synchronized.
+2025-01-25 17:22:08 error : ENOENT: no such file or directory, open 'C:\Users\alino\Desktop\uni\net\HW\project\letterboxd_expressjs_reactjs\express\src\uploads\1737813128820.jpg'
+2025-01-25 17:22:37 info : Server is running on http://localhost:3000
+2025-01-25 17:22:37 info : Connection to the database has been established successfully.
+2025-01-25 17:22:37 info : Database tables are synchronized.
+2025-01-25 17:22:37 error : ENOENT: no such file or directory, open 'C:\Users\alino\Desktop\uni\net\HW\project\letterboxd_expressjs_reactjs\express\src\uploads\1737813157746.jpg'
+2025-01-25 17:24:38 error : ENOENT: no such file or directory, open 'C:\Users\alino\Desktop\uni\net\HW\project\letterboxd_expressjs_reactjs\express\src\uploads\1737813278598.jpg'
+2025-01-25 17:28:02 info : Server is running on http://localhost:3000
+2025-01-25 17:28:02 info : Connection to the database has been established successfully.
+2025-01-25 17:28:02 info : Database tables are synchronized.
+2025-01-25 17:29:25 error : Movie not found or you do not have permission to update it
+2025-01-25 17:29:25 error : Movie not found or you do not have permission to update it
+2025-01-25 17:31:04 info : Server is running on http://localhost:3000
+2025-01-25 17:31:04 info : Connection to the database has been established successfully.
+2025-01-25 17:31:04 info : Database tables are synchronized.
+2025-01-25 17:38:18 info : Server is running on http://localhost:3000
+2025-01-25 17:38:18 info : Connection to the database has been established successfully.
+2025-01-25 17:38:18 info : Database tables are synchronized.
+2025-01-25 19:49:25 info : Server is running on http://localhost:3000
+2025-01-25 19:49:26 info : Connection to the database has been established successfully.
+2025-01-25 19:49:26 info : Database tables are synchronized.
+2025-01-25 19:56:18 info : Server is running on http://localhost:3000
+2025-01-25 19:56:18 info : Connection to the database has been established successfully.
+2025-01-25 19:56:18 info : Database tables are synchronized.
+2025-01-25 19:56:56 error : Unexpected field
+2025-01-25 19:57:07 error : Unexpected field
+2025-01-25 19:57:24 error : Unexpected field
+2025-01-25 19:57:31 error : Unexpected field
+2025-01-25 19:57:38 error : Unexpected field
+2025-01-25 20:00:22 error : Unexpected field
+2025-01-25 20:01:04 info : Server is running on http://localhost:3000
+2025-01-25 20:01:04 info : Connection to the database has been established successfully.
+2025-01-25 20:01:05 info : Database tables are synchronized.
+2025-01-25 20:01:06 error : Unexpected field
+2025-01-25 20:01:46 info : Server is running on http://localhost:3000
+2025-01-25 20:01:46 info : Connection to the database has been established successfully.
+2025-01-25 20:01:46 info : Database tables are synchronized.
+2025-01-25 20:01:48 error : Unexpected field
+2025-01-25 20:02:31 info : Server is running on http://localhost:3000
+2025-01-25 20:02:32 info : Connection to the database has been established successfully.
+2025-01-25 20:02:32 info : Database tables are synchronized.
+2025-01-25 20:02:32 error : Unexpected field
+2025-01-25 20:02:57 info : Server is running on http://localhost:3000
+2025-01-25 20:02:57 info : Connection to the database has been established successfully.
+2025-01-25 20:02:57 info : Database tables are synchronized.
+2025-01-25 20:02:57 error : Unexpected field
+2025-01-25 20:03:22 error : Unknown column 'createdAt' in 'field list'
+2025-01-25 20:03:22 error : Unknown column 'createdAt' in 'field list'
+2025-01-25 20:04:27 error : Cannot add or update a child row: a foreign key constraint fails (`imdb`.`images`, CONSTRAINT `movie_id` FOREIGN KEY (`id`) REFERENCES `movies` (`id`))
+2025-01-25 20:04:27 error : Cannot add or update a child row: a foreign key constraint fails (`imdb`.`images`, CONSTRAINT `movie_id` FOREIGN KEY (`id`) REFERENCES `movies` (`id`))
+2025-01-25 20:07:11 info : Server is running on http://localhost:3000
+2025-01-25 20:07:11 info : Connection to the database has been established successfully.
+2025-01-25 20:07:11 info : Database tables are synchronized.
+2025-01-25 20:07:26 info : Server is running on http://localhost:3000
+2025-01-25 20:07:26 info : Connection to the database has been established successfully.
+2025-01-25 20:07:26 info : Database tables are synchronized.
+2025-01-25 20:07:26 error : Cannot add or update a child row: a foreign key constraint fails (`imdb`.`images`, CONSTRAINT `movie_id` FOREIGN KEY (`id`) REFERENCES `movies` (`id`))
+2025-01-25 20:07:26 error : Cannot add or update a child row: a foreign key constraint fails (`imdb`.`images`, CONSTRAINT `movie_id` FOREIGN KEY (`id`) REFERENCES `movies` (`id`))
+2025-01-25 20:08:49 info : Server is running on http://localhost:3000
+2025-01-25 20:08:49 info : Connection to the database has been established successfully.
+2025-01-25 20:08:49 info : Database tables are synchronized.
+2025-01-25 20:08:49 error : Cannot add or update a child row: a foreign key constraint fails (`imdb`.`images`, CONSTRAINT `movie_id` FOREIGN KEY (`id`) REFERENCES `movies` (`id`))
+2025-01-25 20:08:49 error : Cannot add or update a child row: a foreign key constraint fails (`imdb`.`images`, CONSTRAINT `movie_id` FOREIGN KEY (`id`) REFERENCES `movies` (`id`))
+2025-01-25 20:11:34 info : Server is running on http://localhost:3000
+2025-01-25 20:11:34 info : Connection to the database has been established successfully.
+2025-01-25 20:11:34 error : Cannot add or update a child row: a foreign key constraint fails (`imdb`.`images`, CONSTRAINT `movie_id` FOREIGN KEY (`id`) REFERENCES `movies` (`id`))
+2025-01-25 20:11:34 error : Cannot add or update a child row: a foreign key constraint fails (`imdb`.`images`, CONSTRAINT `movie_id` FOREIGN KEY (`id`) REFERENCES `movies` (`id`))
+2025-01-25 20:11:34 info : Database tables are synchronized.
+2025-01-25 20:12:15 info : Server is running on http://localhost:3000
+2025-01-25 20:12:15 info : Connection to the database has been established successfully.
+2025-01-25 20:12:15 info : Database tables are synchronized.
+2025-01-25 20:12:15 error : Cannot add or update a child row: a foreign key constraint fails (`imdb`.`images`, CONSTRAINT `movie_id` FOREIGN KEY (`id`) REFERENCES `movies` (`id`))
+2025-01-25 20:12:15 error : Cannot add or update a child row: a foreign key constraint fails (`imdb`.`images`, CONSTRAINT `movie_id` FOREIGN KEY (`id`) REFERENCES `movies` (`id`))
+2025-01-25 20:14:11 info : Server is running on http://localhost:3000
+2025-01-25 20:14:11 info : Connection to the database has been established successfully.
+2025-01-25 20:14:11 info : Database tables are synchronized.
+2025-01-25 20:14:12 error : Cannot add or update a child row: a foreign key constraint fails (`imdb`.`images`, CONSTRAINT `movie_id` FOREIGN KEY (`id`) REFERENCES `movies` (`id`))
+2025-01-25 20:14:12 error : Cannot add or update a child row: a foreign key constraint fails (`imdb`.`images`, CONSTRAINT `movie_id` FOREIGN KEY (`id`) REFERENCES `movies` (`id`))
+2025-01-25 20:14:51 info : Server is running on http://localhost:3000
+2025-01-25 20:14:51 info : Connection to the database has been established successfully.
+2025-01-25 20:14:51 info : Database tables are synchronized.
+2025-01-25 20:14:52 error : Cannot add or update a child row: a foreign key constraint fails (`imdb`.`images`, CONSTRAINT `movie_id` FOREIGN KEY (`id`) REFERENCES `movies` (`id`))
+2025-01-25 20:14:52 error : Cannot add or update a child row: a foreign key constraint fails (`imdb`.`images`, CONSTRAINT `movie_id` FOREIGN KEY (`id`) REFERENCES `movies` (`id`))
+2025-01-25 20:16:23 info : Server is running on http://localhost:3000
+2025-01-25 20:16:23 info : Connection to the database has been established successfully.
+2025-01-25 20:16:23 error : Cannot add or update a child row: a foreign key constraint fails (`imdb`.`images`, CONSTRAINT `movie_id` FOREIGN KEY (`id`) REFERENCES `movies` (`id`))
+2025-01-25 20:16:23 error : Cannot add or update a child row: a foreign key constraint fails (`imdb`.`images`, CONSTRAINT `movie_id` FOREIGN KEY (`id`) REFERENCES `movies` (`id`))
+2025-01-25 20:16:23 info : Database tables are synchronized.
+2025-01-25 20:17:45 info : Server is running on http://localhost:3000
+2025-01-25 20:17:45 info : Connection to the database has been established successfully.
+2025-01-25 20:17:45 info : Database tables are synchronized.
+2025-01-25 20:17:46 error : Cannot add or update a child row: a foreign key constraint fails (`imdb`.`images`, CONSTRAINT `movie_id` FOREIGN KEY (`id`) REFERENCES `movies` (`id`))
+2025-01-25 20:17:46 error : Cannot add or update a child row: a foreign key constraint fails (`imdb`.`images`, CONSTRAINT `movie_id` FOREIGN KEY (`id`) REFERENCES `movies` (`id`))
+2025-01-25 20:18:13 info : Server is running on http://localhost:3000
+2025-01-25 20:18:13 info : Connection to the database has been established successfully.
+2025-01-25 20:18:13 info : Database tables are synchronized.
+2025-01-25 20:18:35 info : Server is running on http://localhost:3000
+2025-01-25 20:18:35 info : Connection to the database has been established successfully.
+2025-01-25 20:18:35 info : Database tables are synchronized.
+2025-01-25 20:18:35 error : Cannot add or update a child row: a foreign key constraint fails (`imdb`.`images`, CONSTRAINT `movie_id` FOREIGN KEY (`id`) REFERENCES `movies` (`id`))
+2025-01-25 20:18:35 error : Cannot add or update a child row: a foreign key constraint fails (`imdb`.`images`, CONSTRAINT `movie_id` FOREIGN KEY (`id`) REFERENCES `movies` (`id`))
+2025-01-25 20:22:50 info : Server is running on http://localhost:3000
+2025-01-25 20:22:50 info : Connection to the database has been established successfully.
+2025-01-25 20:22:50 info : Database tables are synchronized.
+2025-01-25 20:22:53 error : Cannot add or update a child row: a foreign key constraint fails (`imdb`.`images`, CONSTRAINT `movie_id` FOREIGN KEY (`id`) REFERENCES `movies` (`id`))
+2025-01-25 20:22:53 error : Cannot add or update a child row: a foreign key constraint fails (`imdb`.`images`, CONSTRAINT `movie_id` FOREIGN KEY (`id`) REFERENCES `movies` (`id`))
+2025-01-25 20:23:29 info : Server is running on http://localhost:3000
+2025-01-25 20:23:29 info : Connection to the database has been established successfully.
+2025-01-25 20:23:30 info : Database tables are synchronized.
+2025-01-25 20:23:30 error : Cannot add or update a child row: a foreign key constraint fails (`imdb`.`images`, CONSTRAINT `movie_id` FOREIGN KEY (`id`) REFERENCES `movies` (`id`))
+2025-01-25 20:23:30 error : Cannot add or update a child row: a foreign key constraint fails (`imdb`.`images`, CONSTRAINT `movie_id` FOREIGN KEY (`id`) REFERENCES `movies` (`id`))
+2025-01-25 20:25:47 info : Server is running on http://localhost:3000
+2025-01-25 20:25:47 info : Connection to the database has been established successfully.
+2025-01-25 20:25:47 info : Database tables are synchronized.
+2025-01-25 20:25:48 error : Cannot add or update a child row: a foreign key constraint fails (`imdb`.`images`, CONSTRAINT `movie_id` FOREIGN KEY (`id`) REFERENCES `movies` (`id`))
+2025-01-25 20:25:48 error : Cannot add or update a child row: a foreign key constraint fails (`imdb`.`images`, CONSTRAINT `movie_id` FOREIGN KEY (`id`) REFERENCES `movies` (`id`))
+2025-01-25 20:27:53 info : Server is running on http://localhost:3000
+2025-01-25 20:27:53 info : Connection to the database has been established successfully.
+2025-01-25 20:27:53 info : Database tables are synchronized.
+2025-01-25 20:27:54 error : Cannot add or update a child row: a foreign key constraint fails (`imdb`.`images`, CONSTRAINT `movie_id` FOREIGN KEY (`id`) REFERENCES `movies` (`id`))
+2025-01-25 20:29:42 info : Server is running on http://localhost:3000
+2025-01-25 20:29:42 info : Connection to the database has been established successfully.
+2025-01-25 20:29:42 info : Database tables are synchronized.
+2025-01-25 20:29:50 info : Server is running on http://localhost:3000
+2025-01-25 20:29:50 info : Connection to the database has been established successfully.
+2025-01-25 20:29:50 info : Database tables are synchronized.
+2025-01-25 20:31:56 info : Server is running on http://localhost:3000
+2025-01-25 20:31:56 info : Connection to the database has been established successfully.
+2025-01-25 20:31:56 info : Database tables are synchronized.
+2025-01-25 20:32:10 error : image is not associated to movie!
+2025-01-25 20:35:43 error : image is not associated to movie!
+2025-01-25 20:36:12 info : Server is running on http://localhost:3000
+2025-01-25 20:36:12 info : Connection to the database has been established successfully.
+2025-01-25 20:36:12 info : Database tables are synchronized.
+2025-01-25 20:36:17 error : image is not associated to movie!
+2025-01-25 20:36:18 error : image is not associated to movie!
+2025-01-25 20:38:55 info : Server is running on http://localhost:3000
+2025-01-25 20:38:56 info : Connection to the database has been established successfully.
+2025-01-25 20:38:56 info : Database tables are synchronized.
+2025-01-25 20:51:15 info : Server is running on http://localhost:3000
+2025-01-25 20:51:15 info : Connection to the database has been established successfully.
+2025-01-25 20:51:15 info : Database tables are synchronized.
+2025-01-25 20:53:21 info : Server is running on http://localhost:3000
+2025-01-25 20:53:21 info : Connection to the database has been established successfully.
+2025-01-25 20:53:21 info : Database tables are synchronized.
+2025-01-25 20:53:45 error : ENOENT: no such file or directory, scandir '../images'
+2025-01-25 20:54:17 error : ENOENT: no such file or directory, scandir '../images'
+2025-01-25 20:54:18 error : ENOENT: no such file or directory, scandir '../images'
+2025-01-25 20:54:19 error : ENOENT: no such file or directory, scandir '../images'
+2025-01-25 20:55:07 info : Server is running on http://localhost:3000
+2025-01-25 20:55:07 info : Connection to the database has been established successfully.
+2025-01-25 20:55:07 info : Database tables are synchronized.
+2025-01-25 20:55:07 error : ENOENT: no such file or directory, scandir 'C:\Users\alino\Desktop\uni\net\HW\project\letterboxd_expressjs_reactjs\express\src\movie\images'
+2025-01-25 20:55:40 info : Server is running on http://localhost:3000
+2025-01-25 20:55:40 info : Connection to the database has been established successfully.
+2025-01-25 20:55:40 info : Database tables are synchronized.
+2025-01-25 20:55:41 error : ENOENT: no such file or directory, scandir 'C:\Users\alino\Desktop\uni\net\HW\project\letterboxd_expressjs_reactjs\express\src\movie\images'
+2025-01-25 20:56:06 info : Server is running on http://localhost:3000
+2025-01-25 20:56:06 info : Connection to the database has been established successfully.
+2025-01-25 20:56:06 info : Database tables are synchronized.
+2025-01-25 20:56:20 info : Server is running on http://localhost:3000
+2025-01-25 20:56:20 info : Connection to the database has been established successfully.
+2025-01-25 20:56:20 info : Database tables are synchronized.
+2025-01-25 20:59:19 info : Server is running on http://localhost:3000
+2025-01-25 20:59:19 info : Connection to the database has been established successfully.
+2025-01-25 20:59:19 info : Database tables are synchronized.
+2025-01-25 21:01:06 info : Server is running on http://localhost:3000
+2025-01-25 21:01:06 info : Connection to the database has been established successfully.
+2025-01-25 21:01:06 info : Database tables are synchronized.
+2025-01-25 21:01:13 error : Unknown column 'NaN' in 'where clause'
+2025-01-25 21:01:13 error : Unknown column 'NaN' in 'where clause'
+2025-01-25 21:01:22 error : Unknown column 'NaN' in 'where clause'
+2025-01-25 21:01:22 error : Unknown column 'NaN' in 'where clause'
+2025-01-25 21:01:37 info : Server is running on http://localhost:3000
+2025-01-25 21:01:37 info : Connection to the database has been established successfully.
+2025-01-25 21:01:37 info : Database tables are synchronized.
+2025-01-25 21:01:56 info : Server is running on http://localhost:3000
+2025-01-25 21:01:56 info : Connection to the database has been established successfully.
+2025-01-25 21:01:56 info : Database tables are synchronized.
+2025-01-25 21:01:58 error : Unknown column 'NaN' in 'where clause'
+2025-01-25 21:01:58 error : Unknown column 'NaN' in 'where clause'
+2025-01-25 21:02:32 info : Server is running on http://localhost:3000
+2025-01-25 21:02:32 info : Connection to the database has been established successfully.
+2025-01-25 21:02:32 info : Database tables are synchronized.
+2025-01-25 21:02:33 error : Unknown column 'NaN' in 'where clause'
+2025-01-25 21:02:33 error : Unknown column 'NaN' in 'where clause'
+2025-01-25 21:03:09 info : Server is running on http://localhost:3000
+2025-01-25 21:03:09 info : Connection to the database has been established successfully.
+2025-01-25 21:03:09 info : Database tables are synchronized.
+2025-01-25 21:04:04 info : Server is running on http://localhost:3000
+2025-01-25 21:04:04 info : Connection to the database has been established successfully.
+2025-01-25 21:04:04 info : Database tables are synchronized.
+2025-01-25 21:04:14 error : Unknown column 'NaN' in 'where clause'
+2025-01-25 21:04:14 error : Unknown column 'NaN' in 'where clause'
+2025-01-25 21:04:15 error : Unknown column 'NaN' in 'where clause'
+2025-01-25 21:04:15 error : Unknown column 'NaN' in 'where clause'
+2025-01-25 21:04:24 info : Server is running on http://localhost:3000
+2025-01-25 21:04:24 info : Connection to the database has been established successfully.
+2025-01-25 21:04:24 info : Database tables are synchronized.

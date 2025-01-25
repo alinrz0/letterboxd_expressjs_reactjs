@@ -1,12 +1,9 @@
 import { Router, Request, Response, NextFunction } from "express";
-import {updateMovie,deleteMovie } from "./movieServices";
-import CreateMovieDto from "./dtos/movieCreateDto";
 import movieModel from '../models/moviesModel'; 
 import logger from "../helper/logger";
-import { upload } from "../multer";
 import { Op ,Sequelize} from "sequelize";
-
-import ValidateMiddleware  from '../middlewares/validateMiddleware';
+import path from 'path';
+import fs from 'fs';
 
 const router = Router();
 
@@ -132,5 +129,34 @@ router.get("/filter/rate", async (req: Request, res: Response, next: NextFunctio
     }
 });
 
+
+const imagesDirectory = path.join(__dirname, '../images');
+
+router.get("/movie/image", async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+    try {
+        const imageName = req.query.name as string; // Get the image name from query parameter
+
+        // Check if the name is provided
+        if (!imageName) {
+            res.status(400).json({ message: "Image name is required." });
+            return;
+        }
+
+        // Construct the full path to the image file
+        const imagePath = path.join(imagesDirectory, imageName);
+
+        // Check if the file exists
+        if (!fs.existsSync(imagePath)) {
+            res.status(404).json({ message: "Image not found." });
+            return;
+        }
+
+        // Serve the image file
+        res.sendFile(imagePath);
+    } catch (error) {
+        console.error('Error fetching image:', error);
+        next(error);
+    }
+});
 
 export default router;

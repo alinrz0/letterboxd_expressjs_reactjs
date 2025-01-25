@@ -6,6 +6,8 @@ import logger from "../helper/logger";
 import movieModel from '../models/moviesModel'; 
 import UpdateUserDto from "./dtos/updateUserDto";
 import CreateMovieDto  from "../movie/dtos/movieCreateDto";
+import { upload } from '../multer'; // Import the multer instance
+import ImagesModel from '../models/imagesModel';
 // import SignupDto from './dtos/signupDto';
 
 const router = Router();
@@ -143,52 +145,140 @@ router.delete("/reviews/:id", async (req: Request, res: Response, next: NextFunc
     }
 });
 
+router.post(
+    "/movie",
+    upload.fields([{ name: "poster", maxCount: 1 }, { name: "images", maxCount: 10 }]),
+    async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+        try {
+            const token = req.cookies.admin_token?.admin_token;
+            if (!token) {
+                res.status(401).json({ message: "Unauthorized." });
+                return;
+            }
 
-router.post("/movie", ValidateMiddleware(CreateMovieDto) ,  async (req: Request, res: Response, next: NextFunction): Promise<void> => {
-    try {
-        const token = req.cookies.admin_token?.admin_token;
-        if (!token) {
-            res.status(401).json({ message: "Unauthorized." });
-            return;
+            const data: CreateMovieDto = req.body;
+
+            // Type assertion for req.files
+            const files = req.files as {
+                [fieldname: string]: Express.Multer.File[];
+            };
+
+            // Save the path of the uploaded poster (if any)
+            if (files["poster"]?.[0]) {
+                data.poster = files["poster"][0].path;
+            }
+
+            // Create the movie entry in the database
+            const createdMovie = await movieModel.create(data);
+
+            // Handle multiple images
+            const images = files["images"] || []; // Initialize images from files["images"]
+            console.log(images); // Log the array of images for debugging
+
+            if (images.length > 0) {
+                // Save image paths in the `images` table
+                const imageRecords = await Promise.all(
+                    images.map((file) =>
+                        ImagesModel.create({
+                            movie_id: createdMovie.id,
+                            image: file.path,
+                        })
+                    )
+                );
+
+                console.log(`Added ${imageRecords.length} images for movie ID ${createdMovie.id}`);
+            }
+
+            res.status(200).json({
+                message: "Movie created successfully.",
+                movie: createdMovie,
+                images: images.map((file) => file.path), // Return the paths of added images
+            });
+        } catch (error) {
+            logger.error(error);
+            next(error);
         }
-
-        const data: CreateMovieDto = req.body;
-
-        const result = await movieModel.create({
-            title: data.title,
-            description: data.description,
-            year: data.year,
-            genre: data.genre,
-            rate: data.rate,
-        });
-        
-
-        console.log(3)
-        res.status(200).json(result);
-    } catch (error) {
-        logger.error(error);
-        next(error);
     }
-});
+);
 
-router.put("/movie/:id" ,  async (req: Request, res: Response, next: NextFunction): Promise<void> => {
-    try {
-        const movieId = parseInt(req.params.id);
-        const data: Partial<CreateMovieDto> = req.body;
-        const token = req.cookies.admin_token?.admin_token;
-        if (!token) {
-            res.status(401).json({ message: "Unauthorized." });
-            return;
+
+
+
+
+router.put(
+    "/movie/:id",
+    upload.fields([{ name: "poster", maxCount: 1 }, { name: "images", maxCount: 10 }]),
+    async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+        try {
+            const movieId = parseInt(req.params.id); // Extract the movie ID from the URL parameter
+            const data: Partial<CreateMovieDto> = req.body; // Get the data from the request body
+            const token = req.cookies.admin_token?.admin_token; // Get the admin token from cookies
+
+            // Check if the admin token exists
+            if (!token) {
+                res.status(401).json({ message: "Unauthorized." });
+                return;
+            }
+
+            // Check if the movie exists in the database
+            const movie = await movieModel.findByPk(movieId);
+            if (!movie) {
+                res.status(404).json({ message: "Movie not found." });
+                return;
+            }
+
+            // Type assertion for req.files
+            const files = req.files as {
+                [fieldname: string]: Express.Multer.File[];
+            };
+
+            // Save the path of the uploaded poster (if any)
+            if (files["poster"]?.[0]) {
+                data.poster = files["poster"][0].path;
+            }
+
+            // Update the movie entry in the database
+            await movieModel.update(data, { where: { id: movieId } });
+
+            // Handle multiple images
+            const images = files["images"] || []; // Initialize images from files["images"]
+            console.log(images); // Log the array of images for debugging
+
+            if (images.length > 0) {
+                // Save new image paths in the `images` table
+                const imageRecords = await Promise.all(
+                    images.map((file) =>
+                        ImagesModel.create({
+                            movie_id: movieId,  // Directly use movieId as a reference
+                            image: file.path,
+                        })
+                    )
+                );
+
+                console.log(`Added ${imageRecords.length} images for movie ID ${movieId}`);
+            }
+
+            // Fetch the updated movie from the database
+            const updatedMovie = await movieModel.findByPk(movieId);
+
+            // Fetch the associated images manually using the movieId
+            const associatedImages = await ImagesModel.findAll({
+                where: { movie_id: movieId },
+            });
+
+            res.status(200).json({
+                message: "Movie updated successfully.",
+                movie: updatedMovie,
+                images: associatedImages.map((image) => image.image), // Return the image paths
+            });
+        } catch (error) {
+            console.error("Error updating movie:", error); // Log the error for debugging
+            next(error);
         }
-
-        // Update the movie with the provided data
-        const result = await updateMovie(movieId, data, token);
-        res.status(200).json(result);
-    } catch (error) {
-        logger.error(error);
-        next(error);
     }
-});
+);
+
+  
 
 router.delete("/movie/:id" , async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {

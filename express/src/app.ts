@@ -43,7 +43,7 @@ app.use("/friend" ,friendController);
 app.use("/profile" ,profileController);
 app.use("/admin" ,adminControllers);
 
-app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+app.use('/images', express.static(path.join(__dirname, 'images')));
 
 app.use(ErrorHandelingMid)
 

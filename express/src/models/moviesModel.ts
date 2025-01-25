@@ -7,7 +7,8 @@ interface MovieAttributes {
   description: string;
   year: String;        
   genre: string;   
-  rate: number;   
+  rate: number; 
+  poster:string;  
 }
 
 interface MovieCreationAttributes extends Optional<MovieAttributes, 'id'> {}
@@ -19,6 +20,7 @@ class Movie extends Model<MovieAttributes, MovieCreationAttributes> implements M
   public year!: String;   
   public genre!: string; 
   public rate!: number; 
+  public poster!: string; 
 }
 
 const MoviesModel = sequelize.define<Movie, MovieCreationAttributes>('movie', {
@@ -41,6 +43,10 @@ const MoviesModel = sequelize.define<Movie, MovieCreationAttributes>('movie', {
   rate: {
     type: DataTypes.FLOAT, 
     allowNull: false,
+  },
+  poster: {
+    type: DataTypes.STRING,
+    allowNull: true,      
   },
 });
 
