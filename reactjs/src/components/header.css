@@ -1,0 +1,183 @@
+/* header Styles */
+header {
+    display: flex;
+    justify-content: space-between; /* Space out elements horizontally */
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #ffffff; /* Default Background */
+    transition: background-color 0.3s ease;
+    position: relative; 
+}
+
+/* Left of header Styles */
+.logo-container {
+    display: flex;            /* Flexbox to arrange items in a row */
+    align-items: center;      /* Vertically center items */
+}
+
+.logo {
+    display: flex;            /* Flexbox for logo and text */
+    align-items: center;      /* Vertically align items */
+}
+
+.logo-icon {
+    width: 38px;
+    height: 47.5px;
+    margin-right: 10px;       /* Space between the logo icon and text */
+}
+
+h1 {
+    font-size: 30px;
+    font-style: italic;
+    color: #2947A9;
+    margin: 0;                /* Remove any default margin */
+}
+
+/* Right of header */
+.links-container {
+    display: flex;
+    gap: 1rem;
+    margin-right: 1rem; /* Add some space between links and dark mode toggle */
+    margin-left: auto;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #14171F; /* Default link color */
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #F9995D; /* Highlight color on hover */
+}
+
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
+    display: flex;
+    align-items: center; 
+    cursor: pointer; 
+    font-size: 24px;
+}
+
+/* Position mode icons */
+.mode-icon {
+    width: 24px;
+    height: 24px;
+    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+}
+
+.mode-icon.sun {
+    display: block;
+    color: #FFBF00; /* Sun Icon color - Yellow */
+}
+
+.mode-icon.moon {
+    display: none;
+    color: #4B6EFA; /* Moon Icon color - Blue */
+}
+
+
+/* Hamburger Menu (Hidden by Default) */
+.hamburger-menu {
+    display: none; /* Only show in mobile view */
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: #000000;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Mobile Nav Toggle Checkbox (Hidden) */
+.nav-toggle {
+    display: none;
+}
+
+
+
+body {
+    margin: 0;
+    font-family: 'Work Sans', sans-serif;  /* Apply Work Sans font */
+  }
+  
+  
+  /* Responsive Styles */
+  @media (max-width: 850px) {
+    /* Show Hamburger Menu */
+    .hamburger-menu {
+        display: flex;
+        position: relative; /* Ensure it's aligned with the toggle area */
+        z-index: 2; /* Make sure it stays above other elements */
+    }
+  
+    /* Hide Links by Default */
+    .links-container {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(136, 135, 135, 0.236);
+        position: absolute;
+        top: 70%;
+        right: 0;
+        width: 200px;
+        box-shadow: 0 4px 6px rgba(255, 255, 255, 0.3);
+        padding: 1rem 0;
+        border-radius: 25px;
+        z-index: 1; /* Ensure visibility under other elements */
+        /* filter: opacity(0.5) */
+    }
+  
+    /* Show Links when Toggle is Checked */
+    .nav-toggle:checked ~ .links-container {
+        display: flex;
+    }
+  
+    
+    .nav-link {
+        padding: 0.1rem 1rem;
+        text-align: left;
+    }
+  
+    /* Dark Mode Toggle */
+    .dark-mode-toggle {
+        order: 6; /* Ensure it appears after links */
+        margin: 1rem auto 0; /* Center it horizontally with spacing */
+        position: absolute;
+        top: 0rem; 
+        right: 1rem;
+    }
+  }
+  
+
+  /* Dark Mode Styles */
+  #header-toggle:checked ~ header .dark-mode-toggle .mode-icon.sun {
+    display: none;
+  }
+  
+  #header-toggle:checked ~ header .dark-mode-toggle .mode-icon.moon {
+    display: block;
+  }
+  
+  #header-toggle:checked ~ header {
+    background-color: #000000; /* Dark Mode Background */
+    color: #ffffff; /* Dark Mode Text Color */
+  }
+  
+  #header-toggle:checked ~ header .links-container .nav-link {
+    color: #ffffff; /* Change link color in Dark Mode */
+  }
+  
+  #header-toggle:checked ~ header .links-container .nav-link:hover {
+    color: #F9995D; /* Highlight color on hover in Dark Mode */
+  }
+  
+  #header-toggle:checked ~ header .hamburger-menu span {
+    background-color: #ffffff; /* Change link color in Dark Mode */
+  }
+  
+ 
