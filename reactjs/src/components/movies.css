@@ -1,0 +1,145 @@
+.movies-container {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Filters */
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .filters select, .filters button {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .filters button {
+    background-color: #2947A9;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .filters button:hover {
+    background-color: #295EA9;
+  }
+  
+  /* Movies Grid */
+  .movies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  /* Movie Card */
+  .movie-card-link {
+    text-decoration: none;
+  }
+
+  .movie-card {
+    background-color: #ffffff;
+    color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.2s ease;
+    max-width: 220px; 
+    margin: auto; 
+  }
+
+  .movie-card:hover {
+    transform: scale(1.05);
+  }
+
+  /* Fixed Image Size */
+  .movie-poster {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  
+  .movie-card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Fixed Image Size */
+  .movie-poster {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  
+  
+  /* Movie Info */
+  .movie-info {
+    margin-top: 10px;
+    text-align: left;
+  }
+  
+  .movie-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #000000;
+  }
+  
+  .movie-year {
+    font-size: 14px;
+    color: #b3b2b2;
+  }
+  
+  /* Loading */
+  .loading {
+    font-size: 18px;
+    color: #007bff;
+    margin-top: 20px;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .movies-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .movies-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+
+  #header-toggle:checked ~ .movies-container .movies-grid .movie-card{
+    background-color: #000000; /* Dark Mode Background */
+    color: #ffffff; /* Dark Mode Text Color */
+  }
+
+  #header-toggle:checked ~ .movies-container .movies-grid .movie-card .movie-info .movie-title{
+    color: #ffffff; /* Dark Mode Text Color */
+  }
+
+  #header-toggle:checked ~ .movies-container .movies-grid .movie-card .movie-info .movie-year{
+    color: #c2c2c2; /* Dark Mode Text Color */
+  }

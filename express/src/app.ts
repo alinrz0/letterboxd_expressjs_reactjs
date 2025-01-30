@@ -13,13 +13,23 @@ import {profileController} from './profile';
 import {adminControllers} from './admin';
 
 import ErrorHandelingMid  from './middlewares/ErrorHandelingMid';
+import dotenv from "dotenv";
 
+dotenv.config();
 const app = express();
 const port = 3000;
 
 app.use(cookieParser());
 
-app.use(cors());
+
+app.use(
+  cors({
+    origin: "http://localhost:5173", // Your React frontend URL
+    credentials: true, // Allow credentials (cookies, authorization headers)
+    methods: ["GET", "POST", "PUT", "DELETE"], // Allowed methods
+    allowedHeaders: ["Content-Type", "Authorization"], // Allowed headers
+  })
+);
 app.use(express.json());
 
 const initializeDatabase = async () => {

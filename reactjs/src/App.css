@@ -1,6 +1,12 @@
-body {
-  margin: 0;
-  font-family: 'Work Sans', sans-serif;  /* Apply Work Sans font */
+/* Default Light Mode */
+#root {
+  background-color: white;
+  color: black;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-
+/* Dark Mode Styles */
+#root.dark-mode {
+  background-color: #383838;
+  color: white;
+}

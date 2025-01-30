@@ -23,6 +23,28 @@ const Header = () => {
     fetchUser();
   }, []);
 
+  useEffect(() => {
+    // Get the checkbox toggle element
+    const darkModeToggle = document.getElementById("header-toggle");
+
+    const applyDarkMode = () => {
+      const root = document.getElementById("root");
+      if (darkModeToggle.checked) {
+        root.classList.add("dark-mode");
+      } else {
+        root.classList.remove("dark-mode");
+      }
+    };
+
+    // Listen for changes on the toggle
+    darkModeToggle.addEventListener("change", applyDarkMode);
+
+    // Cleanup event listener on component unmount
+    return () => {
+      darkModeToggle.removeEventListener("change", applyDarkMode);
+    };
+  }, []);
+
   return (
     <>
       <input type="checkbox" id="header-toggle" hidden />

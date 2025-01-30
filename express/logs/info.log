@@ -1123,3 +1123,88 @@ notNull Violation: movie.rate cannot be null
 2025-01-25 21:04:24 info : Server is running on http://localhost:3000
 2025-01-25 21:04:24 info : Connection to the database has been established successfully.
 2025-01-25 21:04:24 info : Database tables are synchronized.
+2025-01-29 13:00:17 info : Server is running on http://localhost:3000
+2025-01-29 13:00:17 info : Connection to the database has been established successfully.
+2025-01-29 13:00:17 info : Database tables are synchronized.
+2025-01-29 13:05:05 info : Server is running on http://localhost:3000
+2025-01-29 13:05:05 info : Connection to the database has been established successfully.
+2025-01-29 13:05:05 info : Database tables are synchronized.
+2025-01-29 13:05:51 info : Server is running on http://localhost:3000
+2025-01-29 13:05:51 info : Connection to the database has been established successfully.
+2025-01-29 13:05:52 info : Database tables are synchronized.
+2025-01-29 13:18:41 info : Server is running on http://localhost:3000
+2025-01-29 13:18:41 info : Connection to the database has been established successfully.
+2025-01-29 13:18:41 info : Database tables are synchronized.
+2025-01-29 13:36:51 info : Server is running on http://localhost:3000
+2025-01-29 13:36:54 error : Unable to connect to the database or sync: getaddrinfo ENOTFOUND mysql
+2025-01-29 13:38:41 info : Server is running on http://localhost:3000
+2025-01-29 13:38:43 error : Unable to connect to the database or sync: getaddrinfo ENOTFOUND mysql
+2025-01-29 13:39:17 info : Server is running on http://localhost:3000
+2025-01-29 13:39:17 info : Connection to the database has been established successfully.
+2025-01-29 13:39:17 info : Database tables are synchronized.
+2025-01-29 13:42:16 info : Server is running on http://localhost:3000
+2025-01-29 13:42:16 info : Connection to the database has been established successfully.
+2025-01-29 13:42:16 info : Database tables are synchronized.
+2025-01-29 13:51:27 info : Server is running on http://localhost:3000
+2025-01-29 13:51:30 error : Unable to connect to the database or sync: getaddrinfo ENOTFOUND db
+2025-01-29 14:15:30 info : Server is running on http://localhost:3000
+2025-01-29 14:15:33 error : Unable to connect to the database or sync: getaddrinfo ENOTFOUND db
+2025-01-29 14:15:51 info : Server is running on http://localhost:3000
+2025-01-29 14:15:54 error : Unable to connect to the database or sync: getaddrinfo ENOTFOUND db
+2025-01-29 14:24:18 info : Server is running on http://localhost:3000
+2025-01-29 14:24:18 info : Connection to the database has been established successfully.
+2025-01-29 14:24:18 info : Database tables are synchronized.
+2025-01-29 14:28:36 info : Server is running on http://localhost:3000
+2025-01-29 14:28:36 info : Connection to the database has been established successfully.
+2025-01-29 14:28:36 info : Database tables are synchronized.
+2025-01-29 14:29:14 info : Server is running on http://localhost:3000
+2025-01-29 14:29:14 info : Connection to the database has been established successfully.
+2025-01-29 14:29:14 info : Database tables are synchronized.
+2025-01-29 14:37:20 info : Server is running on http://localhost:3000
+2025-01-29 14:37:20 error : Unable to connect to the database or sync: connect ECONNREFUSED ::1:3007
+2025-01-29 18:38:04 info : Server is running on http://localhost:3000
+2025-01-29 18:38:05 info : Connection to the database has been established successfully.
+2025-01-29 18:38:05 info : Database tables are synchronized.
+2025-01-30 13:26:37 info : Server is running on http://localhost:3000
+2025-01-30 13:26:38 info : Connection to the database has been established successfully.
+2025-01-30 13:26:38 info : Database tables are synchronized.
+2025-01-30 16:19:18 info : Server is running on http://localhost:3000
+2025-01-30 16:19:18 info : Connection to the database has been established successfully.
+2025-01-30 16:19:18 info : Database tables are synchronized.
+2025-01-30 16:22:36 info : Server is running on http://localhost:3000
+2025-01-30 16:22:36 info : Connection to the database has been established successfully.
+2025-01-30 16:22:36 info : Database tables are synchronized.
+2025-01-30 16:34:30 info : Server is running on http://localhost:3000
+2025-01-30 16:34:30 info : Connection to the database has been established successfully.
+2025-01-30 16:34:30 info : Database tables are synchronized.
+2025-01-30 18:49:45 info : Server is running on http://localhost:3000
+2025-01-30 18:49:45 info : Connection to the database has been established successfully.
+2025-01-30 18:49:45 info : Database tables are synchronized.
+2025-01-30 20:24:37 error : notNull Violation: movie.year cannot be null
+2025-01-30 20:24:37 error : notNull Violation: movie.year cannot be null
+2025-01-30 20:24:39 error : notNull Violation: movie.year cannot be null
+2025-01-30 20:24:39 error : notNull Violation: movie.year cannot be null
+2025-01-30 21:04:38 info : Server is running on http://localhost:3000
+2025-01-30 21:04:38 info : Connection to the database has been established successfully.
+2025-01-30 21:04:38 info : Database tables are synchronized.
+2025-01-30 21:06:49 info : Server is running on http://localhost:3000
+2025-01-30 21:06:49 info : Connection to the database has been established successfully.
+2025-01-30 21:06:49 info : Database tables are synchronized.
+2025-01-30 21:08:01 info : Server is running on http://localhost:3000
+2025-01-30 21:08:01 info : Connection to the database has been established successfully.
+2025-01-30 21:08:01 info : Database tables are synchronized.
+2025-01-30 21:08:19 error : Unknown column 'createdAt' in 'field list'
+2025-01-30 21:57:04 error : Unknown column 'NaN' in 'where clause'
+2025-01-30 21:57:04 error : Unknown column 'NaN' in 'where clause'
+2025-01-30 21:57:08 error : Unknown column 'NaN' in 'where clause'
+2025-01-30 21:57:08 error : Unknown column 'NaN' in 'where clause'
+2025-01-30 21:57:17 error : Unknown column 'NaN' in 'where clause'
+2025-01-30 21:57:17 error : Unknown column 'NaN' in 'where clause'
+2025-01-30 21:57:22 error : Unknown column 'NaN' in 'where clause'
+2025-01-30 21:57:22 error : Unknown column 'NaN' in 'where clause'
+2025-01-30 21:57:37 error : Unknown column 'NaN' in 'where clause'
+2025-01-30 21:57:37 error : Unknown column 'NaN' in 'where clause'
+2025-01-30 21:57:43 error : Unknown column 'NaN' in 'where clause'
+2025-01-30 21:57:43 error : Unknown column 'NaN' in 'where clause'
+2025-01-30 21:57:47 error : Unknown column 'NaN' in 'where clause'
+2025-01-30 21:57:47 error : Unknown column 'NaN' in 'where clause'

@@ -1,0 +1,23 @@
+version: "3.9"  # Or your preferred version
+
+services:
+  web:
+    build: .  # Your existing Dockerfile
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    environment:
+      - MYSQL_HOST=db  # Important: Use the service name as the hostname
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=1234
+      - MYSQL_DATABASE=imdb
+    volumes:
+      - ./express:/app/express # Mount your express folder to avoid rebuilding the image every time you change the code.
+  db:
+    image: mysql:latest # Or a specific version
+    ports:
+      - "3307:3306" # Only needed if you want to access MySQL from your host machine directly (e.g., with a database client)
+    environment:
+      - MYSQL_ROOT_PASSWORD=1234
+      - MYSQL_DATABASE=imdb

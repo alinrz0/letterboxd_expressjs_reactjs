@@ -52,4 +52,19 @@
   .signup-link a:hover {
     text-decoration: underline;
   }
+
+  #header-toggle:checked ~ .login-container {
+    background-color: #000000; /* Dark Mode Background */
+    color: #ffffff; /* Dark Mode Text Color */
+  }
+
+  #header-toggle:checked ~ .login-container input{
+    background-color: #383838; /* Dark Mode Background */
+    color: #fff; /* Dark Mode Text Color */
+  }
+
+
+
+  
+  
   

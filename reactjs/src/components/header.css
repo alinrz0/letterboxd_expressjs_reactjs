@@ -4,7 +4,7 @@ header {
     justify-content: space-between; /* Space out elements horizontally */
     align-items: center;
     padding: 1rem 2rem;
-    background-color: #ffffff; /* Default Background */
+    background-color: #eceaea; /* Default Background */
     transition: background-color 0.3s ease;
     position: relative; 
 }
@@ -179,5 +179,7 @@ body {
   #header-toggle:checked ~ header .hamburger-menu span {
     background-color: #ffffff; /* Change link color in Dark Mode */
   }
+  
+
   
  

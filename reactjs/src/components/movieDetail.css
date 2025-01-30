@@ -1,0 +1,26 @@
+.movie-detail-container {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .movie-detail-poster {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    object-fit: cover;
+    margin: 0 auto;
+    border-radius: 8px;
+  }
+  
+  .movie-detail-year {
+    font-size: 18px;
+    color: #777;
+    margin: 10px 0;
+  }
+  
+  .movie-detail-description {
+    font-size: 16px;
+    color: #333;
+    margin: 10px 0;
+  }
+  

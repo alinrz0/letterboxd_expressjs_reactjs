@@ -1,5 +1,6 @@
 import { Router, Request, Response, NextFunction } from "express";
 import movieModel from '../models/moviesModel'; 
+import genresModel from '../models/genresModel'; 
 import logger from "../helper/logger";
 import { Op ,Sequelize} from "sequelize";
 import path from 'path';
@@ -10,6 +11,16 @@ const router = Router();
 router.get("/", async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
         const movies = await movieModel.findAll();
+        res.status(200).json(movies);
+    } catch (error) {
+        console.error(error);
+        next(error);
+    }
+});
+
+router.get("/genres", async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+    try {
+        const movies = await genresModel.findAll();
         res.status(200).json(movies);
     } catch (error) {
         console.error(error);
