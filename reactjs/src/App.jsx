@@ -10,6 +10,7 @@ import MovieDetail from "./components/movieDetail"
 import Error from "./components/error"
 import Login from './components/login'
 import Signup from './components/signup'
+import FindFriend from './components/findFriend'
 
 function App() {
 
@@ -20,9 +21,10 @@ function App() {
         <Header /> {/* Header appears on all pages */}
         <Routes>
           <Route path='/' element={<Movies />}></Route>
-          <Route path="/:id" element={<MovieDetail />}></Route>
+          <Route path="movie/:id" element={<MovieDetail />}></Route>
           <Route path='/login' element={< Login/>}></Route>
           <Route path='/signup' element={< Signup/>}></Route>
+          <Route path='/find-friend' element={< FindFriend/>}></Route>
           <Route path='*' element={< Error/>}></Route>
         </Routes>
       </BrowserRouter>

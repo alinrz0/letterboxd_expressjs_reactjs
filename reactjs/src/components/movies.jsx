@@ -203,7 +203,7 @@ const Movies = () => {
       {!error && visibleMovies.length > 0 && (
         <div className="movies-grid">
           {visibleMovies.map((movie) => (
-            <Link key={movie.id} to={`/${movie.id}`} className="movie-card-link">
+            <Link key={movie.id} to={`/movie/${movie.id}`} className="movie-card-link">
               <div className="movie-card">
                 <img
                   src={movie.poster}

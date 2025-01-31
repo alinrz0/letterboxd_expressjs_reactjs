@@ -1,3 +1,4 @@
+import { Op } from "sequelize";
 import FriendModel from "../models/friendsModel";
 import UserModel from "../models/usersModel";
 import { decodeToken } from "../utils/index";
@@ -291,4 +292,39 @@ export const getFollowingOfFriend = async (userId: number, email: string) => {
         name: follow.following?.name,
         email: follow.following?.email,
     }));
+};
+
+
+
+export const deleteFriendRequestByIds = async (user_id: number, friend_id: number) => {
+  try {
+    // Find the existing friend request between the two users
+    const friendRequest = await FriendModel.findOne({
+      where: {
+        [Op.or]: [
+          { user_id, friend_id },
+          { user_id: friend_id, friend_id: user_id },
+        ],
+      },
+    });
+
+    if (!friendRequest) {
+      throw new Error('No pending friend request to delete.');
+    }
+
+    // Check if the status is 'W' (waiting), meaning it's a pending request
+    if (friendRequest.status !== 'W') {
+      throw new Error('You can only delete pending friend requests.');
+    }
+
+    // Delete the pending friend request
+    await friendRequest.destroy();
+
+    console.log('Friend request deleted successfully.');
+    return { message: 'Friend request deleted successfully.' };
+
+  } catch (error) {
+    console.error('Error deleting friend request:', error);
+    throw error;
+  }
 };

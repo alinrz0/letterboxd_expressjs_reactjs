@@ -12,7 +12,8 @@ import {
     deleteFollower,
     deleteFollowing,
     getFollowersOfFriend,
-    getFollowingOfFriend
+    getFollowingOfFriend,
+    deleteFriendRequestByIds
 } from "./friendServices";
 import { decodeToken } from "../utils/index";
 import logger from "../helper/logger";
@@ -182,7 +183,7 @@ router.get("/following", async (req: Request, res: Response, next: NextFunction)
 });
 
 // Delete a Follower
-router.get("/delete-connection/follower", async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+router.put("/delete-connection/follower", async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
         const token = req.cookies.token?.token;
 
@@ -209,7 +210,7 @@ router.get("/delete-connection/follower", async (req: Request, res: Response, ne
 });
 
 // Delete a Following
-router.get("/delete-connection/following", async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+router.put("/delete-connection/following", async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
         const token = req.cookies.token?.token;
 
@@ -286,6 +287,77 @@ router.get("/following-of", async (req: Request, res: Response, next: NextFuncti
         } catch (error) {
             res.status(403).json({ message: error });
         }
+    } catch (error) {
+        logger.error(error);
+        next(error);
+    }
+});
+
+
+router.get("/request-status", async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+    try {
+        const token = req.cookies.token?.token;
+        if (!token) {
+            res.status(401).json({ message: "Token not found or invalid" });
+            return;
+        }
+
+        const user = decodeToken(token); // Decode user info from the token
+        const { email } = req.query;
+
+        if (!email || typeof email !== "string") {
+            res.status(400).json({ message: "Email is required." });
+            return;
+        }
+
+        const friend = await findFriendByEmail(email);
+        const existingRequest = await findExistingRequest(user.id, friend.id);
+
+        if (existingRequest) {
+            res.status(200).json({ status: existingRequest.status }); // Returns 'A' (Accepted), 'W' (Waiting), or 'none'4
+            return;
+        }
+
+        res.status(200).json({ status: 'none' }); // No request found
+    } catch (error) {
+        logger.error(error);
+        next(error);
+    }
+});
+
+// Endpoint to delete a friend request
+router.delete("/delete-request", async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+    try {
+        const token = req.cookies.token?.token;
+        if (!token) {
+            res.status(401).json({ message: "Token not found or invalid" });
+            return;
+        }
+
+        const user = decodeToken(token); // Decode user info from the token
+        const { friend_email } = req.body;
+
+        if (!friend_email) {
+            res.status(400).json({ message: "Friend email is required." });
+            return;
+        }
+
+        const friend = await findFriendByEmail(friend_email);
+        const existingRequest = await findExistingRequest(user.id, friend.id);
+
+        if (!existingRequest) {
+            res.status(400).json({ message: "No pending friend request to delete." });
+            return;
+        }
+
+        if (existingRequest.status !== "W") {
+            res.status(400).json({ message: "You can only delete pending friend requests." });
+            return;
+        }
+
+        await deleteFriendRequestByIds(user.id, friend.id); // Delete the request
+
+        res.status(200).json({ message: "Friend request deleted." });
     } catch (error) {
         logger.error(error);
         next(error);
