@@ -20,7 +20,7 @@ function App() {
         <Header /> {/* Header appears on all pages */}
         <Routes>
           <Route path='/' element={<Movies />}></Route>
-          <Route path="/:id" component={MovieDetail} />
+          <Route path="/:id" element={<MovieDetail />}></Route>
           <Route path='/login' element={< Login/>}></Route>
           <Route path='/signup' element={< Signup/>}></Route>
           <Route path='*' element={< Error/>}></Route>

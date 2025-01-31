@@ -1,6 +1,7 @@
 import { Router, Request, Response, NextFunction } from "express";
 import movieModel from '../models/moviesModel'; 
 import genresModel from '../models/genresModel'; 
+import ImagesModel from '../models/imagesModel'; 
 import logger from "../helper/logger";
 import { Op ,Sequelize} from "sequelize";
 import path from 'path';
@@ -28,22 +29,35 @@ router.get("/genres", async (req: Request, res: Response, next: NextFunction): P
     }
 });
 
-router.get("/:id", async (req: Request, res: Response, next: NextFunction): Promise<void> => {
-    try {
-        const movieId = parseInt(req.params.id);
-        const movie = await movieModel.findOne({ where: { id: movieId } });
+router.get(
+    "/:id",
+    async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+        try {
+            const movieId = parseInt(req.params.id);
 
-        if (!movie) {
-            res.status(404).json({ message: "Movie not found" });
-            return;
+            // Fetch the movie details
+            const movie = await movieModel.findOne({ where: { id: movieId } });
+
+            if (!movie) {
+                res.status(404).json({ message: "Movie not found" });
+                return;
+            }
+
+            // Fetch associated images for the movie
+            const images = await ImagesModel.findAll({
+                where: { movie_id: movieId },
+            });
+
+            res.status(200).json({
+                movie,
+                images: images.map((image) => image.image), // Return only the image paths
+            });
+        } catch (error) {
+            logger.error(error);
+            next(error);
         }
-
-        res.status(200).json(movie);
-    } catch (error) {
-        logger.error(error);
-        next(error);
     }
-});
+);
 
 
 router.get("/filter/genre", async (req: Request, res: Response, next: NextFunction): Promise<void> => {

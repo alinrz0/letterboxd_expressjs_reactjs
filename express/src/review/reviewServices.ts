@@ -13,6 +13,37 @@ interface CreateReviewDto {
     rating: number;
 }
 
+// reviewServices.ts
+
+// Update Review
+export const updateReview = async (token: string, updatedReviewDto: CreateReviewDto) => {
+    const user = getUserFromToken(token);
+    if (!user) throw new Error("User not found.");
+
+    // Find the review by movie ID and user ID
+    const review = await ReviewModel.findOne({ where: { movie_id: updatedReviewDto.movie_id, user_id: user.id } });
+    if (!review) throw new Error("Review not found.");
+
+    // Update the review
+    review.review = updatedReviewDto.review;
+    review.rating = updatedReviewDto.rating;
+    await review.save();
+    
+    return review;
+};
+
+// Delete Review
+export const deleteReview = async (token: string, movie_id: number) => {
+    const user = getUserFromToken(token);
+    if (!user) throw new Error("User not found.");
+
+    // Find and delete the review
+    const review = await ReviewModel.findOne({ where: { movie_id, user_id: user.id } });
+    if (!review) throw new Error("Review not found.");
+
+    await review.destroy();
+};
+
 export const checkExistingReview = async (token: string, movie_id: number) => {
     const user = decodeToken(token);
     if (!user || !user.id) {

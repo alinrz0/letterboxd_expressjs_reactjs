@@ -1,6 +1,7 @@
 /* Default Light Mode */
 #root {
   background-color: white;
+  min-height: 800px;
   color: black;
   transition: background-color 0.3s ease, color 0.3s ease;
 }

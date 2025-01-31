@@ -1,14 +1,21 @@
 import { Router, Request, Response, NextFunction } from "express";
 import ValidateMiddleware from "../middlewares/validateMiddleware";
 import CreateReviewDto from "./dtos/createReviewDto";
-import { addReview ,getReviewsByFriendEmailWithInfo , getUserFromToken ,checkExistingReview} from "./reviewServices";
+import { 
+    addReview,
+    getReviewsByFriendEmailWithInfo,
+    getUserFromToken,
+    checkExistingReview,
+    updateReview,      // New service for updating a review
+    deleteReview       // New service for deleting a review
+} from "./reviewServices";
 import logger from "../helper/logger";
 
 const router = Router();
 
+// POST: Add a new review
 router.post(
     "/review",
-    ValidateMiddleware(CreateReviewDto),
     async (req: Request, res: Response, next: NextFunction): Promise<void> => {
         try {
             const token = req.cookies.token?.token;
@@ -52,7 +59,89 @@ router.post(
     }
 );
 
+// PUT: Update a review
+router.put(
+    "/review",
+    async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+        try {
+            const token = req.cookies.token?.token;
 
+            if (!token) {
+                res.status(401).json({ message: "Token not found or invalid" });
+                return;
+            }
+
+            const movie_id = parseInt(req.query.movie_id as string);
+            if (isNaN(movie_id)) {
+                res.status(400).json({ message: "Movie ID must be a valid number." });
+                return;
+            }
+
+            const updateReviewDto: CreateReviewDto = {
+                ...req.body,
+                movie_id, // Combine movie_id from query
+            };
+
+            // Check if the review exists for the current user
+            const existingReview = await checkExistingReview(token, movie_id);
+            if (!existingReview) {
+                res.status(404).json({ message: "Review not found for this movie." });
+                return;
+            }
+
+            // Update the review
+            const updatedReview = await updateReview(token, updateReviewDto);
+
+            res.status(200).json({
+                message: "Review updated successfully.",
+                review: updatedReview,
+            });
+        } catch (error) {
+            logger.error(error);
+            next(error);
+        }
+    }
+);
+
+// DELETE: Delete a review
+router.delete(
+    "/review",
+    async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+        try {
+            const token = req.cookies.token?.token;
+
+            if (!token) {
+                res.status(401).json({ message: "Token not found or invalid" });
+                return;
+            }
+
+            const movie_id = parseInt(req.query.movie_id as string);
+            if (isNaN(movie_id)) {
+                res.status(400).json({ message: "Movie ID must be a valid number." });
+                return;
+            }
+
+            // Check if the review exists for the current user
+            const existingReview = await checkExistingReview(token, movie_id);
+            if (!existingReview) {
+                res.status(404).json({ message: "Review not found for this movie." });
+                return;
+            }
+
+            // Delete the review
+            await deleteReview(token, movie_id);
+
+            res.status(200).json({
+                message: "Review deleted successfully.",
+            });
+        } catch (error) {
+            logger.error(error);
+            next(error);
+        }
+    }
+);
+
+// GET: Fetch reviews by a friend's email
 router.get("/review", async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
         const token = req.cookies.token?.token;
@@ -85,6 +174,5 @@ router.get("/review", async (req: Request, res: Response, next: NextFunction): P
         next(error);
     }
 });
-
 
 export default router;

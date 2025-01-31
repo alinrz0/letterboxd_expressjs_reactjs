@@ -1,26 +1,92 @@
 .movie-detail-container {
-    padding: 20px;
+    max-width: 700px;
+    margin: auto;
     text-align: center;
+    padding: 20px;
   }
   
   .movie-detail-poster {
     width: 100%;
-    max-width: 600px;
+    max-width: 300px;
     height: auto;
-    object-fit: cover;
-    margin: 0 auto;
     border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
   
-  .movie-detail-year {
-    font-size: 18px;
-    color: #777;
-    margin: 10px 0;
+  .movie-gallery {
+    margin-top: 20px;
   }
   
-  .movie-detail-description {
-    font-size: 16px;
-    color: #333;
-    margin: 10px 0;
+  .gallery-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .gallery-image {
+    width: 100%;
+    max-width: 400px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .gallery-button {
+    background-color: #2947A9;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .gallery-button:hover {
+    background-color: #295EA9;
+  }
+  
+  /* Review Section */
+  .review-section {
+    margin-top: 30px;
+    text-align: left;
+  }
+  
+  .review-textarea {
+    width: 95%;
+    height: 100px;
+    padding: 10px;
+
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize: none;
+  }
+  
+  .rating-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .rating-dropdown {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .submit-review-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  .submit-review-button:hover {
+    background-color: #218838;
   }
   
