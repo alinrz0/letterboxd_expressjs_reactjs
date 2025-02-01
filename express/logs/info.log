@@ -1520,3 +1520,20 @@ notNull Violation: movie.rate cannot be null
 2025-02-01 14:51:57 info : Server is running on http://localhost:3000
 2025-02-01 14:51:57 info : Connection to the database has been established successfully.
 2025-02-01 14:51:57 info : Database tables are synchronized.
+2025-02-02 00:54:27 info : Server is running on http://localhost:3000
+2025-02-02 00:54:27 info : Connection to the database has been established successfully.
+2025-02-02 00:54:27 info : Database tables are synchronized.
+2025-02-02 00:54:44 info : Server is running on http://localhost:3000
+2025-02-02 00:54:44 info : Connection to the database has been established successfully.
+2025-02-02 00:54:44 info : Database tables are synchronized.
+2025-02-02 01:03:27 info : Server is running on http://localhost:3000
+2025-02-02 01:03:27 info : Connection to the database has been established successfully.
+2025-02-02 01:03:28 info : Database tables are synchronized.
+2025-02-02 01:39:21 info : Server is running on http://localhost:3000
+2025-02-02 01:39:21 info : Connection to the database has been established successfully.
+2025-02-02 01:39:21 info : Database tables are synchronized.
+2025-02-02 01:54:10 error : Validation error
+2025-02-02 01:54:22 error : Validation error
+2025-02-02 01:57:07 error : Validation error
+2025-02-02 01:57:25 error : Validation error
+2025-02-02 01:58:14 error : Validation error

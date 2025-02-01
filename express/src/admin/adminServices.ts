@@ -91,7 +91,8 @@ export const getReviewById = async (id: number) => {
     }
 };
 
-// Delete a review by ID
+
+
 export const deleteReview = async (id: number) => {
     try {
         const review = await ReviewModel.findByPk(id); // Find the review by ID
@@ -99,9 +100,24 @@ export const deleteReview = async (id: number) => {
             throw new ServerError(404, "Review not found.");
         }
 
+        const movie_id = review.movie_id; // Get the associated movie ID
         await review.destroy(); // Delete the review from the database
+
+        // Recalculate the average rating for the movie
+        const reviews = await ReviewModel.findAll({ where: { movie_id } });
+        const newAvgRating =
+            reviews.length > 0
+                ? reviews.reduce((sum, r) => sum + r.rating, 0) / reviews.length
+                : 0;
+
+        // Update the movie rating
+        await MoviesModel.update(
+            { rate: newAvgRating },
+            { where: { id: movie_id } }
+        );
+
     } catch (error) {
-        throw new ServerError(500, "Error deleting the review.");
+        throw new ServerError(500, "Error deleting the review and updating movie rating.");
     }
 };
 

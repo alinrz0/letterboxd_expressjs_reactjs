@@ -12,6 +12,19 @@ import ImagesModel from '../models/imagesModel';
 
 const router = Router();
 
+router.get("/", async (req: Request, res: Response, next: NextFunction) => {
+    try {
+        const token = req.cookies.admin_token?.admin_token;
+        if (!token) {
+            res.status(401).json({ message: "Unauthorized." });
+            return;
+        }
+        res.status(200).json({ admin_token: token });
+    } catch (error) {
+        next(error);
+    }
+});
+
 router.post("/login" , ValidateMiddleware(LoginDto) ,  async (req : Request , res : Response , next : NextFunction)=>{
     try{
         const body : LoginDto = req.body;
