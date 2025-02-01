@@ -24,6 +24,7 @@ const Signup = () => {
       if (response.status === 200) {
         Cookies.set("token", response.data.token, { secure: false }); // Store token in cookies
         navigate("/"); // Redirect to a protected route
+        window.location.reload();
       }
     } catch (err) {
       console.log(err);

@@ -38,3 +38,10 @@
     background-color: #0056b3;
   }
   
+  #header-toggle:checked ~ .error-container h2{ 
+    color: #fff; /* Dark Mode Text Color */
+  }
+
+  #header-toggle:checked ~ .error-container p{ 
+    color: #c4c4c4; /* Dark Mode Text Color */
+  }

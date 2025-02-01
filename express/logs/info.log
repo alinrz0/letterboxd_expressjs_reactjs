@@ -1281,3 +1281,15 @@ notNull Violation: movie.rate cannot be null
 2025-02-01 02:02:56 error : Following connection not found.
 2025-02-01 02:20:56 error : You can only delete pending friend requests.
 2025-02-01 02:20:56 error : You can only delete pending friend requests.
+2025-02-01 03:20:06 info : Server is running on http://localhost:3000
+2025-02-01 03:20:06 info : Connection to the database has been established successfully.
+2025-02-01 03:20:06 info : Database tables are synchronized.
+2025-02-01 03:23:29 info : Server is running on http://localhost:3000
+2025-02-01 03:23:29 info : Connection to the database has been established successfully.
+2025-02-01 03:23:29 info : Database tables are synchronized.
+2025-02-01 03:29:50 info : Server is running on http://localhost:3000
+2025-02-01 03:29:51 info : Connection to the database has been established successfully.
+2025-02-01 03:29:51 info : Database tables are synchronized.
+2025-02-01 03:30:09 info : Server is running on http://localhost:3000
+2025-02-01 03:30:10 info : Connection to the database has been established successfully.
+2025-02-01 03:30:10 info : Database tables are synchronized.

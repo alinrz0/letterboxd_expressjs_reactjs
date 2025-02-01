@@ -11,7 +11,9 @@ import Error from "./components/error"
 import Login from './components/login'
 import Signup from './components/signup'
 import FindFriend from './components/findFriend'
-
+import FriendRequests from './components/friendRequest'
+import Profile from './components/profile'
+import Footer from './components/footer'
 function App() {
 
   return (
@@ -25,8 +27,11 @@ function App() {
           <Route path='/login' element={< Login/>}></Route>
           <Route path='/signup' element={< Signup/>}></Route>
           <Route path='/find-friend' element={< FindFriend/>}></Route>
+          <Route path='/requests' element={< FriendRequests/>}></Route>
+          <Route path='/profile' element={< Profile/>}></Route>
           <Route path='*' element={< Error/>}></Route>
         </Routes>
+        <Footer/>
       </BrowserRouter>
     </>
   )

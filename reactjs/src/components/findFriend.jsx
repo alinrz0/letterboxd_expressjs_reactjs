@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Search, UserPlus, UserX } from "lucide-react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom"; // Use useNavigate from react-router-dom v6
 import "./FindFriend.css"; // Import CSS for styling
 
 const FindFriend = () => {
@@ -9,6 +10,39 @@ const FindFriend = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [friendRequestStatus, setFriendRequestStatus] = useState(null); // Track friend request status
+  const navigate = useNavigate(); // Initialize navigate for redirection
+
+  // Check if the user is authenticated using the profile API
+  const checkAuthentication = async () => {
+    try {
+      const response = await axios.get("http://localhost:3000/profile", {
+        withCredentials: true, // Ensure cookies are sent
+      });
+
+      // If the API responds with a valid user profile, then the user is authenticated
+      console.log(response.data)
+      if (response.data.profile) {
+        return true; // User is authenticated
+      }
+    } catch (err) {
+      // If the request fails, the user is not authenticated
+      console.error("Not authenticated:", err);
+    }
+
+    return false; // User is not authenticated
+  };
+
+  // Check authentication when the component mounts
+  useEffect(() => {
+    const checkUserAuthentication = async () => {
+      const isAuthenticated = await checkAuthentication();
+      if (!isAuthenticated) {
+        navigate("/login"); // Redirect to login page if not authenticated
+      }
+    };
+
+    checkUserAuthentication(); // Call the function to check if the user is authenticated
+  }, [navigate]); // Run only once on component mount, and include navigate as a dependency
 
   // Function to search for a user
   const searchUser = async () => {

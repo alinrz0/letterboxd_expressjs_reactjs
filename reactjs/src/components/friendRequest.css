@@ -1,0 +1,45 @@
+.friend-requests-container {
+    padding: 20px;
+  }
+  
+  .friend-requests-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .friend-request-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .accept-request-button, .reject-request-button {
+    padding: 6px 12px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .reject-request-button {
+    background-color: #dc3545;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  .error-message {
+    color: red;
+  }
+
+  #header-toggle:checked ~ .friend-requests-container h2 {
+    color: #ffffff; /* Change link color in Dark Mode */
+  }
+  

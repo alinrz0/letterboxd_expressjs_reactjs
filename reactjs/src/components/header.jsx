@@ -1,7 +1,6 @@
-import "./Header.css"; // Import CSS for styling
+import "./Header.css"; 
 import Icon from "../assets/icons/Icon.svg";
 import { Link } from "react-router-dom";
-import Cookies from "js-cookie";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
@@ -68,12 +67,13 @@ const Header = () => {
           <Link to="/" className="nav-link">Home</Link>
           <Link to="/about" className="nav-link">About Us</Link>
           <Link to="/find-friend" className="nav-link">Find friend</Link>
+          <Link to="/requests" className="nav-link">Requests</Link>
           <Link to="/contact" className="nav-link">Contact Us</Link>
 
           {user ? (
-            <span className="nav-link">profile</span> // Show user name if logged in
+             <Link to="/profile" className="nav-link">profile</Link> 
           ) : (
-            <Link to="/login" className="nav-link">Login</Link> // Show login link if not logged in
+            <Link to="/login" className="nav-link">Login</Link> 
           )}
 
           <label htmlFor="header-toggle" className="dark-mode-toggle">
