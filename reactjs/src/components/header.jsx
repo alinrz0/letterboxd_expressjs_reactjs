@@ -77,10 +77,8 @@ const Header = () => {
 
         <nav className="links-container">
           <Link to="/" className="nav-link">Home</Link>
-          <Link to="/about" className="nav-link">About Us</Link>
           <Link to="/find-friend" className="nav-link">Find friend</Link>
           <Link to="/requests" className="nav-link">Requests</Link>
-          <Link to="/contact" className="nav-link">Contact Us</Link>
 
           {user ? (
              <>

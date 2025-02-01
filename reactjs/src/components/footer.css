@@ -1,9 +1,11 @@
 footer {
     background-color: #2947A9;
-    height: 70px;
-    padding-top: 26px; 
+    height: 40px;
+    /* padding-top: 26px;  */
     padding-left: 112px; 
     width: 100%;
+    position: fixed;
+    bottom: 0;
 }
 
 footer p {

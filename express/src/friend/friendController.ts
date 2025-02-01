@@ -349,8 +349,7 @@ router.delete("/delete-request", async (req: Request, res: Response, next: NextF
             res.status(400).json({ message: "No pending friend request to delete." });
             return;
         }
-
-        if (existingRequest.status !== "W") {
+        if (existingRequest.status !== 'W') {
             res.status(400).json({ message: "You can only delete pending friend requests." });
             return;
         }

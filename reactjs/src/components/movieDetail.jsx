@@ -11,7 +11,7 @@ const MovieDetail = () => {
   const [loading, setLoading] = useState(true);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [review, setReview] = useState("");
-  const [rating, setRating] = useState(0);
+  const [rating, setRating] = useState("rate");
   const [user, setUser] = useState(null);
   const [hasReviewed, setHasReviewed] = useState(false);
 
@@ -82,10 +82,11 @@ const MovieDetail = () => {
   };
 
   const handleSubmitReview = async () => {
-    if (!review.trim()) {
+    if (!review.trim() || rating === "rate") {
       alert("Please enter a review and select a rating.");
       return;
     }
+
     try {
       if (!user.id) {
         alert("You must be logged in to submit a review.");
@@ -101,6 +102,7 @@ const MovieDetail = () => {
 
       alert("Review submitted successfully!");
       setHasReviewed(true);
+      window.location.reload();
     } catch (error) {
       console.error("Error submitting review:", error.response?.data || error);
       alert("Error submitting review:", error.response?.data || error);
@@ -113,6 +115,10 @@ const MovieDetail = () => {
       alert("Please enter a review and select a rating.");
       return;
     }
+    if (rating === 0) {
+      alert("Rating cannot be 0. Please select a valid rating.");
+      return;
+    }
     try {
       const response = await axios.put(
         `http://localhost:3000/review?movie_id=${id}`,
@@ -123,6 +129,7 @@ const MovieDetail = () => {
       );
       alert("Review updated successfully!");
       setHasReviewed(true);
+      window.location.reload();
     } catch (error) {
       console.error("Error updating review:", error);
       alert("Error updating review.");
@@ -142,6 +149,7 @@ const MovieDetail = () => {
       setReview("");
       setRating(0);
       setHasReviewed(false);
+      window.location.reload();
     } catch (error) {
       console.error("Error deleting review:", error);
       alert("Error deleting review.");
@@ -164,7 +172,7 @@ const MovieDetail = () => {
           <p><strong>Description:</strong> {movie.description}</p>
           <p><strong>Year:</strong> {movie.year}</p>
           <p><strong>Genre:</strong> {movie.genre}</p>
-          <p><strong>Rating:</strong> ⭐ {movie.rate} / 5</p>
+          <p><strong>Rating:</strong> ⭐ {movie.rate === 0 ? '-' : movie.rate.toFixed(2)} / 5</p>
 
           {images.length > 0 && (
             <div className="movie-gallery">
@@ -190,17 +198,29 @@ const MovieDetail = () => {
               <div className="rating-container">
                 <label><strong>Rating:</strong></label>
                 <select
+                  onChange={(e) => {
+                    const selectedValue = e.target.value;
+                    if (selectedValue !== "rate") {
+                      setRating(parseFloat(selectedValue));
+                    } else {
+                      setRating("rate"); // Keep it as "rate" if selected
+                    }
+                  }}
                   value={rating}
-                  onChange={(e) => setRating(parseFloat(e.target.value))}
                   className="rating-dropdown"
                 >
-                  {[...Array(21)].map((_, index) => (
-                    <option key={index} value={(index * 0.25).toFixed(2)}>
-                      {(index * 0.25).toFixed(2)}
-                    </option>
-                  ))}
+                  <option value="rate" disabled>Rate</option> {/* Default option */}
+                  {[...Array(20)].map((_, index) => {
+                    const ratingValue = (index * 0.25 + 0.25).toFixed(2);
+                    return (
+                      <option key={ratingValue} value={ratingValue}>
+                        {ratingValue}
+                      </option>
+                    );
+                  })}
                 </select>
               </div>
+
               {hasReviewed ? (
                 <>
                   <p><strong>Your Rating:</strong> ⭐ {rating} / 5</p> {/* Displaying the user's rating */}

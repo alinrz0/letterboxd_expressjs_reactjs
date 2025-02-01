@@ -1,5 +1,6 @@
 .following-container {
-    max-width: 800px;
+    max-width: 90%;
+    width: 800px;
     margin: 50px auto;
     padding: 25px;
     background: rgba(255, 255, 255, 0.2);
@@ -7,66 +8,127 @@
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     border-radius: 15px;
     text-align: center;
-  }
-  
-  .following-container h2 {
+    transition: all 0.3s ease-in-out;
+}
+
+.following-container:hover {
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.following-container h2 {
     font-size: 26px;
     color: #222;
     font-weight: bold;
     margin-bottom: 20px;
     text-transform: uppercase;
-  }
-  
-  .following-list {
+    letter-spacing: 1px;
+}
+
+.following-list {
     margin-top: 20px;
-  }
-  
-  .following-card {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Card Styling */
+.following-card {
+    display: flex;
     align-items: center;
+    justify-content: space-between;
     background: rgba(255, 255, 255, 0.4);
     padding: 15px;
-    border-radius: 10px;
-    margin: 10px 0;
+    border-radius: 12px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  }
-  
-  .following-info {
+    transition: transform 0.2s ease-in-out;
+}
+
+.following-card:hover {
+    transform: scale(1.02);
+}
+
+.following-info {
     flex: 1;
-  }
-  
-  .following-actions {
+    text-align: left;
+}
+
+.following-info p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+}
+
+/* Actions - Buttons */
+.following-actions {
     display: flex;
     gap: 10px;
-  }
-  
-  .view-profile-button,
-  .unfollow-button {
+}
+
+.view-profile-button,
+.unfollow-button {
     padding: 10px 15px;
-    background: linear-gradient(135deg, #007bff, #0056b3);
-    color: white;
     border: none;
-    border-radius: 10px;
-    cursor: pointer;
+    border-radius: 8px;
     font-weight: bold;
     display: flex;
     align-items: center;
-  }
-  
-  .view-profile-button:hover,
-  .unfollow-button:hover {
-    background: linear-gradient(135deg, #0056b3, #003d82);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.view-profile-button {
+    background: linear-gradient(135deg, #4caf50, #2e7d32);
+    color: white;
+}
+
+.view-profile-button:hover {
+    background: linear-gradient(135deg, #2e7d32, #1b5e20);
     transform: scale(1.05);
-  }
-  
-  .unfollow-button .icon {
+}
+
+.unfollow-button {
+    background: linear-gradient(135deg, #ff5252, #d32f2f);
+    color: white;
+}
+
+.unfollow-button:hover {
+    background: linear-gradient(135deg, #d32f2f, #b71c1c);
+    transform: scale(1.05);
+}
+
+.unfollow-button .icon {
     margin-right: 5px;
-  }
-  
-  .error-message {
+}
+
+/* Error Message */
+.error-message {
     color: red;
-    margin-top: 10px;
     font-size: 14px;
-  }
-  
+    margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .following-container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .following-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .following-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .view-profile-button,
+    .unfollow-button {
+        width: 100%;
+        justify-content: center;
+    }
+}

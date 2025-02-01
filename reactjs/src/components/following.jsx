@@ -22,6 +22,7 @@ const Following = () => {
       setFollowing(response.data.following); // Assuming the API returns a list of users the logged-in user is following
     } catch (err) {
       setError("Failed to fetch following list");
+      navigate("/login");
     } finally {
       setLoading(false);
     }
@@ -49,7 +50,7 @@ const Following = () => {
 
   // Navigate to the profile of the followed user
   const viewProfile = (email) => {
-    navigate(`/profile/${email}`); // Assuming you have a route for the user's profile
+    navigate(`/friend?email=${email}`); // Assuming you have a route for the user's profile
   };
 
   return (

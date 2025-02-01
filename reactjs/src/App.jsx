@@ -16,6 +16,7 @@ import Profile from './components/profile'
 import Followers from './components/followers'
 import Following from './components/following'
 import Footer from './components/footer'
+import FriendProfile from './components/friendProfile';
 function App() {
 
   return (
@@ -33,6 +34,7 @@ function App() {
           <Route path='/profile' element={< Profile/>}></Route>
           <Route path='/followers' element={< Followers/>}></Route>
           <Route path='/following' element={< Following/>}></Route>
+          <Route path="/friend" element={<FriendProfile />}></Route>
           <Route path='*' element={< Error/>}></Route>
         </Routes>
         <Footer/>

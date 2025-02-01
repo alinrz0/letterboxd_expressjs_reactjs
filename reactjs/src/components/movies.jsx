@@ -213,6 +213,7 @@ const Movies = () => {
                 />
                 <div className="movie-info">
                   <h3 className="movie-title">Title: {movie.title}</h3>
+                  <p className="movie-rating">Rating: ⭐ {movie.rate === 0 ? '-' : movie.rate.toFixed(2)}/5</p>
                   <p className="movie-year">Year: {movie.year}</p>
                 </div>
               </div>

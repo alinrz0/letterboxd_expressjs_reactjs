@@ -410,3 +410,120 @@ notNull Violation: movie.rate cannot be null
 2025-02-01 10:43:23 error : Cannot add or update a child row: a foreign key constraint fails (`imdb`.`friends`, CONSTRAINT `friend_id` FOREIGN KEY (`id`) REFERENCES `auths` (`id`) ON DELETE CASCADE ON UPDATE RESTRICT)
 2025-02-01 10:43:42 error : Cannot add or update a child row: a foreign key constraint fails (`imdb`.`friends`, CONSTRAINT `friend_id` FOREIGN KEY (`id`) REFERENCES `auths` (`id`) ON DELETE CASCADE ON UPDATE RESTRICT)
 2025-02-01 10:43:42 error : Cannot add or update a child row: a foreign key constraint fails (`imdb`.`friends`, CONSTRAINT `friend_id` FOREIGN KEY (`id`) REFERENCES `auths` (`id`) ON DELETE CASCADE ON UPDATE RESTRICT)
+2025-02-01 12:54:28 error : notNull Violation: movie.year cannot be null,
+notNull Violation: movie.rate cannot be null
+2025-02-01 12:54:28 error : notNull Violation: movie.year cannot be null,
+notNull Violation: movie.rate cannot be null
+2025-02-01 12:54:30 error : notNull Violation: movie.year cannot be null,
+notNull Violation: movie.rate cannot be null
+2025-02-01 12:54:30 error : notNull Violation: movie.year cannot be null,
+notNull Violation: movie.rate cannot be null
+2025-02-01 12:55:18 error : notNull Violation: movie.year cannot be null
+2025-02-01 12:55:18 error : notNull Violation: movie.year cannot be null
+2025-02-01 12:55:19 error : notNull Violation: movie.year cannot be null
+2025-02-01 12:55:19 error : notNull Violation: movie.year cannot be null
+2025-02-01 12:56:22 error : notNull Violation: movie.rate cannot be null
+2025-02-01 12:56:22 error : notNull Violation: movie.rate cannot be null
+2025-02-01 12:56:58 error : notNull Violation: movie.rate cannot be null
+2025-02-01 12:56:58 error : notNull Violation: movie.rate cannot be null
+2025-02-01 12:57:14 error : notNull Violation: movie.rate cannot be null
+2025-02-01 12:57:14 error : notNull Violation: movie.rate cannot be null
+2025-02-01 12:57:16 error : notNull Violation: movie.rate cannot be null
+2025-02-01 12:57:16 error : notNull Violation: movie.rate cannot be null
+2025-02-01 12:59:01 error : notNull Violation: movie.rate cannot be null
+2025-02-01 12:59:01 error : notNull Violation: movie.rate cannot be null
+2025-02-01 12:59:02 error : notNull Violation: movie.rate cannot be null
+2025-02-01 12:59:02 error : notNull Violation: movie.rate cannot be null
+2025-02-01 12:59:04 error : notNull Violation: movie.rate cannot be null
+2025-02-01 12:59:04 error : notNull Violation: movie.rate cannot be null
+2025-02-01 12:59:16 error : notNull Violation: movie.rate cannot be null
+2025-02-01 12:59:16 error : notNull Violation: movie.rate cannot be null
+2025-02-01 13:01:14 error : Data truncated for column 'rate' at row 1
+2025-02-01 13:01:14 error : Data truncated for column 'rate' at row 1
+2025-02-01 13:01:51 error : Data truncated for column 'rate' at row 1
+2025-02-01 13:01:51 error : Data truncated for column 'rate' at row 1
+2025-02-01 13:01:52 error : Data truncated for column 'rate' at row 1
+2025-02-01 13:01:52 error : Data truncated for column 'rate' at row 1
+2025-02-01 13:02:53 error : notNull Violation: movie.rate cannot be null
+2025-02-01 13:02:53 error : notNull Violation: movie.rate cannot be null
+2025-02-01 13:02:55 error : notNull Violation: movie.rate cannot be null
+2025-02-01 13:02:55 error : notNull Violation: movie.rate cannot be null
+2025-02-01 13:02:58 error : Data truncated for column 'rate' at row 1
+2025-02-01 13:02:58 error : Data truncated for column 'rate' at row 1
+2025-02-01 13:02:59 error : Data truncated for column 'rate' at row 1
+2025-02-01 13:02:59 error : Data truncated for column 'rate' at row 1
+2025-02-01 13:06:05 error : notNull Violation: movie.rate cannot be null
+2025-02-01 13:06:05 error : notNull Violation: movie.rate cannot be null
+2025-02-01 13:06:06 error : notNull Violation: movie.rate cannot be null
+2025-02-01 13:06:06 error : notNull Violation: movie.rate cannot be null
+2025-02-01 13:06:07 error : notNull Violation: movie.rate cannot be null
+2025-02-01 13:06:07 error : notNull Violation: movie.rate cannot be null
+2025-02-01 13:08:03 error : notNull Violation: movie.rate cannot be null
+2025-02-01 13:08:03 error : notNull Violation: movie.rate cannot be null
+2025-02-01 13:08:04 error : notNull Violation: movie.rate cannot be null
+2025-02-01 13:08:04 error : notNull Violation: movie.rate cannot be null
+2025-02-01 13:08:05 error : notNull Violation: movie.rate cannot be null
+2025-02-01 13:08:05 error : notNull Violation: movie.rate cannot be null
+2025-02-01 13:08:19 error : notNull Violation: movie.rate cannot be null
+2025-02-01 13:08:19 error : notNull Violation: movie.rate cannot be null
+2025-02-01 13:08:29 error : notNull Violation: movie.rate cannot be null
+2025-02-01 13:08:29 error : notNull Violation: movie.rate cannot be null
+2025-02-01 13:22:37 error : Data truncated for column 'rate' at row 1
+2025-02-01 13:22:37 error : Data truncated for column 'rate' at row 1
+2025-02-01 13:56:22 error : Data truncated for column 'rating' at row 1
+2025-02-01 13:57:50 error : Data truncated for column 'rating' at row 1
+2025-02-01 13:58:06 error : Data truncated for column 'rating' at row 1
+2025-02-01 14:21:32 error : You can only delete pending friend requests.
+2025-02-01 14:21:32 error : You can only delete pending friend requests.
+2025-02-01 14:21:35 error : You can only delete pending friend requests.
+2025-02-01 14:21:35 error : You can only delete pending friend requests.
+2025-02-01 14:22:03 error : You can only delete pending friend requests.
+2025-02-01 14:22:03 error : You can only delete pending friend requests.
+2025-02-01 14:27:07 error : You can only delete pending friend requests.
+2025-02-01 14:27:07 error : You can only delete pending friend requests.
+2025-02-01 14:27:55 error : You can only delete pending friend requests.
+2025-02-01 14:27:55 error : You can only delete pending friend requests.
+2025-02-01 14:28:09 error : You can only delete pending friend requests.
+2025-02-01 14:28:09 error : You can only delete pending friend requests.
+2025-02-01 14:28:52 error : You can only delete pending friend requests.
+2025-02-01 14:28:52 error : You can only delete pending friend requests.
+2025-02-01 14:29:31 error : You can only delete pending friend requests.
+2025-02-01 14:29:31 error : You can only delete pending friend requests.
+2025-02-01 14:30:30 error : You can only delete pending friend requests.
+2025-02-01 14:30:31 error : You can only delete pending friend requests.
+2025-02-01 14:31:57 error : You can only delete pending friend requests.
+2025-02-01 14:31:57 error : You can only delete pending friend requests.
+2025-02-01 14:32:45 error : You can only delete pending friend requests.
+2025-02-01 14:32:45 error : You can only delete pending friend requests.
+2025-02-01 14:33:46 error : You can only delete pending friend requests.
+2025-02-01 14:33:46 error : You can only delete pending friend requests.
+2025-02-01 14:34:13 error : You can only delete pending friend requests.
+2025-02-01 14:34:13 error : You can only delete pending friend requests.
+2025-02-01 14:36:41 error : You can only delete pending friend requests.
+2025-02-01 14:36:41 error : You can only delete pending friend requests.
+2025-02-01 14:36:54 error : You can only delete pending friend requests.
+2025-02-01 14:36:54 error : You can only delete pending friend requests.
+2025-02-01 14:37:31 error : You can only delete pending friend requests.
+2025-02-01 14:37:31 error : You can only delete pending friend requests.
+2025-02-01 14:37:33 error : You can only delete pending friend requests.
+2025-02-01 14:37:33 error : You can only delete pending friend requests.
+2025-02-01 14:38:31 error : You can only delete pending friend requests.
+2025-02-01 14:38:31 error : You can only delete pending friend requests.
+2025-02-01 14:38:56 error : You can only delete pending friend requests.
+2025-02-01 14:38:56 error : You can only delete pending friend requests.
+2025-02-01 14:39:31 error : You can only delete pending friend requests.
+2025-02-01 14:39:31 error : You can only delete pending friend requests.
+2025-02-01 14:40:07 error : You can only delete pending friend requests.
+2025-02-01 14:40:07 error : You can only delete pending friend requests.
+2025-02-01 14:42:34 error : You can only delete pending friend requests.
+2025-02-01 14:42:34 error : You can only delete pending friend requests.
+2025-02-01 14:42:37 error : You can only delete pending friend requests.
+2025-02-01 14:42:37 error : You can only delete pending friend requests.
+2025-02-01 14:43:08 error : You can only delete pending friend requests.
+2025-02-01 14:43:08 error : You can only delete pending friend requests.
+2025-02-01 14:45:40 error : You can only delete pending friend requests.
+2025-02-01 14:45:40 error : You can only delete pending friend requests.
+2025-02-01 14:47:09 error : You can only delete pending friend requests.
+2025-02-01 14:47:09 error : You can only delete pending friend requests.
+2025-02-01 14:47:44 error : You can only delete pending friend requests.
+2025-02-01 14:47:44 error : You can only delete pending friend requests.

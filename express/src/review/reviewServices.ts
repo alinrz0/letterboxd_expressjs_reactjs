@@ -5,13 +5,9 @@ import { decodeToken } from "../utils/index";
 
 import UserModel from "../models/usersModel";
 import FriendModel from "../models/friendsModel";
-import { Op } from "sequelize";
+import { Op, Sequelize } from "sequelize";
 
-interface CreateReviewDto {
-    movie_id: number;
-    review: string;
-    rating: number;
-}
+import CreateReviewDto from "./dtos/createReviewDto";
 
 // reviewServices.ts
 
@@ -28,9 +24,22 @@ export const updateReview = async (token: string, updatedReviewDto: CreateReview
     review.review = updatedReviewDto.review;
     review.rating = updatedReviewDto.rating;
     await review.save();
-    
+
+    // Recalculate the average rating for the movie after the update
+    const avgRatingResult = await ReviewModel.findAll({
+        where: { movie_id: updatedReviewDto.movie_id },
+        attributes: [[Sequelize.fn('AVG', Sequelize.col('rating')), 'avg_rating']],
+    });
+
+    // Extract avg_rating from the result and assert it as a number
+    const avgRating = parseFloat(avgRatingResult[0].get('avg_rating') as string);
+
+    // Update the movie's rating column with the new average rating
+    await MoviesModel.update({ rate: avgRating }, { where: { id: updatedReviewDto.movie_id } });
+
     return review;
 };
+
 
 // Delete Review
 export const deleteReview = async (token: string, movie_id: number) => {
@@ -42,7 +51,25 @@ export const deleteReview = async (token: string, movie_id: number) => {
     if (!review) throw new Error("Review not found.");
 
     await review.destroy();
+    console.log(1)
+    // Recalculate the average rating for the movie after the deletion
+    const avgRatingResult = await ReviewModel.findAll({
+        where: { movie_id },
+        attributes: [[Sequelize.fn('AVG', Sequelize.col('rating')), 'avg_rating']],
+    });
+    
+    let avgRating = 0;
+
+    // If no reviews are left, set the rating to 0
+    if (avgRatingResult.length > 0 && avgRatingResult[0].get('avg_rating') !== null) {
+        avgRating = parseFloat(avgRatingResult[0].get('avg_rating') as string);
+    }
+
+    // Update the movie's rating column with the new average rating, or 0 if no reviews are left
+    await MoviesModel.update({ rate: avgRating }, { where: { id: movie_id } });
 };
+
+
 
 export const checkExistingReview = async (token: string, movie_id: number) => {
     const user = decodeToken(token);
@@ -78,8 +105,22 @@ export const addReview = async (
         rating: createReviewDto.rating,
     });
 
+    // Recalculate the average rating for the movie
+    const avgRatingResult = await ReviewModel.findAll({
+        where: { movie_id: createReviewDto.movie_id },
+        attributes: [[Sequelize.fn('AVG', Sequelize.col('rating')), 'avg_rating']],
+    });
+
+    // Extract avg_rating from the result and assert it as a number
+    const avgRating = parseFloat(avgRatingResult[0].get('avg_rating') as string);
+
+    // Update the movie's rating column with the new average rating
+    await MoviesModel.update({ rate: avgRating }, { where: { id: createReviewDto.movie_id } });
+
+    // Return the new review
     return newReview;
 };
+
 
 
 // Fetch reviews if users are friends
@@ -110,13 +151,35 @@ export const getReviewsByFriendEmailWithInfo = async (user_id: number, friend_em
         attributes: ["movie_id", "review", "rating", "createdAt"],
     });
 
-    // Return reviews along with the friend's name and email
+    // For each review, fetch the associated movie details
+    const reviewsWithMovieDetails = await Promise.all(
+        reviews.map(async (review) => {
+            // Fetch movie details by movie_id
+            const movie = await MoviesModel.findOne({
+                where: { id: review.movie_id },
+                attributes: ["title", "year", "poster"], // Fetch title, year, and poster of the movie
+            });
+
+            return {
+                movie_id: review.movie_id,
+                review: review.review,
+                rating: review.rating,
+                movie: movie ? {
+                    title: movie.title,
+                    year: movie.year,
+                    poster: movie.poster,
+                } : null,
+            };
+        })
+    );
+
+    // Return reviews along with the friend's name, email, and movie information
     return {
         friendInfo: {
             name: friend.name,
             email: friend.email,
         },
-        reviews,
+        reviews: reviewsWithMovieDetails,
     };
 };
 

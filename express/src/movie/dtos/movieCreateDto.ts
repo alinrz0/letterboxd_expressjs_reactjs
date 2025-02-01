@@ -5,6 +5,7 @@ import {
     IsNumber,
     IsPositive,
     MaxLength,
+    IsOptional,
   } from "class-validator";
   
   class CreateMovieDto {
@@ -34,6 +35,8 @@ import {
     @IsNumber({}, { message: "Rate must be a number." })
     @IsPositive({ message: "Rate must be a positive number." })
     @IsNotEmpty({ message: "Rate cannot be empty." })
+
+    @IsOptional()
     rate!: number;
 
     poster!:string;

@@ -50,15 +50,29 @@ export const findExistingRequest = async (user_id: number, friend_id: number) =>
 };
 
 
-// Create a new friend request
 export const createFriendRequest = async (user_id: number, friend_id: number) => {
-    const newFriendRequest = await FriendModel.create({
-        user_id,
-        friend_id,
-        status: "W", // Waiting
+    const existingRequest = await FriendModel.findOne({
+        where: {
+            user_id,
+            friend_id,
+        },
     });
-    return newFriendRequest;
+
+    if (existingRequest) {
+        // Update the status to "W" if a request exists
+        await existingRequest.update({ status: "W" });
+        return existingRequest;
+    } else {
+        // Create a new request if none exists
+        const newFriendRequest = await FriendModel.create({
+            user_id,
+            friend_id,
+            status: "W", // Waiting
+        });
+        return newFriendRequest;
+    }
 };
+
 
 // Get pending friend requests with sender details
 export const getPendingFriendRequests = async (user_id: number) => {
@@ -303,7 +317,7 @@ export const deleteFriendRequestByIds = async (user_id: number, friend_id: numbe
       where: {
         [Op.or]: [
           { user_id, friend_id },
-          { user_id: friend_id, friend_id: user_id },
+          { user_id: user_id, friend_id: friend_id },
         ],
       },
     });
@@ -312,11 +326,12 @@ export const deleteFriendRequestByIds = async (user_id: number, friend_id: numbe
       throw new Error('No pending friend request to delete.');
     }
 
+    console.log(friendRequest)
     // Check if the status is 'W' (waiting), meaning it's a pending request
     if (friendRequest.status !== 'W') {
       throw new Error('You can only delete pending friend requests.');
     }
-
+    console.log(1)
     // Delete the pending friend request
     await friendRequest.destroy();
 

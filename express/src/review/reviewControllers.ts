@@ -14,6 +14,7 @@ import logger from "../helper/logger";
 const router = Router();
 
 // POST: Add a new review
+// Route handler for adding a review
 router.post(
     "/review",
     async (req: Request, res: Response, next: NextFunction): Promise<void> => {
@@ -45,7 +46,7 @@ router.post(
                 return;
             }
 
-            // Add the review
+            // Add the review and update the movie's rating
             const newReview = await addReview(token, createReviewDto);
 
             res.status(201).json({
@@ -53,11 +54,13 @@ router.post(
                 review: newReview,
             });
         } catch (error) {
-            logger.error(error);
+            console.error(error);
             next(error);
         }
     }
 );
+
+
 
 // PUT: Update a review
 router.put(

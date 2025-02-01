@@ -42,7 +42,7 @@ const MoviesModel = sequelize.define<Movie, MovieCreationAttributes>('movie', {
   },
   rate: {
     type: DataTypes.FLOAT, 
-    allowNull: false,
+    allowNull: true,
   },
   poster: {
     type: DataTypes.STRING,
