@@ -378,3 +378,35 @@ notNull Violation: movie.rate cannot be null
 2025-02-01 02:02:56 error : Following connection not found.
 2025-02-01 02:20:56 error : You can only delete pending friend requests.
 2025-02-01 02:20:56 error : You can only delete pending friend requests.
+2025-02-01 10:29:20 error : Following connection not found.
+2025-02-01 10:29:20 error : Following connection not found.
+2025-02-01 10:30:07 error : Follower connection not found.
+2025-02-01 10:30:07 error : Follower connection not found.
+2025-02-01 10:33:28 error : Cannot add or update a child row: a foreign key constraint fails (`imdb`.`friends`, CONSTRAINT `friend_id` FOREIGN KEY (`id`) REFERENCES `auths` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+2025-02-01 10:33:28 error : Cannot add or update a child row: a foreign key constraint fails (`imdb`.`friends`, CONSTRAINT `friend_id` FOREIGN KEY (`id`) REFERENCES `auths` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+2025-02-01 10:36:52 error : Cannot add or update a child row: a foreign key constraint fails (`imdb`.`friends`, CONSTRAINT `friend_id` FOREIGN KEY (`id`) REFERENCES `auths` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+2025-02-01 10:36:52 error : Cannot add or update a child row: a foreign key constraint fails (`imdb`.`friends`, CONSTRAINT `friend_id` FOREIGN KEY (`id`) REFERENCES `auths` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+2025-02-01 10:36:58 error : Cannot add or update a child row: a foreign key constraint fails (`imdb`.`friends`, CONSTRAINT `friend_id` FOREIGN KEY (`id`) REFERENCES `auths` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+2025-02-01 10:36:58 error : Cannot add or update a child row: a foreign key constraint fails (`imdb`.`friends`, CONSTRAINT `friend_id` FOREIGN KEY (`id`) REFERENCES `auths` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+2025-02-01 10:37:53 error : Cannot add or update a child row: a foreign key constraint fails (`imdb`.`friends`, CONSTRAINT `friend_id` FOREIGN KEY (`id`) REFERENCES `auths` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+2025-02-01 10:37:53 error : Cannot add or update a child row: a foreign key constraint fails (`imdb`.`friends`, CONSTRAINT `friend_id` FOREIGN KEY (`id`) REFERENCES `auths` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+2025-02-01 10:39:15 error : Cannot add or update a child row: a foreign key constraint fails (`imdb`.`friends`, CONSTRAINT `friend_id` FOREIGN KEY (`id`) REFERENCES `auths` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+2025-02-01 10:39:15 error : Cannot add or update a child row: a foreign key constraint fails (`imdb`.`friends`, CONSTRAINT `friend_id` FOREIGN KEY (`id`) REFERENCES `auths` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+2025-02-01 10:39:25 error : Cannot add or update a child row: a foreign key constraint fails (`imdb`.`friends`, CONSTRAINT `friend_id` FOREIGN KEY (`id`) REFERENCES `auths` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+2025-02-01 10:39:25 error : Cannot add or update a child row: a foreign key constraint fails (`imdb`.`friends`, CONSTRAINT `friend_id` FOREIGN KEY (`id`) REFERENCES `auths` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+2025-02-01 10:39:32 error : Cannot add or update a child row: a foreign key constraint fails (`imdb`.`friends`, CONSTRAINT `friend_id` FOREIGN KEY (`id`) REFERENCES `auths` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+2025-02-01 10:39:32 error : Cannot add or update a child row: a foreign key constraint fails (`imdb`.`friends`, CONSTRAINT `friend_id` FOREIGN KEY (`id`) REFERENCES `auths` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+2025-02-01 10:39:59 error : Cannot add or update a child row: a foreign key constraint fails (`imdb`.`friends`, CONSTRAINT `friend_id` FOREIGN KEY (`id`) REFERENCES `auths` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+2025-02-01 10:39:59 error : Cannot add or update a child row: a foreign key constraint fails (`imdb`.`friends`, CONSTRAINT `friend_id` FOREIGN KEY (`id`) REFERENCES `auths` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+2025-02-01 10:41:02 error : Cannot add or update a child row: a foreign key constraint fails (`imdb`.`friends`, CONSTRAINT `friend_id` FOREIGN KEY (`id`) REFERENCES `auths` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+2025-02-01 10:41:02 error : Cannot add or update a child row: a foreign key constraint fails (`imdb`.`friends`, CONSTRAINT `friend_id` FOREIGN KEY (`id`) REFERENCES `auths` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+2025-02-01 10:41:21 error : Cannot add or update a child row: a foreign key constraint fails (`imdb`.`friends`, CONSTRAINT `friend_id` FOREIGN KEY (`id`) REFERENCES `auths` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+2025-02-01 10:41:21 error : Cannot add or update a child row: a foreign key constraint fails (`imdb`.`friends`, CONSTRAINT `friend_id` FOREIGN KEY (`id`) REFERENCES `auths` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+2025-02-01 10:41:22 error : Cannot add or update a child row: a foreign key constraint fails (`imdb`.`friends`, CONSTRAINT `friend_id` FOREIGN KEY (`id`) REFERENCES `auths` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+2025-02-01 10:41:22 error : Cannot add or update a child row: a foreign key constraint fails (`imdb`.`friends`, CONSTRAINT `friend_id` FOREIGN KEY (`id`) REFERENCES `auths` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+2025-02-01 10:43:22 error : Cannot add or update a child row: a foreign key constraint fails (`imdb`.`friends`, CONSTRAINT `friend_id` FOREIGN KEY (`id`) REFERENCES `auths` (`id`) ON DELETE CASCADE ON UPDATE RESTRICT)
+2025-02-01 10:43:22 error : Cannot add or update a child row: a foreign key constraint fails (`imdb`.`friends`, CONSTRAINT `friend_id` FOREIGN KEY (`id`) REFERENCES `auths` (`id`) ON DELETE CASCADE ON UPDATE RESTRICT)
+2025-02-01 10:43:23 error : Cannot add or update a child row: a foreign key constraint fails (`imdb`.`friends`, CONSTRAINT `friend_id` FOREIGN KEY (`id`) REFERENCES `auths` (`id`) ON DELETE CASCADE ON UPDATE RESTRICT)
+2025-02-01 10:43:23 error : Cannot add or update a child row: a foreign key constraint fails (`imdb`.`friends`, CONSTRAINT `friend_id` FOREIGN KEY (`id`) REFERENCES `auths` (`id`) ON DELETE CASCADE ON UPDATE RESTRICT)
+2025-02-01 10:43:42 error : Cannot add or update a child row: a foreign key constraint fails (`imdb`.`friends`, CONSTRAINT `friend_id` FOREIGN KEY (`id`) REFERENCES `auths` (`id`) ON DELETE CASCADE ON UPDATE RESTRICT)
+2025-02-01 10:43:42 error : Cannot add or update a child row: a foreign key constraint fails (`imdb`.`friends`, CONSTRAINT `friend_id` FOREIGN KEY (`id`) REFERENCES `auths` (`id`) ON DELETE CASCADE ON UPDATE RESTRICT)

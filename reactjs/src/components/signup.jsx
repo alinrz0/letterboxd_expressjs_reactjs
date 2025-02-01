@@ -19,6 +19,9 @@ const Signup = () => {
         name,
         email,
         password,
+      },
+      {
+        withCredentials: true, // Ensures cookies are sent and received
       });
 
       if (response.status === 200) {

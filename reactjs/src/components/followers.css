@@ -1,0 +1,118 @@
+/* Followers container */
+.followers-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  h2 {
+    color: #2947A9;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Error message */
+  .error {
+    color: red;
+    font-weight: bold;
+  }
+  
+  /* No followers text */
+  .no-followers {
+    color: #666;
+    font-style: italic;
+  }
+  
+  /* Grid layout */
+  .followers-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+  
+  /* Individual follower card */
+  .follower-card {
+    display: flex;
+    align-items: center;
+    background: #f8f9fd;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .follower-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Avatar (first letter of the name) */
+  .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #2947A9;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 12px;
+  }
+  
+  /* Follower details */
+  .follower-details {
+    flex-grow: 1;
+    text-align: left;
+  }
+  
+  .follower-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .follower-email {
+    font-size: 14px;
+    color: #777;
+  }
+  
+  /* Remove button */
+  .remove-btn {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s ease;
+  }
+  
+  .remove-btn:hover {
+    background-color: #cc0000;
+  }
+  
+  /* Responsive */
+  @media (max-width: 500px) {
+    .followers-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  #header-toggle:checked ~ .followers-container   {
+    background-color: #000000; /* Dark Mode Background */
+  }
+  
+  #header-toggle:checked ~ .followers-container p  {
+    color: #fff; /* Dark Mode Background */
+  }
+  
+  #header-toggle:checked ~ .followers-container  .followers-grid .follower-card {
+    background-color: #333; /* Dark Mode Background */
+  }

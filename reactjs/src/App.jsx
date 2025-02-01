@@ -13,6 +13,7 @@ import Signup from './components/signup'
 import FindFriend from './components/findFriend'
 import FriendRequests from './components/friendRequest'
 import Profile from './components/profile'
+import Followers from './components/followers'
 import Footer from './components/footer'
 function App() {
 
@@ -29,6 +30,7 @@ function App() {
           <Route path='/find-friend' element={< FindFriend/>}></Route>
           <Route path='/requests' element={< FriendRequests/>}></Route>
           <Route path='/profile' element={< Profile/>}></Route>
+          <Route path='/followers' element={< Followers/>}></Route>
           <Route path='*' element={< Error/>}></Route>
         </Routes>
         <Footer/>

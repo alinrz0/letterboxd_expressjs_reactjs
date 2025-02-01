@@ -33,12 +33,26 @@ router.post(
     try {
       const body: SignupDto = req.body;
       const result = await signup(body);
+      res.cookie("token", result, {
+        httpOnly: true,
+        secure: process.env.NODE_ENV === "production",
+        maxAge: 3600000,
+      });
       res.send(result);
     } catch (err: any) {
       next(err);
     }
   }
 );
+
+router.post("/logout", (req: Request, res: Response) => {
+  res.clearCookie("token", {
+    httpOnly: true,
+    secure: process.env.NODE_ENV === "production",
+  });
+  res.json({ message: "Logged out successfully" });
+});
+
 
 // Fetch user by email using Sequelize
 router.get(

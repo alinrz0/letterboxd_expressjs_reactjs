@@ -1,6 +1,6 @@
 import "./Header.css"; 
 import Icon from "../assets/icons/Icon.svg";
-import { Link } from "react-router-dom";
+import { Link ,useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
@@ -44,6 +44,18 @@ const Header = () => {
     };
   }, []);
 
+    // Logout Function
+    const handleLogout = async () => {
+      try {
+        await axios.post("http://localhost:3000/logout", {}, { withCredentials: true });
+        setUser(null); // Clear user state
+        navigate("/"); 
+        window.location.reload();
+      } catch (error) {
+        console.error("Logout failed:", error);
+      }
+    };
+
   return (
     <>
       <input type="checkbox" id="header-toggle" hidden />
@@ -71,7 +83,11 @@ const Header = () => {
           <Link to="/contact" className="nav-link">Contact Us</Link>
 
           {user ? (
-             <Link to="/profile" className="nav-link">profile</Link> 
+             <>
+             <Link to="/profile" className="nav-link">Profile</Link>
+             <Link className="nav-link" onClick={handleLogout}>Logout</Link>
+           </>
+             
           ) : (
             <Link to="/login" className="nav-link">Login</Link> 
           )}
