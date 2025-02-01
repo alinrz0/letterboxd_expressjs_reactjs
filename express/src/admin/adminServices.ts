@@ -71,12 +71,44 @@ export const deleteUser = async (id: number) => {
 // Get all reviews
 export const getReviews = async () => {
     try {
-        const reviews = await ReviewModel.findAll(); // Fetch all reviews from the database
-        return reviews;
+      // Fetch all reviews
+      const reviews = await ReviewModel.findAll();
+      
+      // Initialize an array to store the enhanced reviews data
+      const enhancedReviews = [];
+  
+      // Loop through each review to fetch associated user and movie data
+      for (const review of reviews) {
+        // Fetch the user information by user_id
+        const user = await UsersModel.findByPk(review.user_id, {
+          attributes: ['name', 'email'], // Only select name and email
+        });
+  
+        // Fetch the movie information by movie_id
+        const movie = await MoviesModel.findByPk(review.movie_id, {
+          attributes: ['title', 'year', 'poster'], // Only select title, year, and poster
+        });
+  
+        // Push the enhanced data into the enhancedReviews array
+        enhancedReviews.push({
+          id: review.id,
+          review: review.review,
+          rating: review.rating,
+          name: user ? user.name : null, // Get user name or null if user not found
+          email: user ? user.email : null, // Get user email or null if user not found
+          title: movie ? movie.title : null, // Get movie title or null if movie not found
+          year: movie ? movie.year : null, // Get movie year or null if movie not found
+          poster: movie ? movie.poster : null, // Get movie poster or null if movie not found
+        });
+      }
+  
+      // Return the enhanced reviews array
+      return enhancedReviews;
     } catch (error) {
-        throw new ServerError(500, "Error fetching reviews.");
+      throw new ServerError(500, "Error fetching reviews.");
     }
-};
+  };
+  
 
 // Get a single review by ID
 export const getReviewById = async (id: number) => {

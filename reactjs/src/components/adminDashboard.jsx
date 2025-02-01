@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import "./adminDashboard.css"; // Import updated CSS
+import "./adminDashboard.css"; 
+import noImage from "../assets/no_image.jpg";
 
 const AdminDashboard = () => {
   const navigate = useNavigate();
@@ -34,9 +35,23 @@ const AdminDashboard = () => {
       const moviesRes = await axios.get("http://localhost:3000/movies");
       const reviewsRes = await axios.get("http://localhost:3000/admin/reviews", { withCredentials: true });
 
+      const modifiedMovies = moviesRes.data.map((movie) => ({
+        ...movie,
+        poster: movie.poster
+          ? `http://localhost:3000/movies/movie/image?name=${movie.poster.replace("src\\images\\", "")}`
+          : noImage,
+      }));
+
+      const modifiedRewiews = reviewsRes.data.reviews.map((review) => ({
+        ...review,
+        poster: review.poster
+          ? `http://localhost:3000/movies/movie/image?name=${review.poster.replace("src\\images\\", "")}`
+          : noImage,
+      }));
+
       setUsers(usersRes.data.users);
-      setMovies(moviesRes.data);
-      setReviews(reviewsRes.data.reviews);
+      setMovies(modifiedMovies);
+      setReviews(modifiedRewiews);
       setLoading(false);
     } catch (error) {
       console.error("Error fetching admin data:", error);
@@ -142,14 +157,23 @@ const AdminDashboard = () => {
         <div className="section">
           <h3>Movies</h3>
           <button className="add-movie-btn" onClick={handleAddMovie}>Add Movie</button>
-          <ul>
+          <div className="movies-grid">
             {movies.map(movie => (
-              <li key={movie.id}>
-                {movie.title} ({movie.year})
-                <button className="delete-btn" onClick={() => handleDeleteMovie(movie.id)}>Delete</button>
-              </li>
+              <div key={movie.id} className="movie-card">
+                <img
+                  src={movie.poster}
+                  alt={movie.title}
+                  className="movie-poster"
+                  onClick={() => navigate(`/admin/update-movie/${movie.id}`)}
+                />
+                <div className="movie-details">
+                  <h4>{movie.title} ({movie.year})</h4>
+                  <p>⭐ {movie.rate}</p>
+                  <button className="delete-btn" onClick={() => handleDeleteMovie(movie.id)}>Delete</button>
+                </div>
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
 
         {/* Reviews Management */}
@@ -157,13 +181,33 @@ const AdminDashboard = () => {
           <h3>Reviews</h3>
           <ul>
             {reviews.map(review => (
-              <li key={review.id}>
-                "{review.review}" by {review.user_id}
-                <button className="delete-btn" onClick={() => handleDeleteReview(review.id)}>Delete</button>
+              <li key={review.id} className="review-card">
+                <div className="review-content">
+                  <p><strong>Review:</strong> "{review.review}"</p>
+                  <p><strong>Rating:</strong> {review.rating} ⭐</p>
+
+                  <div className="user-info">
+                    <p><strong>User:</strong> {review.name} ({review.email})</p>
+                  </div>
+
+                  <div className="movie-info">
+                    <p><strong>Movie:</strong> {review.title} ({review.year})</p>
+                    <img
+                      src={review.poster}
+                      alt={review.title}
+                      className="movie-poster"
+                      style={{ width: '100px', height: 'auto', marginBottom: '10px' }}
+                    />
+                  </div>
+                </div>
+                <button className="delete-btn" onClick={() => handleDeleteReview(review.id)}>
+                  Delete
+                </button>
               </li>
             ))}
           </ul>
         </div>
+
       </div>
     </div>
   );
