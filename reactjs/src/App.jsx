@@ -14,6 +14,7 @@ import FindFriend from './components/findFriend'
 import FriendRequests from './components/friendRequest'
 import Profile from './components/profile'
 import Followers from './components/followers'
+import Following from './components/following'
 import Footer from './components/footer'
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
           <Route path='/requests' element={< FriendRequests/>}></Route>
           <Route path='/profile' element={< Profile/>}></Route>
           <Route path='/followers' element={< Followers/>}></Route>
+          <Route path='/following' element={< Following/>}></Route>
           <Route path='*' element={< Error/>}></Route>
         </Routes>
         <Footer/>

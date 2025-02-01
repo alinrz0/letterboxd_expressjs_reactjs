@@ -1,0 +1,72 @@
+.following-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+    text-align: center;
+  }
+  
+  .following-container h2 {
+    font-size: 26px;
+    color: #222;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  
+  .following-list {
+    margin-top: 20px;
+  }
+  
+  .following-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.4);
+    padding: 15px;
+    border-radius: 10px;
+    margin: 10px 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .following-info {
+    flex: 1;
+  }
+  
+  .following-actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .view-profile-button,
+  .unfollow-button {
+    padding: 10px 15px;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+  }
+  
+  .view-profile-button:hover,
+  .unfollow-button:hover {
+    background: linear-gradient(135deg, #0056b3, #003d82);
+    transform: scale(1.05);
+  }
+  
+  .unfollow-button .icon {
+    margin-right: 5px;
+  }
+  
+  .error-message {
+    color: red;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
