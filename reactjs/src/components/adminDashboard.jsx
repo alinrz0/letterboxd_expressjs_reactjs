@@ -168,7 +168,7 @@ const AdminDashboard = () => {
                 />
                 <div className="movie-details">
                   <h4>{movie.title} ({movie.year})</h4>
-                  <p>⭐ {movie.rate}</p>
+                  <p>Rating: ⭐ {movie.rate === 0 ? '-' : movie.rate.toFixed(2)}</p>
                   <button className="delete-btn" onClick={() => handleDeleteMovie(movie.id)}>Delete</button>
                 </div>
               </div>

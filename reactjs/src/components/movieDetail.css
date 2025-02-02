@@ -22,29 +22,23 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
+    flex-wrap: wrap;
+    max-width: 100%;
   }
   
   .gallery-image {
     width: 100%;
-    max-width: 400px;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  .gallery-button {
-    background-color: #2947A9;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    font-size: 20px;
-    cursor: pointer;
+    max-width: 300px;
+    height: auto;
     border-radius: 5px;
   }
   
-  .gallery-button:hover {
-    background-color: #295EA9;
+  .gallery-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #000d9b;
+    cursor: pointer;
   }
   
   /* Review Section */
@@ -83,7 +77,7 @@
     padding: 10px;
     cursor: pointer;
     border-radius: 5px;
-    margin-top: 10px;
+    margin: 10px;
   }
   
   .submit-review-button:hover {

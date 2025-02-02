@@ -30,7 +30,9 @@
 
 .admin-login-container input {
   width: 100%;
-  padding: 12px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  margin-top: 20px;
   border: none;
   border-radius: 8px;
   font-size: 16px;
@@ -53,6 +55,7 @@
   background: linear-gradient(135deg, #00aaff, #0077ff);
   color: white;
   padding: 12px;
+  margin-top: 20px;
   border: none;
   border-radius: 8px;
   font-size: 16px;
@@ -84,7 +87,7 @@
 /* Responsive Design */
 @media (max-width: 480px) {
   .admin-login-container {
-    width: 80%;
+    width: 90%;
     padding: 25px;
   }
 }

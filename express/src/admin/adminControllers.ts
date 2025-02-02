@@ -220,72 +220,116 @@ router.post(
 
 router.put(
     "/movie/:id",
-    upload.fields([{ name: "poster", maxCount: 1 }, { name: "images", maxCount: 10 }]),
+    upload.single("poster"),
     async (req: Request, res: Response, next: NextFunction): Promise<void> => {
         try {
-            const movieId = parseInt(req.params.id); // Extract the movie ID from the URL parameter
-            const data: Partial<CreateMovieDto> = req.body; // Get the data from the request body
-            const token = req.cookies.admin_token?.admin_token; // Get the admin token from cookies
+            const movieId = parseInt(req.params.id);
+            const data: Partial<CreateMovieDto> = req.body;
+            const token = req.cookies.admin_token?.admin_token;
 
-            // Check if the admin token exists
             if (!token) {
                 res.status(401).json({ message: "Unauthorized." });
                 return;
             }
 
-            // Check if the movie exists in the database
             const movie = await movieModel.findByPk(movieId);
             if (!movie) {
                 res.status(404).json({ message: "Movie not found." });
                 return;
             }
 
-            // Type assertion for req.files
-            const files = req.files as {
-                [fieldname: string]: Express.Multer.File[];
-            };
-
-            // Save the path of the uploaded poster (if any)
-            if (files["poster"]?.[0]) {
-                data.poster = files["poster"][0].path;
+            if (req.file) {
+                data.poster = req.file.path; // Update poster if uploaded
             }
 
-            // Update the movie entry in the database
             await movieModel.update(data, { where: { id: movieId } });
 
-            // Handle multiple images
-            const images = files["images"] || []; // Initialize images from files["images"]
-            console.log(images); // Log the array of images for debugging
-
-            if (images.length > 0) {
-                // Save new image paths in the `images` table
-                const imageRecords = await Promise.all(
-                    images.map((file) =>
-                        ImagesModel.create({
-                            movie_id: movieId,  // Directly use movieId as a reference
-                            image: file.path,
-                        })
-                    )
-                );
-
-                console.log(`Added ${imageRecords.length} images for movie ID ${movieId}`);
-            }
-
-            // Fetch the updated movie from the database
+            // Fetch updated movie details
             const updatedMovie = await movieModel.findByPk(movieId);
-
-            // Fetch the associated images manually using the movieId
-            const associatedImages = await ImagesModel.findAll({
-                where: { movie_id: movieId },
-            });
 
             res.status(200).json({
                 message: "Movie updated successfully.",
                 movie: updatedMovie,
-                images: associatedImages.map((image) => image.image), // Return the image paths
             });
         } catch (error) {
-            console.error("Error updating movie:", error); // Log the error for debugging
+            console.error("Error updating movie:", error);
+            next(error);
+        }
+    }
+);
+
+// Upload new images
+router.post(
+    "/movie/:id/images",
+    upload.array("images", 10),
+    async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+        try {
+            const movieId = parseInt(req.params.id);
+            const token = req.cookies.admin_token?.admin_token;
+
+            if (!token) {
+                res.status(401).json({ message: "Unauthorized." });
+                return;
+            }
+
+            if (!req.files || (req.files as Express.Multer.File[]).length === 0) {
+                res.status(400).json({ message: "No images uploaded." });
+                return;
+            }
+
+            const images = req.files as Express.Multer.File[];
+            const imageRecords = await Promise.all(
+                images.map((file) =>
+                    ImagesModel.create({
+                        movie_id: movieId,
+                        image: file.path,
+                    })
+                )
+            );
+
+            res.status(201).json({
+                message: "Images uploaded successfully.",
+                images: imageRecords.map((image) => image.image),
+            });
+        } catch (error) {
+            console.error("Error uploading images:", error);
+            next(error);
+        }
+    }
+);
+
+// Delete an image
+router.delete(
+    "/movie/:id/images",
+    async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+        try {
+            const movieId = parseInt(req.params.id);
+            const imageName = req.query.name as string;
+            const token = req.cookies.admin_token?.admin_token;
+
+            if (!token) {
+                res.status(401).json({ message: "Unauthorized." });
+                return;
+            }
+
+            if (!imageName) {
+                res.status(400).json({ message: "Image name is required." });
+                return;
+            }
+            const imageRecord = await ImagesModel.findOne({
+                where: { movie_id: movieId, image: imageName },
+            });
+
+            if (!imageRecord) {
+                res.status(404).json({ message: "Image not found." });
+                return;
+            }
+
+            await ImagesModel.destroy({ where: { movie_id: movieId, image: imageName } });
+
+            res.status(200).json({ message: "Image deleted successfully." });
+        } catch (error) {
+            console.error("Error deleting image:", error);
             next(error);
         }
     }

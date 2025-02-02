@@ -19,14 +19,25 @@ import Footer from "./components/footer";
 import FriendProfile from "./components/friendProfile";
 import AdminLogin from "./components/adminLogin";
 import AdminDashboard from "./components/adminDashboard";
+import AdminUpdateMovie from "./components/adminUpdateMovie";
+import AdminCreateMovie from "./components/adminCreateMovie";
 
 function Layout() {
   const location = useLocation();
 
   // Define paths where Header & Footer should be hidden
-  const hideHeaderFooterRoutes = ["/admin/login" ,"/admin/dashboard" ];
+  const hideHeaderFooterRoutes = [
+    "/admin/login",
+    "/admin/dashboard",
+    "/admin/update-movie/:id",  // Add the dynamic path here
+    "/admin/add-movie"
+  ];
 
-  const shouldHideHeaderFooter = hideHeaderFooterRoutes.includes(location.pathname);
+  const shouldHideHeaderFooter = hideHeaderFooterRoutes.some((route) => {
+    // Check for dynamic path by matching the route pattern
+    const regex = new RegExp(route.replace(":id", "\\d+")); // Use regex to match dynamic paths like :id
+    return regex.test(location.pathname);
+  });
 
   return (
     <>
@@ -44,12 +55,15 @@ function Layout() {
         <Route path="/friend" element={<FriendProfile />} />
         <Route path="/admin/login" element={<AdminLogin />} />
         <Route path="/admin/dashboard" element={<AdminDashboard />} />
+        <Route path="/admin/update-movie/:id" element={<AdminUpdateMovie />} />
+        <Route path="/admin/add-movie" element={<AdminCreateMovie />} />
         <Route path="*" element={<Error />} />
       </Routes>
       {!shouldHideHeaderFooter && <Footer />}
     </>
   );
 }
+
 
 function App() {
   return (

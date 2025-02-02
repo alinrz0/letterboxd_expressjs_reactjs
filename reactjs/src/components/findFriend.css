@@ -17,7 +17,7 @@
 }
 
 /* Heading */
-h2 {
+.find-friend-container h2 {
     font-size: 26px;
     color: #222;
     font-weight: bold;
@@ -27,9 +27,10 @@ h2 {
 }
 
 /* Email Input Field - Moved Up */
-.email-input {
+.find-friend-container .email-input {
     width: 100%;
-    padding: 12px;
+    padding-top: 12px;
+    padding-bottom: 12px;
     border: 2px solid rgba(255, 255, 255, 0.5);
     border-radius: 10px;
     font-size: 16px;
@@ -41,18 +42,18 @@ h2 {
     transition: all 0.3s ease;
 }
 
-.email-input::placeholder {
+.find-friend-container .email-input::placeholder {
     color: #666;
     font-weight: normal;
 }
 
-.email-input:focus {
+.find-friend-container .email-input:focus {
     border-color: #007bff;
     box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
 }
 
 /* Search Button - Below Email Input */
-.search-button {
+.find-friend-container .search-button {
     width: 100%;
     margin-top: 12px;
     background: linear-gradient(135deg, #007bff, #0056b3);
@@ -69,18 +70,18 @@ h2 {
     font-weight: bold;
 }
 
-.search-button:hover {
+.find-friend-container .search-button:hover {
     background: linear-gradient(135deg, #0056b3, #003d82);
     transform: scale(1.05);
 }
 
-.search-button:disabled {
+.find-friend-container .search-button:disabled {
     background: #ccc;
     cursor: not-allowed;
 }
 
 /* Error Message */
-.error-message {
+.find-friend-container .error-message {
     color: red;
     margin-top: 12px;
     font-size: 14px;
@@ -89,7 +90,7 @@ h2 {
 }
 
 /* User Card */
-.user-card {
+.find-friend-container .user-card {
     margin-top: 20px;
     padding: 18px;
     background: rgba(255, 255, 255, 0.4);
@@ -101,20 +102,20 @@ h2 {
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.user-card:hover {
+.find-friend-container .user-card:hover {
     transform: scale(1.02);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* User Info */
-.user-card p {
+.find-friend-container .user-card p {
     font-size: 16px;
     color: #333;
     font-weight: bold;
 }
 
 /* Friend Request Button */
-.add-friend-button {
+.find-friend-container .add-friend-button {
     background: linear-gradient(135deg, #28a745, #1e7e34);
     border: none;
     padding: 12px 14px;
@@ -129,18 +130,18 @@ h2 {
     font-weight: bold;
 }
 
-.add-friend-button:hover {
+.find-friend-container .add-friend-button:hover {
     background: linear-gradient(135deg, #1e7e34, #145623);
     transform: scale(1.05);
 }
 
-.add-friend-button:disabled {
+.find-friend-container .add-friend-button:disabled {
     background: #ccc;
     cursor: not-allowed;
 }
 
 /* Icons */
-.icon {
+.find-friend-container .icon {
     width: 20px;
     height: 20px;
 }

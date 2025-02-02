@@ -7,11 +7,11 @@
     text-align: center;
   }
   
-  h2 {
+  .signup-container h2 {
     margin-bottom: 15px;
   }
   
-  input {
+  .signup-container input {
     width: 100%;
     padding: 8px;
     margin: 10px -10px;
@@ -19,7 +19,7 @@
     border-radius: 4px;
   }
   
-  button {
+  .signup-container  button {
     width: 100%;
     padding: 10px;
     background-color: #007bff;
@@ -29,27 +29,27 @@
     cursor: pointer;
   }
   
-  button:hover {
+  .signup-container button:hover {
     background-color: #0056b3;
   }
   
-  .error-message {
+  .signup-container .error-message {
     color: red;
     font-size: 14px;
   }
   
-  .login-link {
+  .signup-container .login-link {
     margin-top: 15px;
     font-size: 14px;
   }
   
-  .login-link a {
+  .signup-container .login-link a {
     color: #007bff;
     text-decoration: none;
     font-weight: bold;
   }
   
-  .login-link a:hover {
+  .signup-container .login-link a:hover {
     text-decoration: underline;
   }
   

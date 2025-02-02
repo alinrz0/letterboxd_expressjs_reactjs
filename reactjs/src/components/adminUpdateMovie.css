@@ -1,0 +1,149 @@
+.admin-movie-detail {
+    text-align: center;
+    color: white;
+    background: #1e1e2f;
+    padding: 20px;
+    margin: auto;
+}
+
+.admin-movie-detail .edit-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.admin-movie-detail input {
+    width: 90%;
+    max-width: 600px;
+    padding: 10px;
+    background: #2b2b3a;
+    border: 1px solid #444;
+    border-radius: 5px;
+    color: white;
+}
+
+.admin-movie-detail textarea {
+    width: 90%;
+    max-width: 600px;
+    padding: 10px;
+    background: #2b2b3a;
+    border: 1px solid #444;
+    border-radius: 5px;
+    color: white;
+}
+
+
+.admin-movie-detail select {
+    width: 90%;
+    max-width: 300px;
+    padding: 10px;
+    background: #2b2b3a;
+    border: 1px solid #444;
+    border-radius: 5px;
+    color: white;
+    appearance: none;
+    cursor: pointer;
+}
+
+.admin-movie-detail select:focus {
+    outline: none;
+    border-color: #00cc66;
+}
+
+.admin-movie-detail .movie-detail-poster {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.admin-movie-detail .gallery-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+
+.admin-movie-detail .gallery-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.admin-movie-detail .image-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+    justify-content: center;
+    padding: 10px;
+}
+
+.admin-movie-detail .image-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.admin-movie-detail .thumbnail {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.admin-movie-detail .update-btn, .upload-btn, .delete-btn {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 90%;
+}
+
+.admin-movie-detail .delete-btn {
+    border: none;
+    background: #ff4c4c;
+    color: white;
+}
+
+.admin-movie-detail .upload-btn {
+    border: none;
+    background: #00cc66;
+}
+
+.admin-movie-detail .update-btn {
+    border: none;
+    background: #00cc66;
+}
+
+.admin-movie-detail .gallery-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .admin-movie-detail {
+        padding: 15px;
+    }
+    .admin-movie-detail input,
+    .admin-movie-detail textarea,
+    .admin-movie-detail select {
+        width: 100%;
+    }
+    
+    .admin-movie-detail .gallery-image {
+        max-width: 200px;
+    }
+    .admin-movie-detail .thumbnail {
+        width: 80px;
+        height: 80px;
+    }
+}

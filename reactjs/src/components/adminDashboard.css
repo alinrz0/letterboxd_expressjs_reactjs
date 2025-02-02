@@ -15,14 +15,14 @@
 }
 
 /* Dashboard Sections */
-.dashboard-sections {
+.admin-dashboard .dashboard-sections {
   display: flex;
   justify-content: space-between;
   gap: 20px;
   margin-top: 20px;
 }
 
-.section {
+.admin-dashboard .section {
   flex: 1;
   background: #2b2b3a;
   padding: 20px;
@@ -30,19 +30,19 @@
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
 }
 
-.section h3 {
+.admin-dashboard .section h3 {
   font-size: 20px;
   color: #00aaff;
   margin-bottom: 15px;
 }
 
 /* List Styles */
-.section ul {
+.admin-dashboard .section ul {
   list-style: none;
   padding: 0;
 }
 
-.section li {
+.admin-dashboard .section li {
   background: #3a3a4f;
   margin: 10px 0;
   padding: 15px;
@@ -54,19 +54,19 @@
   transition: background 0.3s ease;
 }
 
-.section li:hover {
+.admin-dashboard .section li:hover {
   background: #44445a;
 }
 
 /* Input Fields */
-.user-inputs {
+.admin-dashboard .user-inputs {
   display: flex;
   flex-direction: column;
   width: 100%;
   align-items: center;
 }
 
-.user-inputs input {
+.admin-dashboard .user-inputs input {
   padding: 8px;
   border: 1px solid #444;
   border-radius: 5px;
@@ -77,19 +77,19 @@
   margin-bottom: 10px;
 }
 
-.user-inputs input:focus {
+.admin-dashboard .user-inputs input:focus {
   border-color: #00aaff;
   outline: none;
 }
 
 /* Buttons */
-.user-buttons {
+.admin-dashboard .user-buttons {
   display: flex;
   flex-direction: column;
   width: 90%;
 }
 
-.user-buttons button {
+.admin-dashboard .user-buttons button {
   width: 100%;
   margin-top: 10px;
   padding: 8px;
@@ -99,26 +99,26 @@
   transition: background 0.3s ease;
 }
 
-.update-btn {
+.admin-dashboard .update-btn {
   background: #00cc66;
   color: white;
 }
 
-.update-btn:hover {
+.admin-dashboard .update-btn:hover {
   background: #00994d;
 }
 
-.delete-btn {
+.admin-dashboard .delete-btn {
   background: #ff4c4c;
   color: white;
 }
 
-.delete-btn:hover {
+.admin-dashboard .delete-btn:hover {
   background: #cc0000;
 }
 
 /* Add Movie Button */
-.add-movie-btn {
+.admin-dashboard .add-movie-btn {
   background: #00cc66;
   color: white;
   border: none;
@@ -129,19 +129,19 @@
   transition: background 0.3s ease;
 }
 
-.add-movie-btn:hover {
+.admin-dashboard .add-movie-btn:hover {
   background: #00994d;
 }
 
 /* Movies Grid */
-.section .movies-grid {
+.admin-dashboard .section .movies-grid {
 display: grid;
 grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 gap: 20px;
 margin-top: 15px;
 }
 
-.section .movie-card {
+.admin-dashboard .section .movie-card {
 background: #2b2b3a;
 padding: 15px;
 border-radius: 10px;
@@ -151,11 +151,11 @@ transition: transform 0.2s;
 cursor: pointer;
 }
 
-.section .movie-card:hover {
+.admin-dashboard .section .movie-card:hover {
 transform: scale(1.05);
 }
 
-.section .movie-poster {
+.admin-dashboard .section .movie-poster {
 width: 100%;
 height: 250px;
 object-fit: cover;
@@ -163,23 +163,23 @@ border-radius: 8px;
 cursor: pointer;
 }
 
-.section .movie-details {
+.admin-dashboard .section .movie-details {
 margin-top: 10px;
 color: #fff;
 }
 
-.section .movie-details h4 {
+.admin-dashboard .section .movie-details h4 {
 font-size: 16px;
 margin: 5px 0;
 }
 
-.section .movie-details p {
+.admin-dashboard .section .movie-details p {
 font-size: 14px;
 color: #ffd700;
 }
 
 /* Review Card Styling */
-.review-card {
+.admin-dashboard .review-card {
   background: #2b2b3a;
   padding: 20px;
   margin-bottom: 20px;
@@ -189,11 +189,11 @@ color: #ffd700;
   transition: transform 0.2s ease-in-out;
 }
 
-.review-card:hover {
+.admin-dashboard .review-card:hover {
   transform: scale(1.05);
 }
 
-.review-content {
+.admin-dashboard .review-content {
   margin-bottom: 20px;
   font-size: 16px;
   line-height: 1.5;
@@ -201,56 +201,56 @@ color: #ffd700;
   font-style: italic;
 }
 
-.review-content p {
+.admin-dashboard .review-content p {
   margin: 10px 0;
   color: #e0e0e0;
 }
 
-.user-info,
-.movie-info {
+.admin-dashboard .user-info,
+.admin-dashboard .movie-info {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
 }
 
-.user-info p,
-.movie-info p {
+.admin-dashboard .user-info p,
+.admin-dashboard .movie-info p {
   font-size: 14px;
   color: #f0f0f0;
 }
 
-.user-info p span,
-.movie-info p span {
+.admin-dashboard .user-info p span,
+.admin-dashboard .movie-info p span {
   font-weight: bold;
   color: #00aaff;
 }
 
 /* User Info Styling */
-.user-info {
+.admin-dashboard .user-info {
   margin-bottom: 10px;
 }
 
-.user-info p {
+.admin-dashboard .user-info p {
   display: inline-block;
   font-size: 14px;
   color: #f0f0f0;
 }
 
-.user-info p span {
+.admin-dashboard .user-info p span {
   font-weight: bold;
   color: #00aaff;
 }
 
 /* Movie Info Styling */
-.movie-info {
+.admin-dashboard .movie-info {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.movie-info img {
+.admin-dashboard .movie-info img {
   width: 120px;
   height: 180px;
   object-fit: cover;
@@ -258,14 +258,14 @@ color: #ffd700;
   margin-bottom: 10px;
 }
 
-.movie-info p {
+.admin-dashboard .movie-info p {
   text-align: center;
   font-size: 14px;
   color: #f0f0f0;
 }
 
 /* Delete Button */
-.delete-btn {
+.admin-dashboard .delete-btn {
   background: #ff4c4c;
   color: white;
   padding: 10px 20px;
@@ -276,12 +276,12 @@ color: #ffd700;
   font-size: 14px;
 }
 
-.delete-btn:hover {
+.admin-dashboard .delete-btn:hover {
   background: #cc0000;
 }
 
 /* Section Header */
-.section h3 {
+.admin-dashboard .section h3 {
     font-size: 22px;
     color: #00aaff;
     margin-bottom: 15px;
@@ -291,36 +291,36 @@ color: #ffd700;
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .dashboard-sections {
+  .admin-dashboard .dashboard-sections {
       flex-direction: column;
   }
 
-  .section li {
+  .admin-dashboard .section li {
       text-align: center;
   }
 
-  .user-inputs input {
+  .admin-dashboard .user-inputs input {
       width: 100%;
   }
 
-  .user-buttons button {
+  .admin-dashboard .user-buttons button {
       width: 100%;
   }
 
-  .review-card {
+  .admin-dashboard .review-card {
     padding: 15px;
   }
 
-  .movie-info img {
+  .admin-dashboard .movie-info img {
     width: 100px;
     height: 150px;
   }
 
-  .review-content {
+  .admin-dashboard .review-content {
     font-size: 14px;
   }
 
-  .delete-btn {
+  .admin-dashboard .movie-details .delete-btn {
     padding: 8px 15px;
   }
 }

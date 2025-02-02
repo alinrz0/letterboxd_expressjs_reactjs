@@ -14,6 +14,7 @@ const Followers = () => {
         const response = await axios.get("http://localhost:3000/friend/followers", {
           withCredentials: true, // Ensures cookies are sent
         });
+        console.log()
         setFollowers(response.data.followers); // Set followers list
       } catch (err) {
         setError("You need to log in to view your followers.");
@@ -50,8 +51,9 @@ const Followers = () => {
           {followers.map((follower) => (
             <div key={follower.id} className="follower-card">
               <div className="avatar">
-                {follower.name.charAt(0).toUpperCase()}
+                {follower?.name?.charAt(0)?.toUpperCase() || "?"}
               </div>
+
               <div className="follower-details">
                 <p className="follower-name">{follower.name}</p>
                 <p className="follower-email">{follower.email}</p>

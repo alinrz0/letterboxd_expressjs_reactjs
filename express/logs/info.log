@@ -1543,3 +1543,57 @@ notNull Violation: movie.rate cannot be null
 2025-02-02 02:26:57 info : Server is running on http://localhost:3000
 2025-02-02 02:26:57 info : Connection to the database has been established successfully.
 2025-02-02 02:26:57 info : Database tables are synchronized.
+2025-02-02 12:18:35 info : Server is running on http://localhost:3000
+2025-02-02 12:18:35 info : Connection to the database has been established successfully.
+2025-02-02 12:18:35 info : Database tables are synchronized.
+2025-02-02 12:34:47 info : Server is running on http://localhost:3000
+2025-02-02 12:34:48 info : Connection to the database has been established successfully.
+2025-02-02 12:34:48 info : Database tables are synchronized.
+2025-02-02 12:50:32 info : Server is running on http://localhost:3000
+2025-02-02 12:50:32 info : Connection to the database has been established successfully.
+2025-02-02 12:50:32 info : Database tables are synchronized.
+2025-02-02 12:54:07 info : Server is running on http://localhost:3000
+2025-02-02 12:54:07 info : Connection to the database has been established successfully.
+2025-02-02 12:54:07 info : Database tables are synchronized.
+2025-02-02 12:56:51 info : Server is running on http://localhost:3000
+2025-02-02 12:56:51 info : Connection to the database has been established successfully.
+2025-02-02 12:56:51 info : Database tables are synchronized.
+2025-02-02 12:57:44 info : Server is running on http://localhost:3000
+2025-02-02 12:57:44 info : Connection to the database has been established successfully.
+2025-02-02 12:57:44 info : Database tables are synchronized.
+2025-02-02 12:59:16 info : Server is running on http://localhost:3000
+2025-02-02 12:59:16 info : Connection to the database has been established successfully.
+2025-02-02 12:59:16 info : Database tables are synchronized.
+2025-02-02 12:59:55 info : Server is running on http://localhost:3000
+2025-02-02 12:59:55 info : Connection to the database has been established successfully.
+2025-02-02 12:59:55 info : Database tables are synchronized.
+2025-02-02 13:05:46 info : Server is running on http://localhost:3000
+2025-02-02 13:05:46 info : Connection to the database has been established successfully.
+2025-02-02 13:05:46 info : Database tables are synchronized.
+2025-02-02 13:07:28 info : Server is running on http://localhost:3000
+2025-02-02 13:07:29 info : Connection to the database has been established successfully.
+2025-02-02 13:07:29 info : Database tables are synchronized.
+2025-02-02 13:08:36 info : Server is running on http://localhost:3000
+2025-02-02 13:08:36 info : Connection to the database has been established successfully.
+2025-02-02 13:08:36 info : Database tables are synchronized.
+2025-02-02 13:09:29 info : Server is running on http://localhost:3000
+2025-02-02 13:09:29 info : Connection to the database has been established successfully.
+2025-02-02 13:09:29 info : Database tables are synchronized.
+2025-02-02 13:10:46 info : Server is running on http://localhost:3000
+2025-02-02 13:10:46 info : Connection to the database has been established successfully.
+2025-02-02 13:10:46 info : Database tables are synchronized.
+2025-02-02 13:12:42 info : Server is running on http://localhost:3000
+2025-02-02 13:12:42 info : Connection to the database has been established successfully.
+2025-02-02 13:12:42 info : Database tables are synchronized.
+2025-02-02 13:13:27 info : Server is running on http://localhost:3000
+2025-02-02 13:13:27 info : Connection to the database has been established successfully.
+2025-02-02 13:13:27 info : Database tables are synchronized.
+2025-02-02 13:13:52 info : Server is running on http://localhost:3000
+2025-02-02 13:13:52 info : Connection to the database has been established successfully.
+2025-02-02 13:13:52 info : Database tables are synchronized.
+2025-02-02 14:22:10 error : User with the provided email not found.
+2025-02-02 14:22:10 error : User with the provided email not found.
+2025-02-02 14:22:12 error : User with the provided email not found.
+2025-02-02 14:22:12 error : User with the provided email not found.
+2025-02-02 15:24:51 error : notNull Violation: movie.genre cannot be null
+2025-02-02 15:24:51 error : notNull Violation: movie.genre cannot be null
