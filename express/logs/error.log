@@ -532,3 +532,21 @@ notNull Violation: movie.rate cannot be null
 2025-02-02 01:57:07 error : Validation error
 2025-02-02 01:57:25 error : Validation error
 2025-02-02 01:58:14 error : Validation error
+2025-02-05 15:34:44 error : Unable to connect to the database or sync:
+2025-02-05 15:37:45 error : SequelizeConnectionRefusedError
+2025-02-05 15:37:45 error : SequelizeConnectionRefusedError
+2025-02-05 15:37:45 error : SequelizeConnectionRefusedError
+2025-02-05 15:37:45 error : SequelizeConnectionRefusedError
+2025-02-05 15:38:10 error : Unable to connect to the database or sync:
+2025-02-05 15:38:24 error : SequelizeConnectionRefusedError
+2025-02-05 15:38:24 error : SequelizeConnectionRefusedError
+2025-02-05 15:38:24 error : SequelizeConnectionRefusedError
+2025-02-05 15:38:24 error : SequelizeConnectionRefusedError
+2025-02-05 15:38:26 error : SequelizeConnectionRefusedError
+2025-02-05 15:38:26 error : SequelizeConnectionRefusedError
+2025-02-05 15:38:26 error : SequelizeConnectionRefusedError
+2025-02-05 15:38:26 error : SequelizeConnectionRefusedError
+2025-02-05 15:38:29 error : SequelizeConnectionRefusedError
+2025-02-05 15:38:29 error : SequelizeConnectionRefusedError
+2025-02-05 15:38:29 error : SequelizeConnectionRefusedError
+2025-02-05 15:38:29 error : SequelizeConnectionRefusedError

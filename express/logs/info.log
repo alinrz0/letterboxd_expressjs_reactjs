@@ -1597,3 +1597,26 @@ notNull Violation: movie.rate cannot be null
 2025-02-02 14:22:12 error : User with the provided email not found.
 2025-02-02 15:24:51 error : notNull Violation: movie.genre cannot be null
 2025-02-02 15:24:51 error : notNull Violation: movie.genre cannot be null
+2025-02-05 15:34:44 info : Server is running on http://localhost:3000
+2025-02-05 15:34:44 error : Unable to connect to the database or sync:
+2025-02-05 15:37:45 error : SequelizeConnectionRefusedError
+2025-02-05 15:37:45 error : SequelizeConnectionRefusedError
+2025-02-05 15:37:45 error : SequelizeConnectionRefusedError
+2025-02-05 15:37:45 error : SequelizeConnectionRefusedError
+2025-02-05 15:38:10 info : Server is running on http://localhost:3000
+2025-02-05 15:38:10 error : Unable to connect to the database or sync:
+2025-02-05 15:38:24 error : SequelizeConnectionRefusedError
+2025-02-05 15:38:24 error : SequelizeConnectionRefusedError
+2025-02-05 15:38:24 error : SequelizeConnectionRefusedError
+2025-02-05 15:38:24 error : SequelizeConnectionRefusedError
+2025-02-05 15:38:26 error : SequelizeConnectionRefusedError
+2025-02-05 15:38:26 error : SequelizeConnectionRefusedError
+2025-02-05 15:38:26 error : SequelizeConnectionRefusedError
+2025-02-05 15:38:26 error : SequelizeConnectionRefusedError
+2025-02-05 15:38:29 error : SequelizeConnectionRefusedError
+2025-02-05 15:38:29 error : SequelizeConnectionRefusedError
+2025-02-05 15:38:29 error : SequelizeConnectionRefusedError
+2025-02-05 15:38:29 error : SequelizeConnectionRefusedError
+2025-02-05 19:11:59 info : Server is running on http://localhost:3000
+2025-02-05 19:11:59 info : Connection to the database has been established successfully.
+2025-02-05 19:11:59 info : Database tables are synchronized.
