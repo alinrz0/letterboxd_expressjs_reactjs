@@ -1620,3 +1620,24 @@ notNull Violation: movie.rate cannot be null
 2025-02-05 19:11:59 info : Server is running on http://localhost:3000
 2025-02-05 19:11:59 info : Connection to the database has been established successfully.
 2025-02-05 19:11:59 info : Database tables are synchronized.
+2025-02-05 20:23:08 info : Server is running on http://localhost:3000
+2025-02-05 20:23:08 info : Connection to the database has been established successfully.
+2025-02-05 20:23:08 info : Database tables are synchronized.
+2025-02-05 22:07:08 info : Server is running on http://localhost:3000
+2025-02-05 22:07:08 info : Connection to the database has been established successfully.
+2025-02-05 22:07:08 info : Database tables are synchronized.
+2025-02-05 22:11:46 error : data and hash must be strings
+2025-02-05 22:13:54 error : data and hash must be strings
+2025-02-05 22:15:54 info : Server is running on http://localhost:3000
+2025-02-05 22:15:54 info : Connection to the database has been established successfully.
+2025-02-05 22:15:54 info : Database tables are synchronized.
+2025-02-05 22:16:03 info : Server is running on http://localhost:3000
+2025-02-05 22:16:03 info : Connection to the database has been established successfully.
+2025-02-05 22:16:03 info : Database tables are synchronized.
+2025-02-05 22:16:09 error : data and hash must be strings
+2025-02-05 22:33:31 info : Server is running on http://localhost:3000
+2025-02-05 22:33:31 info : Connection to the database has been established successfully.
+2025-02-05 22:33:31 info : Database tables are synchronized.
+2025-02-05 22:54:48 info : Server is running on http://localhost:3000
+2025-02-05 22:54:48 info : Connection to the database has been established successfully.
+2025-02-05 22:54:48 info : Database tables are synchronized.

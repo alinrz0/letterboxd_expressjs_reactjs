@@ -550,3 +550,6 @@ notNull Violation: movie.rate cannot be null
 2025-02-05 15:38:29 error : SequelizeConnectionRefusedError
 2025-02-05 15:38:29 error : SequelizeConnectionRefusedError
 2025-02-05 15:38:29 error : SequelizeConnectionRefusedError
+2025-02-05 22:11:46 error : data and hash must be strings
+2025-02-05 22:13:54 error : data and hash must be strings
+2025-02-05 22:16:09 error : data and hash must be strings
